@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2007/03/19 08:14:41.950.pas,D:\Borland Studio Projects\Unit1.pas=D:\Delphi\Projetos\Projetos Exemplos\Wait\Unit1.pas</Transaction>
+    <Transaction>2007/03/19 08:14:41.950.dfm,D:\Borland Studio Projects\Unit1.dfm=D:\Delphi\Projetos\Projetos Exemplos\Wait\Unit1.dfm</Transaction>
+    <Transaction>2007/03/19 08:14:47.737.bdsproj,D:\Borland Studio Projects\Project1.bdsproj=D:\Delphi\Projetos\Projetos Exemplos\Wait\Wait.bdsproj</Transaction>
+  </Transactions>
+</BorlandProject>
