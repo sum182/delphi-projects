@@ -1,0 +1,55 @@
+inherited frmPrincipal_LgXhdpiPh: TfrmPrincipal_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited Layout1: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited TabControl1: TTabControl
+      Size.Width = 450.000000000000000000
+      Size.Height = 695.000000000000000000
+      inherited TabItem1: TTabItem
+        Size.Width = 150.000000000000000000
+        inherited lstMnuMain: TListBox
+          Size.Width = 450.000000000000000000
+          inherited lblTipoCombustivel: TListBoxItem
+            Size.Width = 410.000000000000000000
+          end
+          inherited lbKMs: TListBoxItem
+            Size.Width = 410.000000000000000000
+          end
+          inherited lbLitros: TListBoxItem
+            Size.Width = 410.000000000000000000
+          end
+          inherited ListBoxItem2: TListBoxItem
+            Size.Width = 410.000000000000000000
+            inherited btnCalcular: TButton
+              Size.Width = 410.000000000000000000
+            end
+          end
+          inherited lblResultado: TListBoxItem
+            Size.Width = 410.000000000000000000
+          end
+        end
+      end
+      inherited TabItem2: TTabItem
+        Size.Width = 150.000000000000000000
+        inherited lstHistorico: TListView
+          Size.Width = 450.000000000000000000
+          Size.Height = 646.000000000000000000
+          ItemAppearanceObjects.HeaderObjects.Text.WordWrap = True
+          ItemAppearanceObjects.HeaderObjects.Text.Width = 1.000000000000000000
+          ItemAppearanceObjects.HeaderObjects.Text.Height = 1.000000000000000000
+          ItemAppearanceObjects.HeaderObjects.Text.Opacity = 10.000000000000000000
+        end
+      end
+      inherited TabItem3: TTabItem
+        Size.Width = 150.000000000000000000
+        inherited ListBox1: TListBox
+          Size.Width = 450.000000000000000000
+          Size.Height = 646.000000000000000000
+        end
+      end
+    end
+  end
+end

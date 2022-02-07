@@ -1,0 +1,58 @@
+package Registros;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  dsnap,
+  vcldb,
+  vcl,
+  dsnapcon,
+  Sum182,
+  vclactnband,
+  vclx,
+  xmlrtl,
+  designide,
+  IndyProtocols,
+  IndyCore,
+  IndySystem,
+  rbDB1010,
+  rbRCL1010,
+  adortl,
+  vcljpg,
+  dbexpress,
+  Connection,
+  Shared,
+  dbrtl;
+
+contains
+  uRegRetencao in 'uRegRetencao.pas',
+  uRegLocalArm in 'uRegLocalArm.pas',
+  uRegFormArm in 'uRegFormArm.pas',
+  uRegIndexacao in 'uRegIndexacao.pas',
+  uRegistros in 'uRegistros.pas',
+  uDmReg in 'uDmReg.pas';
+
+end.

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{A0E40B2D-AA19-490C-A3E5-DB84F0F6E7C7}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  <Projects>
+      <Projects Name="ISOServer.exe">Server\ISOServer.bdsproj</Projects>
+      <Projects Name="ISO.exe">Sistema\ISO.bdsproj</Projects>
+      <Projects Name="Connection.dll">Sistema\Connection\Connection.bdsproj</Projects>
+      <Projects Name="ACP.dll">Sistema\ACP\ACP.bdsproj</Projects>
+      <Projects Name="Registros.dll">Sistema\Registros\Registros.bdsproj</Projects>
+      <Projects Name="Targets">ISOServer.exe ISO.exe Connection.dll ACP.dll Registros.dll</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+	<StarTeamAssociation></StarTeamAssociation>
+	<StarTeamNonRelativeFiles></StarTeamNonRelativeFiles>
+</BorlandProject>

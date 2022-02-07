@@ -1,0 +1,330 @@
+<XmlTransformation Version="1.0"><Transform Direction="ToCds"><SelectEach dest="DATAPACKET\ROWDATA\ROW" from="\ans_mensagemTISS\ans_cabecalho"><Select dest="@ans_tipoTransacao" from="\ans_identificacaoTransacao\ans_tipoTransacao"/><Select dest="@ans_sequencialTransacao" from="\ans_identificacaoTransacao\ans_sequencialTransacao"/><Select dest="@ans_dataRegistroTransacao" from="\ans_identificacaoTransacao\ans_dataRegistroTransacao"/><Select dest="@ans_horaRegistroTransacao" from="\ans_identificacaoTransacao\ans_horaRegistroTransacao"/><Select dest="@ans_registroANS" from="\ans_destino\ans_registroANS"/><Select dest="@ans_versaoPadrao" from="\ans_versaoPadrao"/></SelectEach></Transform><XmlSchema RootName="ans_mensagemTISS"><![CDATA[<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_mensagemTISS" type="ans_mensagemTISSType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_mensagemTISSType">
+    <sequence>
+      <element name="ans_cabecalho" type="ans_cabecalhoType"/>
+      <element name="ans_prestadorParaOperadora" type="ans_prestadorParaOperadoraType"/>
+      <element name="ans_epilogo" type="ans_epilogoType"/>
+    </sequence>
+    <attribute name="xmlns:ans" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_cabecalho" type="ans_cabecalhoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_cabecalhoType">
+    <sequence>
+      <element name="ans_identificacaoTransacao" type="ans_identificacaoTransacaoType"/>
+      <element name="ans_origem" type="ans_origemType"/>
+      <element name="ans_destino" type="ans_destinoType"/>
+      <element name="ans_versaoPadrao" type="ans_versaoPadraoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoTransacao" type="ans_identificacaoTransacaoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoTransacaoType">
+    <sequence>
+      <element name="ans_tipoTransacao" type="ans_tipoTransacaoType"/>
+      <element name="ans_sequencialTransacao" type="ans_sequencialTransacaoType"/>
+      <element name="ans_dataRegistroTransacao" type="ans_dataRegistroTransacaoType"/>
+      <element name="ans_horaRegistroTransacao" type="ans_horaRegistroTransacaoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoTransacao" type="ans_tipoTransacaoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoTransacaoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_sequencialTransacao" type="ans_sequencialTransacaoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_sequencialTransacaoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dataRegistroTransacao" type="ans_dataRegistroTransacaoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dataRegistroTransacaoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_horaRegistroTransacao" type="ans_horaRegistroTransacaoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_horaRegistroTransacaoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_origem" type="ans_origemType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_origemType">
+    <sequence>
+      <element name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoPrestadorNaOperadoraType">
+    <sequence>
+      <element name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoPrestadorNaOperadoraType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_destino" type="ans_destinoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_destinoType">
+    <sequence>
+      <element name="ans_registroANS" type="ans_registroANSType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_registroANS" type="ans_registroANSType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_registroANSType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_versaoPadrao" type="ans_versaoPadraoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_versaoPadraoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_prestadorParaOperadora" type="ans_prestadorParaOperadoraType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_prestadorParaOperadoraType">
+    <sequence>
+      <element name="ans_loteGuias" type="ans_loteGuiasType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_loteGuias" type="ans_loteGuiasType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_loteGuiasType">
+    <sequence>
+      <element name="ans_numeroLote" type="ans_numeroLoteType"/>
+      <element name="ans_guias" type="ans_guiasType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroLote" type="ans_numeroLoteType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroLoteType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_guias" type="ans_guiasType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_guiasType">
+    <sequence>
+      <element name="ans_guiaFaturamento" type="ans_guiaFaturamentoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_guiaFaturamento" type="ans_guiaFaturamentoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_guiaFaturamentoType">
+    <sequence>
+      <element name="ans_guiaSP_SADT" type="ans_guiaSP_SADTType" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_guiaSP_SADT" type="ans_guiaSP_SADTType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_guiaSP_SADTType">
+    <sequence>
+      <element name="ans_identificacaoGuiaSADTSP" type="ans_identificacaoGuiaSADTSPType"/>
+      <element name="ans_dadosAutorizacao" type="ans_dadosAutorizacaoType"/>
+      <element name="ans_dadosBeneficiario" type="ans_dadosBeneficiarioType"/>
+      <element name="ans_dadosSolicitante" type="ans_dadosSolicitanteType"/>
+      <element name="ans_prestadorExecutante" type="ans_prestadorExecutanteType"/>
+      <element name="ans_caraterAtendimento" type="ans_caraterAtendimentoType"/>
+      <element name="ans_tipoSaida" type="ans_tipoSaidaType"/>
+      <element name="ans_tipoAtendimento" type="ans_tipoAtendimentoType"/>
+      <element name="ans_procedimentosRealizados" type="ans_procedimentosRealizadosType"/>
+      <element name="ans_valorTotal" type="ans_valorTotalType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoGuiaSADTSP" type="ans_identificacaoGuiaSADTSPType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoGuiaSADTSPType">
+    <sequence>
+      <element name="ans_identificacaoFontePagadora" type="ans_identificacaoFontePagadoraType"/>
+      <element name="ans_dataEmissaoGuia" type="ans_dataEmissaoGuiaType"/>
+      <element name="ans_numeroGuiaPrestador" type="ans_numeroGuiaPrestadorType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoFontePagadora" type="ans_identificacaoFontePagadoraType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoFontePagadoraType">
+    <sequence>
+      <element name="ans_registroANS" type="ans_registroANSType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_registroANS" type="ans_registroANSType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_registroANSType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dataEmissaoGuia" type="ans_dataEmissaoGuiaType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dataEmissaoGuiaType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroGuiaPrestador" type="ans_numeroGuiaPrestadorType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroGuiaPrestadorType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dadosAutorizacao" type="ans_dadosAutorizacaoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dadosAutorizacaoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dadosBeneficiario" type="ans_dadosBeneficiarioType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dadosBeneficiarioType">
+    <sequence>
+      <element name="ans_numeroCarteira" type="ans_numeroCarteiraType"/>
+      <element name="ans_nomeBeneficiario" type="ans_nomeBeneficiarioType"/>
+      <element name="ans_nomePlano" type="ans_nomePlanoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroCarteira" type="ans_numeroCarteiraType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroCarteiraType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeBeneficiario" type="ans_nomeBeneficiarioType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeBeneficiarioType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomePlano" type="ans_nomePlanoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomePlanoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dadosSolicitante" type="ans_dadosSolicitanteType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dadosSolicitanteType">
+    <sequence>
+      <element name="ans_contratado" type="ans_contratadoType"/>
+      <element name="ans_profissional" type="ans_profissionalType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_contratado" type="ans_contratadoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_contratadoType">
+    <sequence>
+      <element name="ans_identificacao" type="ans_identificacaoType"/>
+      <element name="ans_nomeContratado" type="ans_nomeContratadoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacao" type="ans_identificacaoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoType">
+    <sequence>
+      <element name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoPrestadorNaOperadoraType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeContratado" type="ans_nomeContratadoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeContratadoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_profissional" type="ans_profissionalType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_profissionalType">
+    <sequence>
+      <element name="ans_nomeProfissional" type="ans_nomeProfissionalType"/>
+      <element name="ans_conselhoProfissional" type="ans_conselhoProfissionalType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeProfissional" type="ans_nomeProfissionalType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeProfissionalType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_conselhoProfissional" type="ans_conselhoProfissionalType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_conselhoProfissionalType">
+    <sequence>
+      <element name="ans_siglaConselho" type="ans_siglaConselhoType"/>
+      <element name="ans_numeroConselho" type="ans_numeroConselhoType"/>
+      <element name="ans_ufConselho" type="ans_ufConselhoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_siglaConselho" type="ans_siglaConselhoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_siglaConselhoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroConselho" type="ans_numeroConselhoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_numeroConselhoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_ufConselho" type="ans_ufConselhoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_ufConselhoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_prestadorExecutante" type="ans_prestadorExecutanteType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_prestadorExecutanteType">
+    <sequence>
+      <element name="ans_identificacao" type="ans_identificacaoType"/>
+      <element name="ans_nomeContratado" type="ans_nomeContratadoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacao" type="ans_identificacaoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_identificacaoType">
+    <sequence>
+      <element name="ans_codigoPrestadorNaOperadora" type="ans_codigoPrestadorNaOperadoraType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeContratado" type="ans_nomeContratadoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_nomeContratadoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_caraterAtendimento" type="ans_caraterAtendimentoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_caraterAtendimentoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoSaida" type="ans_tipoSaidaType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoSaidaType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoAtendimento" type="ans_tipoAtendimentoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoAtendimentoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_procedimentosRealizados" type="ans_procedimentosRealizadosType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_procedimentosRealizadosType">
+    <sequence>
+      <element name="ans_procedimentos" type="ans_procedimentosType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_procedimentos" type="ans_procedimentosType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_procedimentosType">
+    <sequence>
+      <element name="ans_procedimento" type="ans_procedimentoType"/>
+      <element name="ans_data" type="ans_dataType"/>
+      <element name="ans_quantidadeRealizada" type="ans_quantidadeRealizadaType"/>
+      <element name="ans_valor" type="ans_valorType"/>
+      <element name="ans_valorTotal" type="ans_valorTotalType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_procedimento" type="ans_procedimentoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_procedimentoType">
+    <sequence>
+      <element name="ans_codigo" type="ans_codigoType"/>
+      <element name="ans_tipoTabela" type="ans_tipoTabelaType"/>
+      <element name="ans_descricao" type="ans_descricaoType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigo" type="ans_codigoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_codigoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoTabela" type="ans_tipoTabelaType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_tipoTabelaType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_descricao" type="ans_descricaoType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_descricaoType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_data" type="ans_dataType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_dataType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_quantidadeRealizada" type="ans_quantidadeRealizadaType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_quantidadeRealizadaType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_valor" type="ans_valorType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_valorType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_valorTotal" type="ans_valorTotalType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_valorTotalType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_valorTotal" type="ans_valorTotalType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_valorTotalType">
+    <sequence>
+      <element name="ans_totalGeral" type="ans_totalGeralType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_totalGeral" type="ans_totalGeralType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_totalGeralType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_epilogo" type="ans_epilogoType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_epilogoType">
+    <sequence>
+      <element name="ans_hash" type="ans_hashType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="ans_hash" type="ans_hashType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="ans_hashType">
+    <restriction base="xs:string"/>
+  </simpleType>
+</xs:schema>]]></XmlSchema><CdsSkeleton/><XslTransform/><Skeleton><![CDATA[<?xml version="1.0"?><DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD attrname="ans_tipoTransacao" fieldtype="string" WIDTH="16"/><FIELD attrname="ans_sequencialTransacao" fieldtype="string" WIDTH="5"/><FIELD attrname="ans_dataRegistroTransacao" fieldtype="string" WIDTH="10"/><FIELD attrname="ans_horaRegistroTransacao" fieldtype="string" WIDTH="8"/><FIELD attrname="ans_registroANS" fieldtype="string" WIDTH="6"/><FIELD attrname="ans_versaoPadrao" fieldtype="string" WIDTH="7"/></FIELDS><PARAMS/></METADATA><ROWDATA/><METADATA><FIELDS><FIELD attrname="ans_tipoTransacao" fieldtype="string" WIDTH="16"/><FIELD attrname="ans_sequencialTransacao" fieldtype="string" WIDTH="5"/><FIELD attrname="ans_dataRegistroTransacao" fieldtype="string" WIDTH="10"/><FIELD attrname="ans_horaRegistroTransacao" fieldtype="string" WIDTH="8"/><FIELD attrname="ans_registroANS" fieldtype="string" WIDTH="6"/><FIELD attrname="ans_versaoPadrao" fieldtype="string" WIDTH="7"/></FIELDS><PARAMS/></METADATA><ROWDATA/></DATAPACKET>
+]]></Skeleton></XmlTransformation>

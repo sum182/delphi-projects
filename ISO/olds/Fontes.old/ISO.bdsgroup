@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{A0E40B2D-AA19-490C-A3E5-DB84F0F6E7C7}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  
+    
+    <Projects>
+      <Projects Name="Connection.bpl">Sistema\Connection\Connection.bdsproj</Projects>
+      <Projects Name="Shared.bpl">Sistema\Shared\Shared.bdsproj</Projects>
+      <Projects Name="ISO.exe">Sistema\ISO.bdsproj</Projects>
+      <Projects Name="Teste.bpl">Sistema\Teste\Teste.bdsproj</Projects>
+      <Projects Name="Registros.bpl">Sistema\Registros\Registros.bdsproj</Projects>
+      <Projects Name="Targets">Connection.bpl Shared.bpl ISO.exe Teste.bpl Registros.bpl</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+	<StarTeamAssociation></StarTeamAssociation>
+	<StarTeamNonRelativeFiles></StarTeamNonRelativeFiles>
+</BorlandProject>

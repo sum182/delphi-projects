@@ -1,0 +1,56 @@
+package Teste;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  dsnap,
+  vcldb,
+  vclactnband,
+  vclx,
+  xmlrtl,
+  designide,
+  IndyCore,
+  IndySystem,
+  rbDB1010,
+  rbRCL1010,
+  adortl,
+  vcljpg,
+  dbexpress,
+  dsnapcon,
+  Sum182,
+  IndyProtocols,
+  Shared;
+
+contains
+  uCadTesteReg in 'uCadTesteReg.pas',
+  uCadTesteACP in 'uCadTesteACP.pas',
+  uCadtTesteCalib in 'uCadtTesteCalib.pas',
+  uCadTesteRH in 'uCadTesteRH.pas',
+  uDmTeste in 'uDmTeste.pas';
+
+end.

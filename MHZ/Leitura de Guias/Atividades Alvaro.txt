@@ -1,0 +1,41 @@
+- VM - Desenv XE6 - ok
+
+- Análise FireDac - ok
+
+- DevExpress - ok
+
+- ReportBuilder - ok
+
+- Cadastro Padrão - OK
+
+- Atualizar componentes sum182 para xe6 - OK
+
+- Formulário – Importação de XMLs - OK
+
+- Formulário - Leitura de Guias - OK
+
+- Formulário - Análise Geral das Guias - OK
+
+- Formulário – Fechamento de Lotes - OK
+
+- Relatório – Fechamento de Lotes - OK
+
+- Formulários em Abas - OK
+
+- Alterar dominios da FKs para para FLoat ou Double - nao sera alterado - ok
+
+- Alterar dominios de PKs/Fks para FLoat ou Double - nao sera alterado - ok
+
+- Criar repostirorio componentes sum182 - ok
+
+- Implementar Guia em Branco - ok
+
+- Implementar guia com desconto - ok
+
+- Implementar flag de fechamento 
+
+- teste geral - ok
+
+- flegar o cabec como cancelado apos importacao - ok
+
+- analisar transacao importacao - ok

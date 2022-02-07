@@ -1,0 +1,97 @@
+Novas Atividades
+
+
+
+- Atalhos do menu principal(aperte Alt para verificar) ---------------------não entendi 
+
+
+
+
+
+
+- Sobre --------- ok
+
+- Configurações gerais do menu principal --- ok
+
+- Verificar todos os seus cadastros se estao OK  ------- ok
+
+- Analisar em todos os cadastros
+nao pode alterar o ID ------- ok
+arrumar todos os nomes dos TFIELDS(Maisculus e Minusculos) no displayname ------- ok
+organizar campos ------- ok
+Aumentar o tamnho dos edits  ------- ok
+arrumar campos de pesquisa grid/combo  ------- ok
+Tirar o ID da pesquisa  ------- ok
+Analisar TabOrder  ------- ok
+
+
+- Cadastro de Usuarios
+nao deixar td maisculo,  --- ok
+organizar campos,  --- ok
+campo de ID nao pode ser alterado,  --- ok
+campo senha nao pode ser visivel,  --- ok
+colocar check box para campos booleanos,   --- ok
+pesquisa nao pode ser feita pelos campos booleanos, --------- nao vejo problema
+a grid de busca esta mostrando a senha de todos os usuarios,   --- ok
+pesquisa nao pode ser feita por ID, --------- nao vejo problema
+criar um usuario admin, 
+arrumar os caps da grid de busca    --- ok
+arrumar todos os nomes dos TFIELDS(Maisculus e Minusculos) no displayname    --- ok
+
+implementar método GetUsuario do DM - esta rotina sera responsavel por retornar o id do usuario logado no sistema
+
+
+- Cadastro de Serviços
+arrumar caps da grid  --- ok
+nao podemos deletar os registros atuais   --- ok
+organizar campos de cadastros  --- ok
+nao pode alterar o ID  --- ok
+Tirar o ID da pesquisa --- ok
+arrumar todos os nomes dos TFIELDS(Maisculus e Minusculos) no displayname --- ok
+
+
+	
+
+- Cadastro de Status
+Esta dando erro  --- ok
+nao podemos deletar os registros atuais  --- ok
+nao pode alterar o ID  --- ok
+arrumar todos os nomes dos TFIELDS(Maisculus e Minusculos) no displayname  --- ok
+organizar campos,  --- ok
+arrumar campos de pesquisa   --- ok
+
+
+
+
+- Cadastro de Clientes
+nao pode alterar o ID  ------- ok
+arrumar todos os nomes dos TFIELDS(Maisculus e Minusculos) no displayname  ------- ok
+organizar campos,  ------- ok
+arrumar campos de pesquisa   ------- ok
+Tirar o ID da pesquisa --- ok
+
+
+
+- Login
+Empresa esta fixa no codigo ------- ok
+O correto e cliente e nao empresa ------- ok
+Esta com problemas entre maisculo/minusculo  ------- ok
+Ao fechar o principal o login volta a aparecer  ------- ok
+Para que serve a data/empresa?  ------- ok
+Tirar os botoes da barra de título  ------- ok
+
+Após a aplicação estiver pronta
+- Testar o funcionamento de todo o processo
+- Testar importação
+- Testar a importação de um lote já utilizado anteriormente
+- Testar guia com desconto
+- Testar guia em branco
+- Testar selecionar mais de uma guia para leitura
+- Testar cadastrar guia não encontrada no lote
+- Testar cadastros
+- Testar análise geral de guias
+- Testar fechamento
+- Testar Manutenção - Grupo de Lotes
+- Testar Manutenção - Lotes
+
+

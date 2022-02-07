@@ -1,0 +1,62 @@
+package Shared;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  vclx,
+  dbrtl,
+  dsnap,
+  vcldb,
+  adortl,
+  dbexpress,
+  Sum182,
+  vclactnband,
+  xmlrtl,
+  designide,
+  IndyProtocols,
+  IndyCore,
+  IndySystem,
+  rbDB1010,
+  rbRCL1010,
+  vcljpg,
+  dsnapcon,
+  Connection,
+  cxLibraryD10,
+  dxThemeD10,
+  cxEditorsD10,
+  cxDataD10,
+  cxExtEditorsD10,
+  cxGridD10,
+  cxPageControlD10,
+  IBO40XRT_D2006;
+
+contains
+  uLibrary in 'uLibrary.pas',
+  uCadISO in 'uCadISO.pas' {frmCadISO},
+  uDmShared in 'uDmShared.pas' {DmShared};
+
+end.

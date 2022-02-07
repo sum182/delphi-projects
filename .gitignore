@@ -55,3 +55,6 @@ __recovery
 .svn-base
 
 
+*.bmp
+*.avi
+*.jpg

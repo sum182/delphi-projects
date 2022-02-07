@@ -1,0 +1,12 @@
+<clientes>
+  <cliente>
+    <codigo>1</codigo>
+    <nome>Cliente 1</nome>
+    <telefone>1234-5678</telefone>
+  </cliente>
+  <cliente>
+    <codigo>2</codigo>
+    <nome>Cliente 2</nome>
+    <telefone>9876-5432</telefone>
+  </cliente>
+</clientes>

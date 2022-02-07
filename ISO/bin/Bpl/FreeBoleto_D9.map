@@ -1,0 +1,943 @@
+
+ Start         Length     Name                   Class
+ 0001:00401000 000084DCH .text                   CODE
+ 0002:0040A000 000001BCH .itext                  ICODE
+ 0003:0040B000 0000003CH .data                   DATA
+ 0004:0040C000 00000040H .bss                    BSS
+ 0005:00000000 00000000H .tls                    TLS
+
+
+Detailed map of segments
+
+ 0001:00000000 0000017E C=CODE     S=.text    G=(none)   M=System   ACBP=A9
+ 0001:00000180 000001C3 C=CODE     S=.text    G=(none)   M=SysInit  ACBP=A9
+ 0001:00000344 00000056 C=CODE     S=.text    G=(none)   M=SysUtils ACBP=A9
+ 0001:0000039C 000000AC C=CODE     S=.text    G=(none)   M=Windows  ACBP=A9
+ 0001:00000448 000000B6 C=CODE     S=.text    G=(none)   M=Classes  ACBP=A9
+ 0001:00000500 00000006 C=CODE     S=.text    G=(none)   M=TypInfo  ACBP=A9
+ 0001:00000508 00000006 C=CODE     S=.text    G=(none)   M=Variants ACBP=A9
+ 0001:00000510 00000006 C=CODE     S=.text    G=(none)   M=VarUtils ACBP=A9
+ 0001:00000518 0000010E C=CODE     S=.text    G=(none)   M=Controls ACBP=A9
+ 0001:00000628 0000000E C=CODE     S=.text    G=(none)   M=ActnList ACBP=A9
+ 0001:00000638 0000001E C=CODE     S=.text    G=(none)   M=Contnrs  ACBP=A9
+ 0001:00000658 00000086 C=CODE     S=.text    G=(none)   M=Graphics ACBP=A9
+ 0001:000006E0 00000006 C=CODE     S=.text    G=(none)   M=Registry ACBP=A9
+ 0001:000006E8 00000006 C=CODE     S=.text    G=(none)   M=IniFiles ACBP=A9
+ 0001:000006F0 00000136 C=CODE     S=.text    G=(none)   M=Forms    ACBP=A9
+ 0001:00000828 00000006 C=CODE     S=.text    G=(none)   M=HelpIntfs ACBP=A9
+ 0001:00000830 00000006 C=CODE     S=.text    G=(none)   M=MultiMon ACBP=A9
+ 0001:00000838 00000006 C=CODE     S=.text    G=(none)   M=Menus    ACBP=A9
+ 0001:00000840 00000006 C=CODE     S=.text    G=(none)   M=UxTheme  ACBP=A9
+ 0001:00000848 00000006 C=CODE     S=.text    G=(none)   M=Themes   ACBP=A9
+ 0001:00000850 0000000E C=CODE     S=.text    G=(none)   M=Dialogs  ACBP=A9
+ 0001:00000860 00000046 C=CODE     S=.text    G=(none)   M=Printers ACBP=A9
+ 0001:000008A8 00000026 C=CODE     S=.text    G=(none)   M=ExtCtrls ACBP=A9
+ 0001:000008D0 00000006 C=CODE     S=.text    G=(none)   M=GraphUtil ACBP=A9
+ 0001:000008D8 00000016 C=CODE     S=.text    G=(none)   M=Clipbrd  ACBP=A9
+ 0001:000008F0 00000006 C=CODE     S=.text    G=(none)   M=FlatSB   ACBP=A9
+ 0001:000008F8 00000392 C=CODE     S=.text    G=(none)   M=uFuncAux ACBP=A9
+ 0001:00000C8C 0000087C C=CODE     S=.text    G=(none)   M=uFreeBanco033 ACBP=A9
+ 0001:00001508 000007E6 C=CODE     S=.text    G=(none)   M=uFreeBanco104 ACBP=A9
+ 0001:00001CF0 00000A0E C=CODE     S=.text    G=(none)   M=uFreeBanco341 ACBP=A9
+ 0001:00002700 0000098E C=CODE     S=.text    G=(none)   M=uFreeBanco151 ACBP=A9
+ 0001:00003090 00000796 C=CODE     S=.text    G=(none)   M=uFreeBanco237 ACBP=A9
+ 0001:00003828 00000716 C=CODE     S=.text    G=(none)   M=uFreeBanco409 ACBP=A9
+ 0001:00003F40 000006AA C=CODE     S=.text    G=(none)   M=uFreeBanco356 ACBP=A9
+ 0001:000045EC 000008DE C=CODE     S=.text    G=(none)   M=uFreeBanco001 ACBP=A9
+ 0001:00004ECC 0000165E C=CODE     S=.text    G=(none)   M=uFreeBoleto ACBP=A9
+ 0001:0000652C 00000006 C=CODE     S=.text    G=(none)   M=ExtDlgs  ACBP=A9
+ 0001:00006534 00000006 C=CODE     S=.text    G=(none)   M=Buttons  ACBP=A9
+ 0001:0000653C 00000016 C=CODE     S=.text    G=(none)   M=ComCtrls ACBP=A9
+ 0001:00006554 00000006 C=CODE     S=.text    G=(none)   M=ExtActns ACBP=A9
+ 0001:0000655C 00000006 C=CODE     S=.text    G=(none)   M=Mapi     ACBP=A9
+ 0001:00006564 00000016 C=CODE     S=.text    G=(none)   M=jpeg     ACBP=A9
+ 0001:0000657C 00000006 C=CODE     S=.text    G=(none)   M=DateUtils ACBP=A9
+ 0001:00006584 00001CE6 C=CODE     S=.text    G=(none)   M=uFreeBoletoImage ACBP=A9
+ 0001:0000826C 0000026F C=CODE     S=.text    G=(none)   M=.FreeBoleto_D9 ACBP=A9
+ 0002:00000000 00000006 C=ICODE    S=.itext   G=(none)   M=System   ACBP=A9
+ 0002:00000008 00000006 C=ICODE    S=.itext   G=(none)   M=SysUtils ACBP=A9
+ 0002:00000010 00000011 C=ICODE    S=.itext   G=(none)   M=Windows  ACBP=A9
+ 0002:00000024 00000006 C=ICODE    S=.itext   G=(none)   M=Classes  ACBP=A9
+ 0002:0000002C 00000006 C=ICODE    S=.itext   G=(none)   M=TypInfo  ACBP=A9
+ 0002:00000034 00000006 C=ICODE    S=.itext   G=(none)   M=Variants ACBP=A9
+ 0002:0000003C 00000006 C=ICODE    S=.itext   G=(none)   M=VarUtils ACBP=A9
+ 0002:00000044 00000006 C=ICODE    S=.itext   G=(none)   M=Controls ACBP=A9
+ 0002:0000004C 00000006 C=ICODE    S=.itext   G=(none)   M=ActnList ACBP=A9
+ 0002:00000054 00000006 C=ICODE    S=.itext   G=(none)   M=Graphics ACBP=A9
+ 0002:0000005C 00000006 C=ICODE    S=.itext   G=(none)   M=Registry ACBP=A9
+ 0002:00000064 00000006 C=ICODE    S=.itext   G=(none)   M=IniFiles ACBP=A9
+ 0002:0000006C 00000006 C=ICODE    S=.itext   G=(none)   M=Forms    ACBP=A9
+ 0002:00000074 00000006 C=ICODE    S=.itext   G=(none)   M=HelpIntfs ACBP=A9
+ 0002:0000007C 00000006 C=ICODE    S=.itext   G=(none)   M=MultiMon ACBP=A9
+ 0002:00000084 00000006 C=ICODE    S=.itext   G=(none)   M=Menus    ACBP=A9
+ 0002:0000008C 00000006 C=ICODE    S=.itext   G=(none)   M=UxTheme  ACBP=A9
+ 0002:00000094 00000006 C=ICODE    S=.itext   G=(none)   M=Themes   ACBP=A9
+ 0002:0000009C 00000006 C=ICODE    S=.itext   G=(none)   M=Dialogs  ACBP=A9
+ 0002:000000A4 00000006 C=ICODE    S=.itext   G=(none)   M=Printers ACBP=A9
+ 0002:000000AC 00000006 C=ICODE    S=.itext   G=(none)   M=ExtCtrls ACBP=A9
+ 0002:000000B4 00000006 C=ICODE    S=.itext   G=(none)   M=GraphUtil ACBP=A9
+ 0002:000000BC 00000006 C=ICODE    S=.itext   G=(none)   M=Clipbrd  ACBP=A9
+ 0002:000000C4 00000006 C=ICODE    S=.itext   G=(none)   M=FlatSB   ACBP=A9
+ 0002:000000CC 00000008 C=ICODE    S=.itext   G=(none)   M=uFuncAux ACBP=A9
+ 0002:000000D4 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco033 ACBP=A9
+ 0002:000000E8 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco104 ACBP=A9
+ 0002:000000FC 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco341 ACBP=A9
+ 0002:00000110 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco151 ACBP=A9
+ 0002:00000124 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco237 ACBP=A9
+ 0002:00000138 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco409 ACBP=A9
+ 0002:0000014C 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco356 ACBP=A9
+ 0002:00000160 00000014 C=ICODE    S=.itext   G=(none)   M=uFreeBanco001 ACBP=A9
+ 0002:00000174 00000008 C=ICODE    S=.itext   G=(none)   M=uFreeBoleto ACBP=A9
+ 0002:0000017C 00000006 C=ICODE    S=.itext   G=(none)   M=ExtDlgs  ACBP=A9
+ 0002:00000184 00000006 C=ICODE    S=.itext   G=(none)   M=Buttons  ACBP=A9
+ 0002:0000018C 00000006 C=ICODE    S=.itext   G=(none)   M=ComCtrls ACBP=A9
+ 0002:00000194 00000006 C=ICODE    S=.itext   G=(none)   M=ExtActns ACBP=A9
+ 0002:0000019C 00000006 C=ICODE    S=.itext   G=(none)   M=Mapi     ACBP=A9
+ 0002:000001A4 00000006 C=ICODE    S=.itext   G=(none)   M=jpeg     ACBP=A9
+ 0002:000001AC 00000008 C=ICODE    S=.itext   G=(none)   M=uFreeBoletoImage ACBP=A9
+ 0002:000001B4 00000005 C=ICODE    S=.itext   G=(none)   M=.FreeBoleto_D9 ACBP=A9
+ 0003:00000000 0000002C C=DATA     S=.data    G=DGROUP   M=SysInit  ACBP=A9
+ 0003:0000002C 00000008 C=DATA     S=.data    G=DGROUP   M=uFreeBanco033 ACBP=A9
+ 0003:00000034 00000004 C=DATA     S=.data    G=DGROUP   M=uFreeBanco341 ACBP=A9
+ 0003:00000038 00000004 C=DATA     S=.data    G=DGROUP   M=uFreeBanco151 ACBP=A9
+ 0004:00000000 0000000C C=BSS      S=.bss     G=DGROUP   M=SysInit  ACBP=A9
+ 0004:0000000C 00000008 C=BSS      S=.bss     G=DGROUP   M=Windows  ACBP=A9
+ 0004:00000014 00000004 C=BSS      S=.bss     G=DGROUP   M=uFuncAux ACBP=A9
+ 0004:00000018 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco033 ACBP=A9
+ 0004:0000001C 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco104 ACBP=A9
+ 0004:00000020 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco341 ACBP=A9
+ 0004:00000024 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco151 ACBP=A9
+ 0004:00000028 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco237 ACBP=A9
+ 0004:0000002C 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco409 ACBP=A9
+ 0004:00000030 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco356 ACBP=A9
+ 0004:00000034 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBanco001 ACBP=A9
+ 0004:00000038 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBoleto ACBP=A9
+ 0004:0000003C 00000004 C=BSS      S=.bss     G=DGROUP   M=uFreeBoletoImage ACBP=A9
+
+
+  Address             Publics by Name
+
+ 0002:000001B4       .FreeBoleto_D9..FreeBoleto_D9
+ 0001:000084BC       .FreeBoleto_D9.@GetPackageInfoTable
+ 0001:000084C4       .FreeBoleto_D9.@PackageLoad
+ 0001:000084D0       .FreeBoleto_D9.@PackageUnload
+ 0001:000002C8       SysInit.@InitPkg
+ 0001:0000032C       SysInit.@PackageLoad
+ 0001:00000338       SysInit.@PackageUnload
+ 0001:000001B8       SysInit.AllocTlsBuffer
+ 0001:00000274       SysInit.ExitProcessTLS
+ 0001:0000023C       SysInit.ExitThreadTLS
+ 0001:00000180       SysInit.FreeLibrary
+ 0001:000001C4       SysInit.GetTlsSize
+ 0004:00000004       SysInit.HInstance
+ 0001:00000298       SysInit.InitializeModule
+ 0001:00000210       SysInit.InitProcessTLS
+ 0001:000001CC       SysInit.InitThreadTLS
+ 0001:00000188       SysInit.LocalAlloc
+ 0001:00000190       SysInit.LocalFree
+ 0003:00000004       SysInit.Module
+ 0004:00000000       SysInit.ModuleIsLib
+ 0004:00000001       SysInit.ModuleIsPackage
+ 0001:00000198       SysInit.TlsAlloc
+ 0004:00000008       SysInit.tlsBuffer
+ 0001:000001A0       SysInit.TlsFree
+ 0001:000001A8       SysInit.TlsGetValue
+ 0003:00000000       SysInit.TlsIndex
+ 0005:00000000       SysInit.TlsLast
+ 0003:0000001C       SysInit.TlsProc
+ 0001:000001B0       SysInit.TlsSetValue
+ 0001:000002A4       SysInit.UninitializeModule
+ 0004:00000034       uFreeBanco001..2
+ 0001:000045EC       uFreeBanco001..TFreeBanco001
+ 0001:00004E9C       uFreeBanco001.Finalization
+ 0001:0000478C       uFreeBanco001.TFreeBanco001.ChecarDadosIniciais
+ 0001:00004988       uFreeBanco001.TFreeBanco001.FormataAgencCodigoCedente
+ 0001:00004A70       uFreeBanco001.TFreeBanco001.GetCampoLivre
+ 0001:00004C08       uFreeBanco001.TFreeBanco001.GetCodigoBanco
+ 0001:00004C28       uFreeBanco001.TFreeBanco001.GetCodigoBancoComDigito
+ 0001:00004CC0       uFreeBanco001.TFreeBanco001.GetDigitoNossoNum
+ 0001:00004C4C       uFreeBanco001.TFreeBanco001.GetModulo11BB
+ 0001:00004D58       uFreeBanco001.TFreeBanco001.GetNomeBanco
+ 0001:00004D84       uFreeBanco001.TFreeBanco001.GetNumeroBancario
+ 0001:00004E38       uFreeBanco001.TFreeBanco001.InicializaDadosPadroes
+ 0002:00000160       uFreeBanco001.uFreeBanco001
+ 0004:00000018       uFreeBanco033..2
+ 0001:00000C8C       uFreeBanco033..TFreeBanco033
+ 0003:0000002C       uFreeBanco033.Filler
+ 0001:000014C4       uFreeBanco033.Finalization
+ 0003:00000030       uFreeBanco033.peso
+ 0001:00000E2C       uFreeBanco033.TFreeBanco033.ChecarDadosIniciais
+ 0001:00000F98       uFreeBanco033.TFreeBanco033.FormataAgencCodigoCedente
+ 0001:00001090       uFreeBanco033.TFreeBanco033.GetCampoLivre
+ 0001:000011E0       uFreeBanco033.TFreeBanco033.GetCodigoBanco
+ 0001:00001200       uFreeBanco033.TFreeBanco033.GetCodigoBancoComDigito
+ 0001:00001238       uFreeBanco033.TFreeBanco033.GetDigitoNossoNum
+ 0001:0000133C       uFreeBanco033.TFreeBanco033.GetNomeBanco
+ 0001:00001360       uFreeBanco033.TFreeBanco033.GetNumeroBancario
+ 0001:0000143C       uFreeBanco033.TFreeBanco033.InicializaDadosPadroes
+ 0002:000000D4       uFreeBanco033.uFreeBanco033
+ 0004:0000001C       uFreeBanco104..2
+ 0001:00001508       uFreeBanco104..TFreeBanco104
+ 0001:00001CC0       uFreeBanco104.Finalization
+ 0001:000016A8       uFreeBanco104.TFreeBanco104.ChecarDadosIniciais
+ 0001:00001880       uFreeBanco104.TFreeBanco104.FormataAgencCodigoCedente
+ 0001:000019E8       uFreeBanco104.TFreeBanco104.GetCampoLivre
+ 0001:00001AAC       uFreeBanco104.TFreeBanco104.GetCodigoBanco
+ 0001:00001ACC       uFreeBanco104.TFreeBanco104.GetCodigoBancoComDigito
+ 0001:00001AF0       uFreeBanco104.TFreeBanco104.GetDigitoNossoNum
+ 0001:00001B94       uFreeBanco104.TFreeBanco104.GetNomeBanco
+ 0001:00001BB8       uFreeBanco104.TFreeBanco104.GetNumeroBancario
+ 0001:00001C5C       uFreeBanco104.TFreeBanco104.InicializaDadosPadroes
+ 0002:000000E8       uFreeBanco104.uFreeBanco104
+ 0004:00000024       uFreeBanco151..2
+ 0001:00002700       uFreeBanco151..TFreeBanco151
+ 0001:00003054       uFreeBanco151.Finalization
+ 0003:00000038       uFreeBanco151.peso
+ 0001:000028A0       uFreeBanco151.TFreeBanco151.ChecarDadosIniciais
+ 0001:00002A30       uFreeBanco151.TFreeBanco151.ConfiguraModalidadeConta
+ 0001:00002A94       uFreeBanco151.TFreeBanco151.FormataAgencCodigoCedente
+ 0001:00002B74       uFreeBanco151.TFreeBanco151.GetCampoLivre
+ 0001:00002D48       uFreeBanco151.TFreeBanco151.GetCodigoBanco
+ 0001:00002D68       uFreeBanco151.TFreeBanco151.GetCodigoBancoComDigito
+ 0001:00002DAC       uFreeBanco151.TFreeBanco151.GetDigitoNossoNum
+ 0001:00002EFC       uFreeBanco151.TFreeBanco151.GetNomeBanco
+ 0001:00002F24       uFreeBanco151.TFreeBanco151.GetNumeroBancario
+ 0001:00002FD4       uFreeBanco151.TFreeBanco151.InicializaDadosPadroes
+ 0002:00000110       uFreeBanco151.uFreeBanco151
+ 0004:00000028       uFreeBanco237..2
+ 0001:00003090       uFreeBanco237..TFreeBanco237
+ 0001:000037F8       uFreeBanco237.Finalization
+ 0001:00003230       uFreeBanco237.TFreeBanco237.ChecarDadosIniciais
+ 0001:00003484       uFreeBanco237.TFreeBanco237.FormataAgencCodigoCedente
+ 0001:00003558       uFreeBanco237.TFreeBanco237.GetCampoLivre
+ 0001:000035D0       uFreeBanco237.TFreeBanco237.GetCodigoBanco
+ 0001:000035F0       uFreeBanco237.TFreeBanco237.GetCodigoBancoComDigito
+ 0001:00003614       uFreeBanco237.TFreeBanco237.GetDigitoNossoNum
+ 0001:000036C0       uFreeBanco237.TFreeBanco237.GetNomeBanco
+ 0001:000036E8       uFreeBanco237.TFreeBanco237.GetNumeroBancario
+ 0001:00003774       uFreeBanco237.TFreeBanco237.InicializaDadosPadroes
+ 0002:00000124       uFreeBanco237.uFreeBanco237
+ 0004:00000020       uFreeBanco341..2
+ 0001:00001CF0       uFreeBanco341..TFreeBanco341
+ 0003:00000034       uFreeBanco341.Filler
+ 0001:000026C4       uFreeBanco341.Finalization
+ 0001:00001E90       uFreeBanco341.TFreeBanco341.ChecarDadosIniciais
+ 0001:00002188       uFreeBanco341.TFreeBanco341.FormataAgencCodigoCedente
+ 0001:00002230       uFreeBanco341.TFreeBanco341.GetCampoLivre
+ 0001:00002408       uFreeBanco341.TFreeBanco341.GetCodigoBanco
+ 0001:00002428       uFreeBanco341.TFreeBanco341.GetCodigoBancoComDigito
+ 0001:0000244C       uFreeBanco341.TFreeBanco341.GetDigitoNossoNum
+ 0001:00002598       uFreeBanco341.TFreeBanco341.GetNomeBanco
+ 0001:000025BC       uFreeBanco341.TFreeBanco341.GetNumeroBancario
+ 0001:00002660       uFreeBanco341.TFreeBanco341.InicializaDadosPadroes
+ 0002:000000FC       uFreeBanco341.uFreeBanco341
+ 0004:00000030       uFreeBanco356..2
+ 0001:00003F40       uFreeBanco356..TFreeBanco356
+ 0001:000045BC       uFreeBanco356.Finalization
+ 0001:000040E0       uFreeBanco356.TFreeBanco356.ChecarDadosIniciais
+ 0001:000042F8       uFreeBanco356.TFreeBanco356.FormataAgencCodigoCedente
+ 0001:000043B4       uFreeBanco356.TFreeBanco356.GetCampoLivre
+ 0001:0000443C       uFreeBanco356.TFreeBanco356.GetCodigoBanco
+ 0001:0000445C       uFreeBanco356.TFreeBanco356.GetCodigoBancoComDigito
+ 0001:00004480       uFreeBanco356.TFreeBanco356.GetDigitoNossoNum
+ 0001:00004500       uFreeBanco356.TFreeBanco356.GetNomeBanco
+ 0001:00004524       uFreeBanco356.TFreeBanco356.GetNumeroBancario
+ 0001:00004538       uFreeBanco356.TFreeBanco356.InicializaDadosPadroes
+ 0002:0000014C       uFreeBanco356.uFreeBanco356
+ 0004:0000002C       uFreeBanco409..2
+ 0001:00003828       uFreeBanco409..TFreeBanco409
+ 0001:00003F10       uFreeBanco409.Finalization
+ 0001:000039C8       uFreeBanco409.TFreeBanco409.ChecarDadosIniciais
+ 0001:00003C18       uFreeBanco409.TFreeBanco409.FormataAgencCodigoCedente
+ 0001:00003CB4       uFreeBanco409.TFreeBanco409.GetCampoLivre
+ 0001:00003D3C       uFreeBanco409.TFreeBanco409.GetCodigoBanco
+ 0001:00003D5C       uFreeBanco409.TFreeBanco409.GetCodigoBancoComDigito
+ 0001:00003D80       uFreeBanco409.TFreeBanco409.GetDigitoNossoNum
+ 0001:00003DEC       uFreeBanco409.TFreeBanco409.GetNomeBanco
+ 0001:00003E14       uFreeBanco409.TFreeBanco409.GetNumeroBancario
+ 0001:00003E8C       uFreeBanco409.TFreeBanco409.InicializaDadosPadroes
+ 0002:00000138       uFreeBanco409.uFreeBanco409
+ 0004:00000038       uFreeBoleto..9
+ 0001:00004FA0       uFreeBoleto..TCamposBanco001
+ 0001:00004ECC       uFreeBoleto..TCamposBanco151
+ 0001:0000506C       uFreeBoleto..TCedente
+ 0001:00005454       uFreeBoleto..TDadosGerados
+ 0001:00005514       uFreeBoleto..TFreeBoleto
+ 0001:00005804       uFreeBoleto..TFreeBoletoList
+ 0001:00005890       uFreeBoleto..TFreeClasseBanco
+ 0001:00005284       uFreeBoleto..TSacado
+ 0001:000064FC       uFreeBoleto.Finalization
+ 0001:000063DC       uFreeBoleto.Register
+ 0001:000064EC       uFreeBoleto.TCamposBanco001.Limpar
+ 0001:000063CC       uFreeBoleto.TCamposBanco151.Limpar
+ 0001:00006200       uFreeBoleto.TCedente.create
+ 0001:00006250       uFreeBoleto.TCedente.Destroy
+ 0001:00006140       uFreeBoleto.TCedente.Limpar
+ 0001:000061D0       uFreeBoleto.TDadosGerados.Limpar
+ 0001:00005A70       uFreeBoleto.TFreeBoleto.Create
+ 0001:00005AE8       uFreeBoleto.TFreeBoleto.Destroy
+ 0001:00005B30       uFreeBoleto.TFreeBoleto.GetFatorVencto
+ 0001:000060B4       uFreeBoleto.TFreeBoleto.Limpar
+ 0001:00006124       uFreeBoleto.TFreeBoleto.LimparTudo
+ 0001:00005C30       uFreeBoleto.TFreeBoleto.MontaCodigoDeBarras
+ 0001:00005D2C       uFreeBoleto.TFreeBoleto.MontaLinhaDigitavel
+ 0001:00005EC8       uFreeBoleto.TFreeBoleto.Preparar
+ 0001:0000640C       uFreeBoleto.TFreeBoleto.SetInstrucoes
+ 0001:00006490       uFreeBoleto.TFreeBoletoList.Add
+ 0001:000064D8       uFreeBoleto.TFreeBoletoList.Clear
+ 0001:00006448       uFreeBoleto.TFreeBoletoList.Create
+ 0001:000064CC       uFreeBoleto.TFreeBoletoList.Delete
+ 0001:0000649C       uFreeBoleto.TFreeBoletoList.Destroy
+ 0001:000064E4       uFreeBoleto.TFreeBoletoList.GetCountItems
+ 0001:00006428       uFreeBoleto.TFreeBoletoList.GetItem
+ 0001:0000643C       uFreeBoleto.TFreeBoletoList.SetItem
+ 0001:0000628C       uFreeBoleto.TFreeClasseBanco.ChecarDadosIniciais
+ 0001:00005A48       uFreeBoleto.TFreeClasseBanco.FormataAgencCodigoCedente
+ 0001:00005A30       uFreeBoleto.TFreeClasseBanco.GetCampoLivre
+ 0001:00005A38       uFreeBoleto.TFreeClasseBanco.GetCodigoBanco
+ 0001:00005A40       uFreeBoleto.TFreeClasseBanco.GetCodigoBancoComDigito
+ 0001:00005A50       uFreeBoleto.TFreeClasseBanco.GetDigitoNossoNum
+ 0001:00005A60       uFreeBoleto.TFreeClasseBanco.GetNomeBanco
+ 0001:00005A58       uFreeBoleto.TFreeClasseBanco.GetNumeroBancario
+ 0001:00005A68       uFreeBoleto.TFreeClasseBanco.InicializaDadosPadroes
+ 0001:0000618C       uFreeBoleto.TSacado.Limpar
+ 0002:00000174       uFreeBoleto.uFreeBoleto
+ 0004:0000003C       uFreeBoletoImage..3
+ 0001:00006AF8       uFreeBoletoImage..TFreeBoletoImagem
+ 0001:00006584       uFreeBoletoImage..TfrmFreeBoletoImg
+ 0001:00006D7C       uFreeBoletoImage.DesenhaBloco
+ 0001:0000823C       uFreeBoletoImage.Finalization
+ 0001:00007B18       uFreeBoletoImage.Register
+ 0001:00007C60       uFreeBoletoImage.TFreeBoletoImagem.Create
+ 0001:00007384       uFreeBoletoImage.TFreeBoletoImagem.Define2de5
+ 0001:0000712C       uFreeBoletoImage.TFreeBoletoImagem.DesenhaBoleto
+ 0001:00007CC4       uFreeBoletoImage.TFreeBoletoImagem.Destroy
+ 0001:00007DF4       uFreeBoletoImage.TFreeBoletoImagem.GetBoletoAtual
+ 0001:00007EC4       uFreeBoletoImage.TFreeBoletoImagem.GetBoletoIndex
+ 0001:00007728       uFreeBoletoImage.TFreeBoletoImagem.GetImagem
+ 0001:00007968       uFreeBoletoImage.TFreeBoletoImagem.SaveBoletoImagem
+ 0001:00007E14       uFreeBoletoImage.TFreeBoletoImagem.SetBoletoAtual
+ 0001:00007E74       uFreeBoletoImage.TFreeBoletoImagem.SetBoletoIndex
+ 0001:00007F80       uFreeBoletoImage.TFreeBoletoImagem.SetDestruirBoletos
+ 0001:00007274       uFreeBoletoImage.TFreeBoletoImagem.ShowPreview
+ 0001:00007D30       uFreeBoletoImage.TFreeBoletoImagem.UpdateImagem
+ 0001:00007D80       uFreeBoletoImage.TfrmFreeBoletoImg.ActionAnteriorExecute
+ 0001:00007B50       uFreeBoletoImage.TfrmFreeBoletoImg.ActionConfigurarImpressoraExecute
+ 0001:00007C28       uFreeBoletoImage.TfrmFreeBoletoImg.ActionCopiarExecute
+ 0001:00007F6C       uFreeBoletoImage.TfrmFreeBoletoImg.ActionFecharJanelaExecute
+ 0001:00007B48       uFreeBoletoImage.TfrmFreeBoletoImg.ActionImprimirExecute
+ 0001:00007DB4       uFreeBoletoImage.TfrmFreeBoletoImg.ActionProximaExecute
+ 0001:00007B5C       uFreeBoletoImage.TfrmFreeBoletoImg.ActionSalvarImagemExecute
+ 0001:00007FAC       uFreeBoletoImage.TfrmFreeBoletoImg.BltTBitmapAsDib
+ 0001:00007CF4       uFreeBoletoImage.TfrmFreeBoletoImg.FormCreate
+ 0001:00007D24       uFreeBoletoImage.TfrmFreeBoletoImg.FormDestroy
+ 0001:00007AD4       uFreeBoletoImage.TfrmFreeBoletoImg.FormResize
+ 0001:00006C10       uFreeBoletoImage.TfrmFreeBoletoImg.PrintBoleto
+ 0001:00007EE0       uFreeBoletoImage.TfrmFreeBoletoImg.TrackBar1Change
+ 0001:00007F74       uFreeBoletoImage.TfrmFreeBoletoImg.TrackTimerTimer
+ 0002:000001AC       uFreeBoletoImage.uFreeBoletoImage
+ 0004:00000014       uFuncAux..1
+ 0001:00000B98       uFuncAux.CalcDigVerificador
+ 0001:00000C5C       uFuncAux.Finalization
+ 0001:000009CC       uFuncAux.Modulo10
+ 0001:00000AB0       uFuncAux.Modulo11
+ 0001:000008F8       uFuncAux.PadL
+ 0002:000000CC       uFuncAux.uFuncAux
+ 0004:0000000C       Windows..3
+ 0001:00000404       Windows.Finalization
+ 0001:0000039C       Windows.FreeLibrary
+ 0001:000003F4       Windows.GetDC
+ 0001:000003CC       Windows.GetDeviceCaps
+ 0001:000003C4       Windows.GetDIBits
+ 0001:000003D4       Windows.GetSystemPaletteEntries
+ 0001:000003A4       Windows.GlobalAlloc
+ 0001:000003AC       Windows.GlobalFree
+ 0001:000003B4       Windows.GlobalLock
+ 0001:000003BC       Windows.GlobalUnlock
+ 0004:00000010       Windows.HtmlHelpModule
+ 0001:000003DC       Windows.RealizePalette
+ 0001:000003FC       Windows.ReleaseDC
+ 0001:000003E4       Windows.SelectPalette
+ 0001:000003EC       Windows.StretchDIBits
+ 0002:00000010       Windows.Windows
+
+
+  Address             Publics by Value
+
+ 0001:00000180       SysInit.FreeLibrary
+ 0001:00000188       SysInit.LocalAlloc
+ 0001:00000190       SysInit.LocalFree
+ 0001:00000198       SysInit.TlsAlloc
+ 0001:000001A0       SysInit.TlsFree
+ 0001:000001A8       SysInit.TlsGetValue
+ 0001:000001B0       SysInit.TlsSetValue
+ 0001:000001B8       SysInit.AllocTlsBuffer
+ 0001:000001C4       SysInit.GetTlsSize
+ 0001:000001CC       SysInit.InitThreadTLS
+ 0001:00000210       SysInit.InitProcessTLS
+ 0001:0000023C       SysInit.ExitThreadTLS
+ 0001:00000274       SysInit.ExitProcessTLS
+ 0001:00000298       SysInit.InitializeModule
+ 0001:000002A4       SysInit.UninitializeModule
+ 0001:000002C8       SysInit.@InitPkg
+ 0001:0000032C       SysInit.@PackageLoad
+ 0001:00000338       SysInit.@PackageUnload
+ 0001:0000039C       Windows.FreeLibrary
+ 0001:000003A4       Windows.GlobalAlloc
+ 0001:000003AC       Windows.GlobalFree
+ 0001:000003B4       Windows.GlobalLock
+ 0001:000003BC       Windows.GlobalUnlock
+ 0001:000003C4       Windows.GetDIBits
+ 0001:000003CC       Windows.GetDeviceCaps
+ 0001:000003D4       Windows.GetSystemPaletteEntries
+ 0001:000003DC       Windows.RealizePalette
+ 0001:000003E4       Windows.SelectPalette
+ 0001:000003EC       Windows.StretchDIBits
+ 0001:000003F4       Windows.GetDC
+ 0001:000003FC       Windows.ReleaseDC
+ 0001:00000404       Windows.Finalization
+ 0001:000008F8       uFuncAux.PadL
+ 0001:000009CC       uFuncAux.Modulo10
+ 0001:00000AB0       uFuncAux.Modulo11
+ 0001:00000B98       uFuncAux.CalcDigVerificador
+ 0001:00000C5C       uFuncAux.Finalization
+ 0001:00000C8C       uFreeBanco033..TFreeBanco033
+ 0001:00000E2C       uFreeBanco033.TFreeBanco033.ChecarDadosIniciais
+ 0001:00000F98       uFreeBanco033.TFreeBanco033.FormataAgencCodigoCedente
+ 0001:00001090       uFreeBanco033.TFreeBanco033.GetCampoLivre
+ 0001:000011E0       uFreeBanco033.TFreeBanco033.GetCodigoBanco
+ 0001:00001200       uFreeBanco033.TFreeBanco033.GetCodigoBancoComDigito
+ 0001:00001238       uFreeBanco033.TFreeBanco033.GetDigitoNossoNum
+ 0001:0000133C       uFreeBanco033.TFreeBanco033.GetNomeBanco
+ 0001:00001360       uFreeBanco033.TFreeBanco033.GetNumeroBancario
+ 0001:0000143C       uFreeBanco033.TFreeBanco033.InicializaDadosPadroes
+ 0001:000014C4       uFreeBanco033.Finalization
+ 0001:00001508       uFreeBanco104..TFreeBanco104
+ 0001:000016A8       uFreeBanco104.TFreeBanco104.ChecarDadosIniciais
+ 0001:00001880       uFreeBanco104.TFreeBanco104.FormataAgencCodigoCedente
+ 0001:000019E8       uFreeBanco104.TFreeBanco104.GetCampoLivre
+ 0001:00001AAC       uFreeBanco104.TFreeBanco104.GetCodigoBanco
+ 0001:00001ACC       uFreeBanco104.TFreeBanco104.GetCodigoBancoComDigito
+ 0001:00001AF0       uFreeBanco104.TFreeBanco104.GetDigitoNossoNum
+ 0001:00001B94       uFreeBanco104.TFreeBanco104.GetNomeBanco
+ 0001:00001BB8       uFreeBanco104.TFreeBanco104.GetNumeroBancario
+ 0001:00001C5C       uFreeBanco104.TFreeBanco104.InicializaDadosPadroes
+ 0001:00001CC0       uFreeBanco104.Finalization
+ 0001:00001CF0       uFreeBanco341..TFreeBanco341
+ 0001:00001E90       uFreeBanco341.TFreeBanco341.ChecarDadosIniciais
+ 0001:00002188       uFreeBanco341.TFreeBanco341.FormataAgencCodigoCedente
+ 0001:00002230       uFreeBanco341.TFreeBanco341.GetCampoLivre
+ 0001:00002408       uFreeBanco341.TFreeBanco341.GetCodigoBanco
+ 0001:00002428       uFreeBanco341.TFreeBanco341.GetCodigoBancoComDigito
+ 0001:0000244C       uFreeBanco341.TFreeBanco341.GetDigitoNossoNum
+ 0001:00002598       uFreeBanco341.TFreeBanco341.GetNomeBanco
+ 0001:000025BC       uFreeBanco341.TFreeBanco341.GetNumeroBancario
+ 0001:00002660       uFreeBanco341.TFreeBanco341.InicializaDadosPadroes
+ 0001:000026C4       uFreeBanco341.Finalization
+ 0001:00002700       uFreeBanco151..TFreeBanco151
+ 0001:000028A0       uFreeBanco151.TFreeBanco151.ChecarDadosIniciais
+ 0001:00002A30       uFreeBanco151.TFreeBanco151.ConfiguraModalidadeConta
+ 0001:00002A94       uFreeBanco151.TFreeBanco151.FormataAgencCodigoCedente
+ 0001:00002B74       uFreeBanco151.TFreeBanco151.GetCampoLivre
+ 0001:00002D48       uFreeBanco151.TFreeBanco151.GetCodigoBanco
+ 0001:00002D68       uFreeBanco151.TFreeBanco151.GetCodigoBancoComDigito
+ 0001:00002DAC       uFreeBanco151.TFreeBanco151.GetDigitoNossoNum
+ 0001:00002EFC       uFreeBanco151.TFreeBanco151.GetNomeBanco
+ 0001:00002F24       uFreeBanco151.TFreeBanco151.GetNumeroBancario
+ 0001:00002FD4       uFreeBanco151.TFreeBanco151.InicializaDadosPadroes
+ 0001:00003054       uFreeBanco151.Finalization
+ 0001:00003090       uFreeBanco237..TFreeBanco237
+ 0001:00003230       uFreeBanco237.TFreeBanco237.ChecarDadosIniciais
+ 0001:00003484       uFreeBanco237.TFreeBanco237.FormataAgencCodigoCedente
+ 0001:00003558       uFreeBanco237.TFreeBanco237.GetCampoLivre
+ 0001:000035D0       uFreeBanco237.TFreeBanco237.GetCodigoBanco
+ 0001:000035F0       uFreeBanco237.TFreeBanco237.GetCodigoBancoComDigito
+ 0001:00003614       uFreeBanco237.TFreeBanco237.GetDigitoNossoNum
+ 0001:000036C0       uFreeBanco237.TFreeBanco237.GetNomeBanco
+ 0001:000036E8       uFreeBanco237.TFreeBanco237.GetNumeroBancario
+ 0001:00003774       uFreeBanco237.TFreeBanco237.InicializaDadosPadroes
+ 0001:000037F8       uFreeBanco237.Finalization
+ 0001:00003828       uFreeBanco409..TFreeBanco409
+ 0001:000039C8       uFreeBanco409.TFreeBanco409.ChecarDadosIniciais
+ 0001:00003C18       uFreeBanco409.TFreeBanco409.FormataAgencCodigoCedente
+ 0001:00003CB4       uFreeBanco409.TFreeBanco409.GetCampoLivre
+ 0001:00003D3C       uFreeBanco409.TFreeBanco409.GetCodigoBanco
+ 0001:00003D5C       uFreeBanco409.TFreeBanco409.GetCodigoBancoComDigito
+ 0001:00003D80       uFreeBanco409.TFreeBanco409.GetDigitoNossoNum
+ 0001:00003DEC       uFreeBanco409.TFreeBanco409.GetNomeBanco
+ 0001:00003E14       uFreeBanco409.TFreeBanco409.GetNumeroBancario
+ 0001:00003E8C       uFreeBanco409.TFreeBanco409.InicializaDadosPadroes
+ 0001:00003F10       uFreeBanco409.Finalization
+ 0001:00003F40       uFreeBanco356..TFreeBanco356
+ 0001:000040E0       uFreeBanco356.TFreeBanco356.ChecarDadosIniciais
+ 0001:000042F8       uFreeBanco356.TFreeBanco356.FormataAgencCodigoCedente
+ 0001:000043B4       uFreeBanco356.TFreeBanco356.GetCampoLivre
+ 0001:0000443C       uFreeBanco356.TFreeBanco356.GetCodigoBanco
+ 0001:0000445C       uFreeBanco356.TFreeBanco356.GetCodigoBancoComDigito
+ 0001:00004480       uFreeBanco356.TFreeBanco356.GetDigitoNossoNum
+ 0001:00004500       uFreeBanco356.TFreeBanco356.GetNomeBanco
+ 0001:00004524       uFreeBanco356.TFreeBanco356.GetNumeroBancario
+ 0001:00004538       uFreeBanco356.TFreeBanco356.InicializaDadosPadroes
+ 0001:000045BC       uFreeBanco356.Finalization
+ 0001:000045EC       uFreeBanco001..TFreeBanco001
+ 0001:0000478C       uFreeBanco001.TFreeBanco001.ChecarDadosIniciais
+ 0001:00004988       uFreeBanco001.TFreeBanco001.FormataAgencCodigoCedente
+ 0001:00004A70       uFreeBanco001.TFreeBanco001.GetCampoLivre
+ 0001:00004C08       uFreeBanco001.TFreeBanco001.GetCodigoBanco
+ 0001:00004C28       uFreeBanco001.TFreeBanco001.GetCodigoBancoComDigito
+ 0001:00004C4C       uFreeBanco001.TFreeBanco001.GetModulo11BB
+ 0001:00004CC0       uFreeBanco001.TFreeBanco001.GetDigitoNossoNum
+ 0001:00004D58       uFreeBanco001.TFreeBanco001.GetNomeBanco
+ 0001:00004D84       uFreeBanco001.TFreeBanco001.GetNumeroBancario
+ 0001:00004E38       uFreeBanco001.TFreeBanco001.InicializaDadosPadroes
+ 0001:00004E9C       uFreeBanco001.Finalization
+ 0001:00004ECC       uFreeBoleto..TCamposBanco151
+ 0001:00004FA0       uFreeBoleto..TCamposBanco001
+ 0001:0000506C       uFreeBoleto..TCedente
+ 0001:00005284       uFreeBoleto..TSacado
+ 0001:00005454       uFreeBoleto..TDadosGerados
+ 0001:00005514       uFreeBoleto..TFreeBoleto
+ 0001:00005804       uFreeBoleto..TFreeBoletoList
+ 0001:00005890       uFreeBoleto..TFreeClasseBanco
+ 0001:00005A30       uFreeBoleto.TFreeClasseBanco.GetCampoLivre
+ 0001:00005A38       uFreeBoleto.TFreeClasseBanco.GetCodigoBanco
+ 0001:00005A40       uFreeBoleto.TFreeClasseBanco.GetCodigoBancoComDigito
+ 0001:00005A48       uFreeBoleto.TFreeClasseBanco.FormataAgencCodigoCedente
+ 0001:00005A50       uFreeBoleto.TFreeClasseBanco.GetDigitoNossoNum
+ 0001:00005A58       uFreeBoleto.TFreeClasseBanco.GetNumeroBancario
+ 0001:00005A60       uFreeBoleto.TFreeClasseBanco.GetNomeBanco
+ 0001:00005A68       uFreeBoleto.TFreeClasseBanco.InicializaDadosPadroes
+ 0001:00005A70       uFreeBoleto.TFreeBoleto.Create
+ 0001:00005AE8       uFreeBoleto.TFreeBoleto.Destroy
+ 0001:00005B30       uFreeBoleto.TFreeBoleto.GetFatorVencto
+ 0001:00005C30       uFreeBoleto.TFreeBoleto.MontaCodigoDeBarras
+ 0001:00005D2C       uFreeBoleto.TFreeBoleto.MontaLinhaDigitavel
+ 0001:00005EC8       uFreeBoleto.TFreeBoleto.Preparar
+ 0001:000060B4       uFreeBoleto.TFreeBoleto.Limpar
+ 0001:00006124       uFreeBoleto.TFreeBoleto.LimparTudo
+ 0001:00006140       uFreeBoleto.TCedente.Limpar
+ 0001:0000618C       uFreeBoleto.TSacado.Limpar
+ 0001:000061D0       uFreeBoleto.TDadosGerados.Limpar
+ 0001:00006200       uFreeBoleto.TCedente.create
+ 0001:00006250       uFreeBoleto.TCedente.Destroy
+ 0001:0000628C       uFreeBoleto.TFreeClasseBanco.ChecarDadosIniciais
+ 0001:000063CC       uFreeBoleto.TCamposBanco151.Limpar
+ 0001:000063DC       uFreeBoleto.Register
+ 0001:0000640C       uFreeBoleto.TFreeBoleto.SetInstrucoes
+ 0001:00006428       uFreeBoleto.TFreeBoletoList.GetItem
+ 0001:0000643C       uFreeBoleto.TFreeBoletoList.SetItem
+ 0001:00006448       uFreeBoleto.TFreeBoletoList.Create
+ 0001:00006490       uFreeBoleto.TFreeBoletoList.Add
+ 0001:0000649C       uFreeBoleto.TFreeBoletoList.Destroy
+ 0001:000064CC       uFreeBoleto.TFreeBoletoList.Delete
+ 0001:000064D8       uFreeBoleto.TFreeBoletoList.Clear
+ 0001:000064E4       uFreeBoleto.TFreeBoletoList.GetCountItems
+ 0001:000064EC       uFreeBoleto.TCamposBanco001.Limpar
+ 0001:000064FC       uFreeBoleto.Finalization
+ 0001:00006584       uFreeBoletoImage..TfrmFreeBoletoImg
+ 0001:00006AF8       uFreeBoletoImage..TFreeBoletoImagem
+ 0001:00006C10       uFreeBoletoImage.TfrmFreeBoletoImg.PrintBoleto
+ 0001:00006D7C       uFreeBoletoImage.DesenhaBloco
+ 0001:0000712C       uFreeBoletoImage.TFreeBoletoImagem.DesenhaBoleto
+ 0001:00007274       uFreeBoletoImage.TFreeBoletoImagem.ShowPreview
+ 0001:00007384       uFreeBoletoImage.TFreeBoletoImagem.Define2de5
+ 0001:00007728       uFreeBoletoImage.TFreeBoletoImagem.GetImagem
+ 0001:00007968       uFreeBoletoImage.TFreeBoletoImagem.SaveBoletoImagem
+ 0001:00007AD4       uFreeBoletoImage.TfrmFreeBoletoImg.FormResize
+ 0001:00007B18       uFreeBoletoImage.Register
+ 0001:00007B48       uFreeBoletoImage.TfrmFreeBoletoImg.ActionImprimirExecute
+ 0001:00007B50       uFreeBoletoImage.TfrmFreeBoletoImg.ActionConfigurarImpressoraExecute
+ 0001:00007B5C       uFreeBoletoImage.TfrmFreeBoletoImg.ActionSalvarImagemExecute
+ 0001:00007C28       uFreeBoletoImage.TfrmFreeBoletoImg.ActionCopiarExecute
+ 0001:00007C60       uFreeBoletoImage.TFreeBoletoImagem.Create
+ 0001:00007CC4       uFreeBoletoImage.TFreeBoletoImagem.Destroy
+ 0001:00007CF4       uFreeBoletoImage.TfrmFreeBoletoImg.FormCreate
+ 0001:00007D24       uFreeBoletoImage.TfrmFreeBoletoImg.FormDestroy
+ 0001:00007D30       uFreeBoletoImage.TFreeBoletoImagem.UpdateImagem
+ 0001:00007D80       uFreeBoletoImage.TfrmFreeBoletoImg.ActionAnteriorExecute
+ 0001:00007DB4       uFreeBoletoImage.TfrmFreeBoletoImg.ActionProximaExecute
+ 0001:00007DF4       uFreeBoletoImage.TFreeBoletoImagem.GetBoletoAtual
+ 0001:00007E14       uFreeBoletoImage.TFreeBoletoImagem.SetBoletoAtual
+ 0001:00007E74       uFreeBoletoImage.TFreeBoletoImagem.SetBoletoIndex
+ 0001:00007EC4       uFreeBoletoImage.TFreeBoletoImagem.GetBoletoIndex
+ 0001:00007EE0       uFreeBoletoImage.TfrmFreeBoletoImg.TrackBar1Change
+ 0001:00007F6C       uFreeBoletoImage.TfrmFreeBoletoImg.ActionFecharJanelaExecute
+ 0001:00007F74       uFreeBoletoImage.TfrmFreeBoletoImg.TrackTimerTimer
+ 0001:00007F80       uFreeBoletoImage.TFreeBoletoImagem.SetDestruirBoletos
+ 0001:00007FAC       uFreeBoletoImage.TfrmFreeBoletoImg.BltTBitmapAsDib
+ 0001:0000823C       uFreeBoletoImage.Finalization
+ 0001:000084BC       .FreeBoleto_D9.@GetPackageInfoTable
+ 0001:000084C4       .FreeBoleto_D9.@PackageLoad
+ 0001:000084D0       .FreeBoleto_D9.@PackageUnload
+ 0002:00000010       Windows.Windows
+ 0002:000000CC       uFuncAux.uFuncAux
+ 0002:000000D4       uFreeBanco033.uFreeBanco033
+ 0002:000000E8       uFreeBanco104.uFreeBanco104
+ 0002:000000FC       uFreeBanco341.uFreeBanco341
+ 0002:00000110       uFreeBanco151.uFreeBanco151
+ 0002:00000124       uFreeBanco237.uFreeBanco237
+ 0002:00000138       uFreeBanco409.uFreeBanco409
+ 0002:0000014C       uFreeBanco356.uFreeBanco356
+ 0002:00000160       uFreeBanco001.uFreeBanco001
+ 0002:00000174       uFreeBoleto.uFreeBoleto
+ 0002:000001AC       uFreeBoletoImage.uFreeBoletoImage
+ 0002:000001B4       .FreeBoleto_D9..FreeBoleto_D9
+ 0003:00000000       SysInit.TlsIndex
+ 0003:00000004       SysInit.Module
+ 0003:0000001C       SysInit.TlsProc
+ 0003:0000002C       uFreeBanco033.Filler
+ 0003:00000030       uFreeBanco033.peso
+ 0003:00000034       uFreeBanco341.Filler
+ 0003:00000038       uFreeBanco151.peso
+ 0004:00000000       SysInit.ModuleIsLib
+ 0004:00000001       SysInit.ModuleIsPackage
+ 0004:00000004       SysInit.HInstance
+ 0004:00000008       SysInit.tlsBuffer
+ 0004:0000000C       Windows..3
+ 0004:00000010       Windows.HtmlHelpModule
+ 0004:00000014       uFuncAux..1
+ 0004:00000018       uFreeBanco033..2
+ 0004:0000001C       uFreeBanco104..2
+ 0004:00000020       uFreeBanco341..2
+ 0004:00000024       uFreeBanco151..2
+ 0004:00000028       uFreeBanco237..2
+ 0004:0000002C       uFreeBanco409..2
+ 0004:00000030       uFreeBanco356..2
+ 0004:00000034       uFreeBanco001..2
+ 0004:00000038       uFreeBoleto..9
+ 0004:0000003C       uFreeBoletoImage..3
+ 0005:00000000       SysInit.TlsLast
+
+
+Line numbers for uFuncAux(uFuncAux.pas) segment .text
+
+    17 0001:000008F8    18 0001:00000926    19 0001:0000093C    20 0001:00000946
+    21 0001:00000957    22 0001:00000963    24 0001:00000975    25 0001:0000099F
+    30 0001:000009CC    31 0001:000009F6    32 0001:000009FD    34 0001:00000A0C
+    35 0001:00000A26    36 0001:00000A2B    38 0001:00000A32    40 0001:00000A34
+    41 0001:00000A39    43 0001:00000A40    44 0001:00000A45    32 0001:00000A46
+    46 0001:00000A4A    48 0001:00000A56    49 0001:00000A5A    51 0001:00000A69
+    52 0001:00000A78    57 0001:00000AB0    58 0001:00000ADD    59 0001:00000AE4
+    61 0001:00000AF3    62 0001:00000B0D    64 0001:00000B0F    65 0001:00000B14
+    67 0001:00000B17    68 0001:00000B1C    59 0001:00000B1D    70 0001:00000B21
+    72 0001:00000B30    73 0001:00000B38    75 0001:00000B47    76 0001:00000B5C
+    82 0001:00000B98    83 0001:00000BBF    84 0001:00000BC6    85 0001:00000BD5
+    87 0001:00000BDA    88 0001:00000BF4    89 0001:00000BF6    90 0001:00000BFB
+    92 0001:00000BFE    93 0001:00000C03    84 0001:00000C04    95 0001:00000C08
+    97 0001:00000C19    98 0001:00000C27   100 0001:00000C2B   101 0001:00000C2E
+
+Line numbers for uFuncAux(uFuncAux.pas) segment .itext
+
+   103 0002:000000CC
+
+Line numbers for uFreeBanco033(uFreeBanco033.pas) segment .text
+
+    26 0001:00000E2C    27 0001:00000E42    30 0001:00000E49    31 0001:00000E56
+    33 0001:00000E6E    35 0001:00000E8C    36 0001:00000E9F    38 0001:00000EB5
+    39 0001:00000EBE    41 0001:00000ED4    44 0001:00000F98    46 0001:00000FB7
+    50 0001:0000104E    57 0001:00001090    59 0001:000010BA    60 0001:000010F9
+    62 0001:00001104    63 0001:00001126    65 0001:0000112C    66 0001:0000113B
+    68 0001:0000114A    70 0001:00001175    71 0001:0000117B    72 0001:00001190
+    75 0001:000011E0    77 0001:000011E3    78 0001:000011EF    81 0001:00001200
+    83 0001:00001203    84 0001:0000120F    92 0001:00001238    94 0001:00001257
+    95 0001:000012AB    96 0001:000012AD    97 0001:000012B2    96 0001:000012ED
+    98 0001:000012F2    99 0001:000012FE   100 0001:0000130B   101 0001:0000130E
+   104 0001:0000133C   106 0001:0000133F   107 0001:0000134B   110 0001:00001360
+   112 0001:00001384   113 0001:000013FA   116 0001:0000143C   120 0001:0000143F
+   121 0001:00001452   122 0001:00001465   123 0001:00001478   125 0001:0000148B
+
+Line numbers for uFreeBanco033(uFreeBanco033.pas) segment .itext
+
+   127 0002:000000D4   128 0002:000000DD   130 0002:000000E7
+
+Line numbers for uFreeBanco104(uFreeBanco104.pas) segment .text
+
+    26 0001:000016A8    27 0001:000016BE    30 0001:000016C5    31 0001:000016D4
+    33 0001:000016EA    34 0001:000016F7    36 0001:0000170F    38 0001:0000172D
+    39 0001:00001740    41 0001:00001756    42 0001:0000175F    44 0001:00001775
+    50 0001:00001880    52 0001:000018A9    53 0001:000018F8    54 0001:0000190C
+    55 0001:00001917    57 0001:0000191B    58 0001:00001921    60 0001:00001981
+    66 0001:000019E8    68 0001:00001A08    70 0001:00001A5F    71 0001:00001A69
+    74 0001:00001AAC    76 0001:00001AAF    77 0001:00001ABB    80 0001:00001ACC
+    82 0001:00001ACF    83 0001:00001ADB    89 0001:00001AF0    91 0001:00001B0A
+    92 0001:00001B2D    93 0001:00001B41    94 0001:00001B4C    96 0001:00001B50
+    97 0001:00001B56   100 0001:00001B94   102 0001:00001B97   103 0001:00001BA3
+   106 0001:00001BB8   108 0001:00001BD6   109 0001:00001C18   112 0001:00001C5C
+   116 0001:00001C5F   117 0001:00001C72   118 0001:00001C85   120 0001:00001C98
+
+Line numbers for uFreeBanco104(uFreeBanco104.pas) segment .itext
+
+   122 0002:000000E8   123 0002:000000F1   125 0002:000000FB
+
+Line numbers for uFreeBanco341(uFreeBanco341.pas) segment .text
+
+    34 0001:00001E90    35 0001:00001EAB    38 0001:00001EB2    39 0001:00001EBF
+    41 0001:00001ED7    44 0001:00001EF5    45 0001:00001F08    47 0001:00001F1E
+    48 0001:00001F41    50 0001:00001F57    51 0001:00001F60    53 0001:00001F76
+    54 0001:00001F83    56 0001:00001F99    58 0001:00001FC1    61 0001:00001FEF
+    69 0001:00002188    71 0001:000021A4    72 0001:000021E3    82 0001:00002230
+    84 0001:0000225B    86 0001:00002270    95 0001:00002318    98 0001:00002370
+   101 0001:00002393   102 0001:0000239D   109 0001:00002408   111 0001:0000240B
+   112 0001:00002417   119 0001:00002428   121 0001:0000242B   122 0001:00002437
+   132 0001:0000244C   134 0001:0000246C   136 0001:0000247D   141 0001:000024B8
+   146 0001:00002541   147 0001:00002552   155 0001:00002598   157 0001:0000259B
+   158 0001:000025A7   166 0001:000025BC   168 0001:000025DA   169 0001:0000261F
+   177 0001:00002660   181 0001:00002663   182 0001:00002676   183 0001:00002689
+   185 0001:0000269C
+
+Line numbers for uFreeBanco341(uFreeBanco341.pas) segment .itext
+
+   187 0002:000000FC   188 0002:00000105   190 0002:0000010F
+
+Line numbers for uFreeBanco151(uFreeBanco151.pas) segment .text
+
+    32 0001:000028A0    33 0001:000028B6    36 0001:000028BD    37 0001:000028D3
+    39 0001:000028E9    40 0001:000028F6    42 0001:0000290E    44 0001:0000292C
+    45 0001:00002935    47 0001:0000294B    50 0001:00002A30    51 0001:00002A50
+    52 0001:00002A5D    54 0001:00002A69    55 0001:00002A72    58 0001:00002A94
+    59 0001:00002AB6    63 0001:00002B3F    70 0001:00002B74    72 0001:00002B9E
+    78 0001:00002C40    80 0001:00002C4B    81 0001:00002C4D    82 0001:00002C6F
+    83 0001:00002C7B    85 0001:00002C8A    86 0001:00002C8C    87 0001:00002C9B
+    89 0001:00002CAA    92 0001:00002CC6    93 0001:00002CCA    94 0001:00002CDF
+    97 0001:00002D48    99 0001:00002D4B   100 0001:00002D57   103 0001:00002D68
+   105 0001:00002D6B   106 0001:00002D77   114 0001:00002DAC   116 0001:00002DCF
+   122 0001:00002E60   123 0001:00002E62   124 0001:00002E67   123 0001:00002EA2
+   125 0001:00002EA7   126 0001:00002EB3   127 0001:00002EC0   128 0001:00002EC3
+   131 0001:00002EFC   133 0001:00002EFF   134 0001:00002F0B   137 0001:00002F24
+   139 0001:00002F44   140 0001:00002F91   143 0001:00002FD4   147 0001:00002FDA
+   148 0001:00002FED   149 0001:00003000   150 0001:00003013   152 0001:00003026
+
+Line numbers for uFreeBanco151(uFreeBanco151.pas) segment .itext
+
+   154 0002:00000110   155 0002:00000119   157 0002:00000123
+
+Line numbers for uFreeBanco237(uFreeBanco237.pas) segment .text
+
+    67 0001:00003230    68 0001:0000324B    71 0001:00003252    72 0001:0000325F
+    74 0001:00003277    75 0001:00003284    77 0001:000032A2    78 0001:000032B5
+    80 0001:000032CD    81 0001:000032E0    83 0001:00003309    84 0001:00003314
+    86 0001:0000332C    87 0001:00003330    89 0001:00003361    90 0001:0000336E
+    92 0001:00003384   102 0001:00003484   104 0001:000034AD   106 0001:00003511
+   115 0001:00003558   117 0001:00003572   122 0001:000035A0   131 0001:000035D0
+   133 0001:000035D3   134 0001:000035DF   143 0001:000035F0   145 0001:000035F3
+   146 0001:000035FF   158 0001:00003614   160 0001:0000362E   162 0001:0000363C
+   163 0001:00003650   164 0001:00003656   166 0001:00003665   167 0001:0000366B
+   168 0001:00003678   170 0001:0000367E   180 0001:000036C0   182 0001:000036C3
+   183 0001:000036CF   193 0001:000036E8   195 0001:00003704   196 0001:00003736
+   206 0001:00003774   210 0001:00003777   211 0001:0000378A   212 0001:0000379D
+   213 0001:000037B0   215 0001:000037C3
+
+Line numbers for uFreeBanco237(uFreeBanco237.pas) segment .itext
+
+   217 0002:00000124   218 0002:0000012D   220 0002:00000137
+
+Line numbers for uFreeBanco409(uFreeBanco409.pas) segment .text
+
+    67 0001:000039C8    68 0001:000039E3    71 0001:000039EA    72 0001:000039F7
+    74 0001:00003A0F    75 0001:00003A1C    77 0001:00003A3A    78 0001:00003A4D
+    80 0001:00003A65    81 0001:00003A78    83 0001:00003A9C    84 0001:00003AA7
+    86 0001:00003ABF    87 0001:00003AC3    89 0001:00003AF4    90 0001:00003AFF
+    92 0001:00003B15   102 0001:00003C18   104 0001:00003C34   106 0001:00003C73
+   115 0001:00003CB4   117 0001:00003CCD   121 0001:00003D02   130 0001:00003D3C
+   132 0001:00003D3F   133 0001:00003D4B   142 0001:00003D5C   144 0001:00003D5F
+   145 0001:00003D6B   156 0001:00003D80   158 0001:00003D9C   159 0001:00003DB0
+   160 0001:00003DBC   162 0001:00003DC0   163 0001:00003DC6   173 0001:00003DEC
+   175 0001:00003DEF   176 0001:00003DFB   186 0001:00003E14   188 0001:00003E30
+   189 0001:00003E5A   199 0001:00003E8C   203 0001:00003E8F   204 0001:00003EA2
+   205 0001:00003EB5   206 0001:00003EC8   208 0001:00003EDB
+
+Line numbers for uFreeBanco409(uFreeBanco409.pas) segment .itext
+
+   210 0002:00000138   211 0002:00000141   213 0002:0000014B
+
+Line numbers for uFreeBanco356(uFreeBanco356.pas) segment .text
+
+    75 0001:000040E0    78 0001:000040FB    81 0001:00004102    82 0001:0000410F
+    83 0001:00004127    84 0001:00004134    86 0001:00004152    87 0001:00004165
+    92 0001:0000417B    93 0001:00004184    94 0001:0000419C    95 0001:000041A4
+    96 0001:000041DA    97 0001:000041DE   100 0001:000041F4   110 0001:000042F8
+   112 0001:00004318   115 0001:0000437D   124 0001:000043B4   126 0001:000043D5
+   131 0001:00004412   140 0001:0000443C   142 0001:0000443F   143 0001:0000444B
+   152 0001:0000445C   154 0001:0000445F   155 0001:0000446B   165 0001:00004480
+   167 0001:0000449B   168 0001:000044D3   178 0001:00004500   180 0001:00004503
+   181 0001:0000450F   191 0001:00004524   193 0001:0000452A   194 0001:00004534
+   204 0001:00004538   208 0001:0000453B   209 0001:0000454E   210 0001:00004561
+   211 0001:00004574   213 0001:00004587
+
+Line numbers for uFreeBanco356(uFreeBanco356.pas) segment .itext
+
+   215 0002:0000014C   216 0002:00000155   218 0002:0000015F
+
+Line numbers for uFreeBanco001(uFreeBanco001.pas) segment .text
+
+    81 0001:0000478C    82 0001:0000478F    85 0001:00004796    86 0001:000047A3
+    88 0001:000047B9    89 0001:000047BF    91 0001:000047D7    92 0001:000047E6
+    94 0001:000047FC    95 0001:0000480B    97 0001:00004823    98 0001:00004839
+   100 0001:0000484F   110 0001:00004988   112 0001:000049B3   113 0001:00004A27
+   123 0001:00004A70   125 0001:00004A98   126 0001:00004AA0   128 0001:00004AAF
+   129 0001:00004ABC   130 0001:00004AF1   131 0001:00004B0B   132 0001:00004B40
+   134 0001:00004B4D   135 0001:00004B82   138 0001:00004B9A   140 0001:00004BC5
+   149 0001:00004C08   151 0001:00004C0B   152 0001:00004C17   161 0001:00004C28
+   163 0001:00004C2B   164 0001:00004C37   175 0001:00004C4C   176 0001:00004C73
+   177 0001:00004C84   178 0001:00004C8A   180 0001:00004C8E   181 0001:00004C94
+   185 0001:00004CC0   187 0001:00004CDD   188 0001:00004D1C   189 0001:00004D2D
+   199 0001:00004D58   201 0001:00004D5B   202 0001:00004D67   212 0001:00004D84
+   214 0001:00004DA4   215 0001:00004E00   225 0001:00004E38   229 0001:00004E3B
+   230 0001:00004E4E   231 0001:00004E61   233 0001:00004E74
+
+Line numbers for uFreeBanco001(uFreeBanco001.pas) segment .itext
+
+   235 0002:00000160   236 0002:00000169   238 0002:00000173
+
+Line numbers for uFreeBoleto(uFreeBoleto.pas) segment .text
+
+   212 0001:00005A30   213 0001:00005A38   214 0001:00005A40   215 0001:00005A48
+   216 0001:00005A50   217 0001:00005A58   218 0001:00005A60   220 0001:00005A68
+   243 0001:00005A70   244 0001:00005A82   245 0001:00005A8B   246 0001:00005A9A
+   247 0001:00005AA9   248 0001:00005AB8   249 0001:00005AC7   250 0001:00005ACB
+   257 0001:00005AE8   258 0001:00005AF3   259 0001:00005AFB   260 0001:00005B03
+   261 0001:00005B0B   262 0001:00005B13   263 0001:00005B1F   275 0001:00005B30
+   276 0001:00005B49   277 0001:00005B63   278 0001:00005B79   279 0001:00005BAF
+   280 0001:00005BC9   290 0001:00005C30   291 0001:00005C4C   293 0001:00005C64
+   302 0001:00005CD2   303 0001:00005CED   315 0001:00005D2C   316 0001:00005D4C
+   317 0001:00005D87   318 0001:00005D9D   320 0001:00005DAF   321 0001:00005DC5
+   322 0001:00005DDB   324 0001:00005DED   325 0001:00005E03   326 0001:00005E19
+   328 0001:00005E2B   329 0001:00005E3D   331 0001:00005E56   332 0001:00005E89
+   347 0001:00005EC8   348 0001:00005EE8   349 0001:00005F1B   351 0001:00005F23
+   352 0001:00005F34   353 0001:00005F42   354 0001:00005F4C   355 0001:00005F5A
+   356 0001:00005F62   358 0001:00005F6A   359 0001:00005F8C   360 0001:00005FAE
+   361 0001:00005FCD   363 0001:00005FF9   368 0001:0000600C   370 0001:00006040
+   379 0001:000060B4   380 0001:000060B7   381 0001:000060BF   382 0001:000060C7
+   383 0001:000060CC   384 0001:000060D4   385 0001:000060D8   386 0001:000060E0
+   387 0001:000060E8   389 0001:000060F0   390 0001:000060F8   391 0001:00006100
+   392 0001:00006108   393 0001:00006110   394 0001:00006118   395 0001:00006120
+   405 0001:00006124   406 0001:00006127   407 0001:0000612E   408 0001:00006136
+   409 0001:0000613E   420 0001:00006140   421 0001:00006143   422 0001:0000614B
+   423 0001:0000614F   424 0001:00006157   425 0001:00006162   426 0001:0000616D
+   427 0001:00006174   428 0001:0000617F   429 0001:0000618A   440 0001:0000618C
+   441 0001:0000618F   442 0001:00006197   443 0001:0000619F   444 0001:000061A7
+   445 0001:000061AF   446 0001:000061B7   447 0001:000061BF   448 0001:000061C3
+   449 0001:000061CB   460 0001:000061D0   461 0001:000061D3   462 0001:000061DB
+   463 0001:000061E3   464 0001:000061EB   465 0001:000061F3   466 0001:000061FB
+   473 0001:00006200   474 0001:00006212   475 0001:00006224   476 0001:00006236
+   483 0001:00006250   484 0001:0000625B   485 0001:00006266   486 0001:00006271
+   487 0001:0000627D   492 0001:0000628C   495 0001:0000628F   496 0001:00006295
+   498 0001:000062AB   499 0001:000062BA   501 0001:000062D0   502 0001:000062DF
+   504 0001:000062F5   505 0001:00006302   507 0001:00006318   512 0001:000063CC
+   513 0001:000063CF   514 0001:000063D7   517 0001:000063DC   518 0001:000063DD
+   519 0001:000063F3   522 0001:0000640C   523 0001:00006410   524 0001:00006417
+   526 0001:00006421   527 0001:00006424   532 0001:00006428   533 0001:0000642E
+   534 0001:00006438   539 0001:0000643C   540 0001:00006444   543 0001:00006448
+   544 0001:00006461   545 0001:00006472   549 0001:00006490   550 0001:00006498
+   553 0001:0000649C   554 0001:000064A7   555 0001:000064AF   556 0001:000064BB
+   560 0001:000064CC   561 0001:000064D4   565 0001:000064D8   566 0001:000064E0
+   570 0001:000064E4   571 0001:000064EA   576 0001:000064EC   577 0001:000064EF
+   578 0001:000064F7
+
+Line numbers for uFreeBoleto(uFreeBoleto.pas) segment .itext
+
+   580 0002:00000174
+
+Line numbers for uFreeBoletoImage(uFreeBoletoImage.pas) segment .text
+
+   139 0001:00006C10   140 0001:00006C1B   141 0001:00006C2B   142 0001:00006C32
+   143 0001:00006C39   144 0001:00006C50   145 0001:00006C67   147 0001:00006C76
+   149 0001:00006C7C   151 0001:00006C84   152 0001:00006C88   155 0001:00006C91
+   157 0001:00006C96   158 0001:00006CA3   162 0001:00006CA8   163 0001:00006CAC
+   166 0001:00006CB3   168 0001:00006CBB   169 0001:00006CC7   170 0001:00006CCF
+   171 0001:00006CDD   173 0001:00006CE5   174 0001:00006CF2   175 0001:00006CFD
+   176 0001:00006D41   177 0001:00006D4E   171 0001:00006D4F   179 0001:00006D5F
+   183 0001:00006D6F   191 0001:00006D7C   194 0001:00006DA7   195 0001:00006DB4
+   196 0001:00006DC3   197 0001:00006DDE   198 0001:00006DF3   199 0001:00006E00
+   200 0001:00006E19   201 0001:00006E34   202 0001:00006E5D   203 0001:00006E72
+   204 0001:00006E8B   205 0001:00006EC1   206 0001:00006ED0   207 0001:00006EF9
+   208 0001:00006F11   209 0001:00006F23   210 0001:00006F35   211 0001:00006F4E
+   212 0001:00006F66   211 0001:00006F96   213 0001:00006F9B   215 0001:00006FB4
+   216 0001:00006FE8   217 0001:00007004   218 0001:00007020   219 0001:00007029
+   221 0001:00007038   222 0001:00007040   223 0001:00007046   225 0001:00007055
+   226 0001:0000705D   228 0001:00007098   229 0001:000070A3   231 0001:0000712C
+   232 0001:00007138   233 0001:00007154   235 0001:00007166   236 0001:00007170
+   237 0001:0000717A   239 0001:00007187   240 0001:00007193   241 0001:000071B5
+   242 0001:000071DA   244 0001:000071FF   246 0001:00007211   247 0001:0000721E
+   248 0001:0000722B   249 0001:0000723A   251 0001:00007259   254 0001:00007274
+   255 0001:0000727B   256 0001:0000728A   257 0001:000072A0   258 0001:000072B4
+   259 0001:000072C2   260 0001:000072CA   261 0001:000072D9   262 0001:000072E1
+   263 0001:000072F8   264 0001:00007316   265 0001:0000732D   267 0001:00007348
+   269 0001:0000735B   284 0001:00007384   285 0001:000073BC   286 0001:000073C8
+   287 0001:000073D5   288 0001:000073E2   289 0001:000073EF   290 0001:000073FC
+   291 0001:00007409   292 0001:00007416   293 0001:00007423   294 0001:00007430
+   295 0001:0000743D   296 0001:0000744A   297 0001:00007457   301 0001:00007464
+   302 0001:00007479   304 0001:0000748C   305 0001:000074B1   308 0001:000074D5
+   302 0001:000074D6   311 0001:000074D9   312 0001:000074E5   315 0001:000074F3
+   316 0001:000074F8   319 0001:00007505   320 0001:000075D2   317 0001:000075D5
+   324 0001:000075E8   325 0001:000075FD   342 0001:00007728   343 0001:00007747
+   344 0001:00007752   345 0001:00007763   346 0001:00007771   347 0001:0000777E
+   348 0001:00007788   349 0001:0000779E   350 0001:000077B3   351 0001:000077C4
+   352 0001:000077D5   348 0001:000077D8   354 0001:000077DD   356 0001:000077DF
+   358 0001:000077F2   361 0001:0000780C   363 0001:00007816   364 0001:0000781C
+   366 0001:00007828   368 0001:00007835   370 0001:00007842   372 0001:00007847
+   373 0001:00007852   374 0001:00007860   370 0001:00007861   379 0001:00007866
+   381 0001:0000786B   382 0001:00007876   383 0001:00007884   379 0001:00007885
+   387 0001:00007888   358 0001:0000788B   390 0001:00007896   393 0001:000078AC
+   396 0001:00007924   398 0001:00007934   403 0001:00007968   404 0001:0000798E
+   405 0001:00007994   406 0001:000079AA   407 0001:000079C0   408 0001:000079CE
+   409 0001:000079D7   410 0001:000079E1   411 0001:000079E9   412 0001:000079F8
+   414 0001:00007A06   415 0001:00007A0D   416 0001:00007A2E   417 0001:00007A36
+   419 0001:00007A4E   422 0001:00007A6B   424 0001:00007A7E   427 0001:00007AD4
+   428 0001:00007AD8   431 0001:00007AEE   433 0001:00007B12   436 0001:00007B18
+   437 0001:00007B19   438 0001:00007B2F   442 0001:00007B48   443 0001:00007B4D
+   448 0001:00007B50   449 0001:00007B5B   454 0001:00007B5C   455 0001:00007B78
+   457 0001:00007B87   458 0001:00007B96   460 0001:00007BA4   461 0001:00007BAB
+   462 0001:00007BC6   463 0001:00007BCE   465 0001:00007BF4   467 0001:00007C04
+   474 0001:00007C28   475 0001:00007C2B   476 0001:00007C49   477 0001:00007C5B
+   480 0001:00007C60   481 0001:00007C75   482 0001:00007C7E   483 0001:00007C85
+   484 0001:00007C8C   485 0001:00007C9F   486 0001:00007CA6   489 0001:00007CC4
+   490 0001:00007CCF   491 0001:00007CD7   492 0001:00007CE3   495 0001:00007CF4
+   496 0001:00007CF8   497 0001:00007D0C   498 0001:00007D1F   502 0001:00007D24
+   503 0001:00007D2F   506 0001:00007D30   507 0001:00007D34   508 0001:00007D3B
+   509 0001:00007D55   510 0001:00007D7A   513 0001:00007D80   514 0001:00007D84
+   516 0001:00007D8A   517 0001:00007D9C   518 0001:00007DAA   520 0001:00007DB1
+   523 0001:00007DB4   524 0001:00007DB8   526 0001:00007DBE   527 0001:00007DD8
+   528 0001:00007DE9   530 0001:00007DF0   533 0001:00007DF4   534 0001:00007DF7
+   535 0001:00007E03   537 0001:00007E10   538 0001:00007E12   541 0001:00007E14
+   542 0001:00007E1A   543 0001:00007E26   545 0001:00007E36   546 0001:00007E4C
+   549 0001:00007E74   550 0001:00007E7A   551 0001:00007E86   552 0001:00007E9C
+   553 0001:00007E9F   556 0001:00007EC4   557 0001:00007EC7   558 0001:00007ED3
+   560 0001:00007ED8   561 0001:00007EDB   564 0001:00007EE0   565 0001:00007EE4
+   566 0001:00007F21   569 0001:00007F2C   570 0001:00007F35   572 0001:00007F42
+   573 0001:00007F4E   574 0001:00007F66   578 0001:00007F6C   579 0001:00007F71
+   583 0001:00007F74   584 0001:00007F7F   587 0001:00007F80   588 0001:00007F88
+   589 0001:00007F90   590 0001:00007F97   591 0001:00007FA8   612 0001:00007FAC
+   629 0001:00007FBB   632 0001:00007FC6   635 0001:00007FCF   638 0001:00007FEB
+   641 0001:00007FF3   642 0001:00007FF9   644 0001:00008002   646 0001:00008009
+   649 0001:00008013   652 0001:00008021   653 0001:00008027   654 0001:0000802D
+   655 0001:00008038   657 0001:0000803E   658 0001:00008044   660 0001:0000804C
+   661 0001:00008052   662 0001:00008057   665 0001:0000806E   666 0001:00008073
+   668 0001:00008078   670 0001:0000807E   671 0001:00008085   675 0001:0000808E
+   676 0001:00008093   680 0001:00008098   681 0001:000080A3   684 0001:000080AE
+   686 0001:000080B7   692 0001:000080BD   696 0001:000080C3   699 0001:000080D8
+   700 0001:000080E6   704 0001:000080F2   706 0001:00008109   709 0001:0000810F
+   713 0001:0000811B   715 0001:00008129   717 0001:00008133   719 0001:0000813B
+   721 0001:00008144   723 0001:0000814D   715 0001:0000814E   724 0001:00008151
+   727 0001:00008158   728 0001:0000815B   731 0001:00008161   733 0001:0000816A
+   737 0001:00008170   739 0001:00008178   740 0001:00008194   744 0001:0000819A
+   746 0001:000081AB   750 0001:000081B4   752 0001:000081E5   755 0001:000081E9
+   757 0001:000081F5   761 0001:000081FE   762 0001:00008207   764 0001:00008210
+   766 0001:0000821A   767 0001:00008225   774 0001:00008230
+
+Line numbers for uFreeBoletoImage(uFreeBoletoImage.pas) segment .itext
+
+   776 0002:000001AC
+
+Line numbers for .FreeBoleto_D9(D:\Alvaro\Alvaro - Files\Delphi\Projetos\Projetos Exemplos\FreeBoleto_V050\FreeBoleto_D9.dpk) segment .itext
+
+    44 0002:000001B4
+
+Bound resource files
+
+uFreeBoletoImage.dfm
+FreeBoleto_D9.res
+FreeBoleto_D9.drf
+
+
+Program entry point at 0002:000001B4

@@ -1,0 +1,147 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{ca22d371-00bb-4290-b2b6-38a498353056}</ProjectGuid>
+    <MainSource>ISO.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>ISO.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_UnitSearchPath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_ResourcePath>
+    <DCC_ObjPath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_ObjPath>
+    <DCC_IncludePath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_IncludePath>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_UnitSearchPath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_ResourcePath>
+    <DCC_ObjPath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_ObjPath>
+    <DCC_IncludePath>$(BDS)\units;$(BDS)\vcl;$(BDS)\rtl;$(BDS)\db;$(BDS)\app\ui\res;$(BDS)\app\ed\res;$(BDS)\app\design;$(BDS)\qt;$(BDS)\clx</DCC_IncludePath>
+    <DCC_Define>DEBUG</DCC_Define>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName"></VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">ISO.dpr</Source></Source></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="ISO.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="..\..\..\..\Componentes\Sum182\Forms\smForm.pas">
+      <Form>frmForm</Form>
+    </DCCReference>
+    <DCCReference Include="..\..\..\..\Componentes\Sum182\forms\smForms.pas" />
+    <DCCReference Include="..\..\..\..\Componentes\Sum182\smCadPadrao.pas" />
+    <DCCReference Include="..\..\..\..\Componentes\Sum182\smCheckListBox.pas" />
+    <DCCReference Include="..\..\..\..\Componentes\Sum182\smDBGrid.pas" />
+    <DCCReference Include="Connection\uDmConnection.pas">
+      <Form>DMConnection</Form>
+    </DCCReference>
+    <DCCReference Include="Departamento\uDepartamentos.pas">
+      <Form>frmDepartamentos</Form>
+    </DCCReference>
+    <DCCReference Include="Fornecedores\Telefones\uTelefones.pas">
+      <Form>frmTelefones</Form>
+    </DCCReference>
+    <DCCReference Include="Fornecedores\uFornecedores.pas">
+      <Form>frmFornecedores</Form>
+    </DCCReference>
+    <DCCReference Include="Funcionarios\uFuncionarios.pas">
+      <Form>frmFuncionarios</Form>
+    </DCCReference>
+    <DCCReference Include="Registros\uDmReg.pas">
+      <Form>DmReg</Form>
+    </DCCReference>
+    <DCCReference Include="Registros\uRegFormArm.pas" />
+    <DCCReference Include="Registros\uRegistros.pas" />
+    <DCCReference Include="Registros\uRegLocalArm.pas" />
+    <DCCReference Include="Registros\uRegProcedimentos.pas">
+      <Form>frmProcedimento</Form>
+    </DCCReference>
+    <DCCReference Include="Registros\uRegRetencao.pas" />
+    <DCCReference Include="Shared\uCadISO.pas">
+      <Form>frmCadISO</Form>
+    </DCCReference>
+    <DCCReference Include="Shared\uDmShared.pas">
+      <Form>DmShared</Form>
+    </DCCReference>
+    <DCCReference Include="Shared\uLibrary.pas" />
+    <DCCReference Include="Teste\uCadTesteACP.pas">
+      <Form>frmCadTesteACP</Form>
+    </DCCReference>
+    <DCCReference Include="Teste\uCadTesteReg.pas">
+      <Form>frmCadTesteReg</Form>
+    </DCCReference>
+    <DCCReference Include="Teste\uCadTesteRH.pas">
+      <Form>frmCadTesteRH</Form>
+    </DCCReference>
+    <DCCReference Include="Teste\uCadtTesteCalib.pas">
+      <Form>frmCadTesteCalib</Form>
+    </DCCReference>
+    <DCCReference Include="Teste\uDmTeste.pas">
+      <Form>DmTeste</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uDmTreinamentos.pas">
+      <Form>DmTreinamentos</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uFichaIndiv.pas">
+      <Form>frmFichaIndividual</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uFuncSearchOfTreinamentos.pas">
+      <Form>frmFuncSearchOfTreinamentos</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uInstituicoes.pas">
+      <Form>frmInstituicoes</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uInstrutores.pas">
+      <Form>frmInstrutores</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uLocalizaParticipantes.pas">
+      <Form>frmLocalizaParticip</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uTreinamentos.pas">
+      <Form>frmTreinamentos</Form>
+    </DCCReference>
+    <DCCReference Include="Treinamentos\uTreinamentosTipos.pas">
+      <Form>frmTreinamentosTipos</Form>
+    </DCCReference>
+    <DCCReference Include="uAbout.pas">
+      <Form>AboutBox</Form>
+    </DCCReference>
+    <DCCReference Include="uDM.pas">
+      <Form>DM</Form>
+    </DCCReference>
+    <DCCReference Include="uLogin.pas">
+      <Form>frmLogin</Form>
+    </DCCReference>
+    <DCCReference Include="uLoginDefault.pas">
+      <Form>frmLoginDefault</Form>
+    </DCCReference>
+    <DCCReference Include="uMainMenu.pas">
+      <Form>frmMainMenu</Form>
+    </DCCReference>
+    <DCCReference Include="uModules.pas" />
+    <DCCReference Include="uSplah.pas">
+      <Form>frmSplash</Form>
+    </DCCReference>
+    <DCCReference Include="Usuarios\uUsuarios.pas">
+      <Form>frmUsuarios</Form>
+    </DCCReference>
+    <DCCReference Include="uTeste.pas">
+      <Form>frmTeste</Form>
+    </DCCReference>
+    <DCCReference Include="uTesteChild.pas">
+      <Form>MDIChild</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>

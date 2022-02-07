@@ -1,0 +1,608 @@
+object FoCadastroPadrao: TFoCadastroPadrao
+  Left = 188
+  Top = 247
+  Width = 1036
+  Height = 780
+  Caption = 'Cadastro Padr'#227'o'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  ShowHint = True
+  WindowState = wsMaximized
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PaCoPadrao: TcxPageControl
+    Left = 0
+    Top = 44
+    Width = 1028
+    Height = 702
+    ActivePage = TaShConsulta
+    Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Verdana'
+    Font.Style = []
+    LookAndFeel.Kind = lfOffice11
+    LookAndFeel.NativeStyle = False
+    ParentFont = False
+    TabOrder = 0
+    OnChange = PaCoPadraoChange
+    ClientRectBottom = 702
+    ClientRectRight = 1028
+    ClientRectTop = 23
+    object TaShConsulta: TcxTabSheet
+      Caption = 'Consulta'
+      object GrBoFiltroPadrao: TcxGroupBox
+        Left = 0
+        Top = 0
+        Width = 1028
+        Height = 61
+        Align = alTop
+        Caption = 'Dados da Pesquisa'
+        Style.LookAndFeel.NativeStyle = True
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 8
+          Top = 16
+          Width = 41
+          Height = 13
+          Caption = 'Campo'
+          Transparent = True
+        end
+        object Label2: TLabel
+          Left = 194
+          Top = 16
+          Width = 55
+          Height = 13
+          Caption = 'Conte'#250'do'
+          Transparent = True
+        end
+        object EdConteudoTexto: TcxMaskEdit
+          Left = 194
+          Top = 32
+          Width = 343
+          Height = 21
+          Properties.CharCase = ecUpperCase
+          Properties.OnChange = EdConteudoTextoPropertiesChange
+          Style.Shadow = True
+          TabOrder = 0
+          OnKeyPress = EdConteudoTextoKeyPress
+        end
+        object CoBoCampos: TcxComboBox
+          Left = 8
+          Top = 32
+          Width = 161
+          Height = 21
+          Properties.DropDownListStyle = lsFixedList
+          Properties.DropDownSizeable = True
+          Properties.ImmediatePost = True
+          Properties.ImmediateUpdateText = True
+          Properties.OnChange = CoBoCamposPropertiesChange
+          Style.Shadow = True
+          TabOrder = 1
+        end
+        object EdConteudoNum: TcxCurrencyEdit
+          Left = 194
+          Top = 32
+          Width = 121
+          Height = 21
+          Properties.DisplayFormat = ',0'
+          Properties.UseThousandSeparator = True
+          Properties.ValidateOnEnter = True
+          Properties.OnChange = EdConteudoNumPropertiesChange
+          Style.Shadow = True
+          TabOrder = 2
+          Visible = False
+          OnKeyPress = EdConteudoNumKeyPress
+        end
+        object EdConteudoData: TcxDateEdit
+          Left = 194
+          Top = 32
+          Width = 121
+          Height = 21
+          Properties.DateButtons = [btnClear, btnNow, btnToday]
+          Properties.DateOnError = deNull
+          Properties.ImmediatePost = True
+          Properties.InputKind = ikStandard
+          Properties.SaveTime = False
+          Properties.ShowTime = False
+          Properties.OnChange = EdConteudoDataPropertiesChange
+          Style.Shadow = True
+          TabOrder = 3
+          Visible = False
+          OnKeyPress = EdConteudoDataKeyPress
+        end
+        object BuProcessar: TRzBitBtn
+          Left = 544
+          Top = 29
+          Width = 91
+          Caption = 'Pesquisar'
+          Color = 15791348
+          Enabled = False
+          HighlightColor = 16026986
+          HotTrack = True
+          HotTrackColor = 3983359
+          TabOrder = 4
+          OnClick = BuProcessarClick
+          Glyph.Data = {
+            36060000424D3606000000000000360400002800000020000000100000000100
+            08000000000000020000330B0000330B00000001000000000000000000003300
+            00006600000099000000CC000000FF0000000033000033330000663300009933
+            0000CC330000FF33000000660000336600006666000099660000CC660000FF66
+            000000990000339900006699000099990000CC990000FF99000000CC000033CC
+            000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF
+            0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00
+            330000333300333333006633330099333300CC333300FF333300006633003366
+            33006666330099663300CC663300FF6633000099330033993300669933009999
+            3300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC
+            330000FF330033FF330066FF330099FF3300CCFF3300FFFF3300000066003300
+            66006600660099006600CC006600FF0066000033660033336600663366009933
+            6600CC336600FF33660000666600336666006666660099666600CC666600FF66
+            660000996600339966006699660099996600CC996600FF99660000CC660033CC
+            660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF
+            6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00
+            990000339900333399006633990099339900CC339900FF339900006699003366
+            99006666990099669900CC669900FF6699000099990033999900669999009999
+            9900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC
+            990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300
+            CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933
+            CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66
+            CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CC
+            CC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FF
+            CC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00
+            FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366
+            FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999
+            FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCC
+            FF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF00FFFFFF00000080000080
+            000000808000800000008000800080800000C0C0C00080808000191919004C4C
+            4C00B2B2B200E5E5E500C8AC2800E0CC6600F2EABF00B59B2400D8E9EC009933
+            6600D075A300ECC6D900646F710099A8AC00E2EFF10000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000E8ACDEE3E8E8
+            E8E8E8E8E8E8E8E8E8E8E8ACDEE3E8E8E8E8E8E8E8E8E8E8E8E8AC807A81E3E8
+            E8E8E8E8E8E8E8E8E8E8ACE28181E3E8E8E8E8E8E8E8E8E8E8E8E8CEA37A81E3
+            E8E8E8E8E8E8E8E8E8E8E8ACE28181E3E8E8E8E8E8E8E8E8E8E8E8D0CEA37A81
+            E3E8E8E8E8E8E8E8E8E8E8E3ACE28181E3E8E8E8E8E8E8E8E8E8E8E8D0CEA37A
+            81E3E8E8E8E8E8E8E8E8E8E8E3ACE28181E3E8E8E8E8E8E8E8E8E8E8E8D0CEA3
+            7AACAD82828288E3E8E8E8E8E8E3ACE281ACE3818181E2E3E8E8E8E8E8E8D0CE
+            E28288E6B3E6E682EBE8E8E8E8E8E3ACE281E2ACACACAC81E3E8E8E8E8E8E8E3
+            8289B3B3B3D7D7D782E3E8E8E8E8E8E381E3ACACACE3E3E381E3E8E8E8E8E8AD
+            88B3E6B3B3D7D7D7E688E8E8E8E8E8E3E2ACACACACE3E3E3ACE2E8E8E8E8E888
+            89E6E6B3B3B3D7D7E682E8E8E8E8E8E2E3ACACACACACE3E3AC81E8E8E8E8E882
+            E6E6E6E6B3B3B3B3B382E8E8E8E8E881ACACACACACACACACAC81E8E8E8E8E888
+            E6B3E6E6E6B3B3B3E682E8E8E8E8E8E2ACACACACACACACACAC81E8E8E8E8E8AD
+            88D7D7E6E6E6E6B38888E8E8E8E8E8E3E2E3E3ACACACACACE2E2E8E8E8E8E8E3
+            82EBD7B3E6E6E68982E3E8E8E8E8E8E381E3E3ACACACACE381E3E8E8E8E8E8E8
+            AD82ADE6E6E68882ADE8E8E8E8E8E8E8E381E3ACACACE281E3E8E8E8E8E8E8E8
+            E8E38882828282E3E8E8E8E8E8E8E8E8E8E3E281818181E3E8E8}
+          NumGlyphs = 2
+        end
+        object RzGroupBox1: TRzGroupBox
+          Left = 651
+          Top = 10
+          Width = 129
+          Height = 43
+          Caption = 'Modo Pesquisa'
+          TabOrder = 5
+          object SpBuFinal: TSpeedButton
+            Left = 95
+            Top = 16
+            Width = 23
+            Height = 22
+            Hint = 'Final do conte'#250'do|Procura pelo final do conte'#250'do'
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              3A020000424D3A020000000000003A0100002800000010000000100000000100
+              08000000000000010000120B0000120B0000410000004100000000000000FFFF
+              FF00FF00FF00FFFCFC00FFFCFB00FFFBF800FFEAD700FEF3E900FFF6EE00FECC
+              9900FED5AB00FEDAB500FEDAB600FFE7CF00FFEBD700FEF0E200FFF4E900FFF7
+              EF00CA680000FECB9600FECC9800FECE9C00FECF9D00FED0A000FFD3A500FED3
+              A500FED5AA00FFD8AF00FED8AF00FED9B000FEDCB600FFDEBB00FEDEBB00FEDE
+              BC00FFE1C200FEE1C100FEE1C200FFE5C900FEE5C900FEE7CF00FFEBD500FEEB
+              D700FFEEDC00FFEFDD00FEEEDD00FFF7EE00FEDCB500FEE2C100FEE2C200FFE9
+              CF00FFE9D000FEE9CF00FEE9D000FEEBD500FEEFDD00FFF2E200FFF4E700FFFA
+              F400FEF2E200FEF2E300FFFCF800FFFAF300FFFCF700FFFEFC00008100000202
+              0202020202020202020202020202020212121212121212121212121202020212
+              31252F210B1D1A1817160913120202120E272530202E1D0A1917161412020212
+              2A4040404040404040404015120202123B2C3531252F210C1C1A191712020212
+              103736290D40404040404019120202122D103A2B0E322522201E1B1A12020212
+              39404040404040404040401C12020212053D11380F2A0E342623211E12020212
+              043C3D08074040404040401F12020212013F3E3D2D10372B0634262412020212
+              01404040404040404040402512020212010101033E3D2D10372B283312020202
+              121212121212121212121212020202020202020202020202020202020202}
+          end
+          object SpBuMeio: TSpeedButton
+            Left = 42
+            Top = 16
+            Width = 23
+            Height = 22
+            Hint = 'Cont'#233'm o conte'#250'do|Procura em qualquer parte o conte'#250'do informado'
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              2E020000424D2E020000000000002E0100002800000010000000100000000100
+              08000000000000010000120B0000120B00003E0000003E00000000000000FFFF
+              FF00FF00FF00FFFCFC00FFFCFB00FFFBF800FFEAD700FECC9900FED5AB00FEDA
+              B500FEDAB600FFEBD700FEF0E200FFF4E900FFF7EF00CA680000FECB9600FECC
+              9800FECE9C00FECF9D00FED0A000FFD3A500FED3A500FED5AA00FFD8AF00FED8
+              AF00FED9B000FEDCB600FFDEBB00FEDEBB00FEDEBC00FFE1C200FEE1C100FEE1
+              C200FFE5C900FEE5C900FEE7CF00FFEBD500FFEEDC00FFEFDD00FEEEDD00FFF7
+              EE00FED9AF00FEDCB500FEE2C100FEE2C200FFE9CF00FFE9D000FEE9CF00FEE9
+              D000FEEBD500FEEFDD00FFF2E200FFF4E700FFFAF400FEF2E200FEF2E300FFFC
+              F800FFFAF300FFFCF700FFFEFC00008100000202020202020202020202020202
+              020202020F0F0F0F0F0F0F0F0F0F0F0F0202020F2E222C1E091A171514130710
+              0F02020F0B24222D1D2B1A08161413110F02020F263D3D3D3D3D3D3D3D3D3D12
+              0F02020F3828322E222C1E0A191716140F02020F0D34333D3D3D3D3D3D2A1716
+              0F02020F290D37270B2F221F1D1B18170F02020F363D3D3D3D3D3D3D3D3D3D19
+              0F02020F053A0E350C260B3123201E1B0F02020F04393A3D3D3D3D3D3D231F1C
+              0F02020F013C3B3A290D3427063123210F02020F013D3D3D3D3D3D3D3D3D3D22
+              0F02020F010101033B3A290D342725300F0202020F0F0F0F0F0F0F0F0F0F0F0F
+              020202020202020202020202020202020202}
+          end
+          object SpBuInicio: TSpeedButton
+            Left = 69
+            Top = 16
+            Width = 23
+            Height = 22
+            Hint = 'In'#237'cio do conte'#250'do|Procura pelo in'#237'cio do conte'#250'do'
+            AllowAllUp = True
+            GroupIndex = 1
+            Flat = True
+            Glyph.Data = {
+              2E020000424D2E020000000000002E0100002800000010000000100000000100
+              08000000000000010000120B0000120B00003E0000003E00000000000000FFFF
+              FF00FF00FF00FFFCFC00FFFCFB00FFFBF800FFEAD700FECC9900FED5AB00FEDA
+              B500FEDAB600FEE7D000FFEBD700FEF0E200FFF4E900FFF7EF00CA680000FECB
+              9600FECC9800FECE9C00FECF9D00FED0A000FFD3A500FED3A500FED5AA00FFD8
+              AF00FED8AF00FED9B000FFDCB600FEDCB600FFDEBB00FEDEBB00FEDEBC00FFE1
+              C200FEE1C100FEE1C200FFE5C900FEE5C900FEE7CF00FFEBD500FFEEDC00FFEF
+              DD00FEEEDD00FFF7EE00FED9AF00FEDCB500FEE2C100FEE2C200FFE9CF00FFE9
+              D000FEE9CF00FEE9D000FEEBD500FFF2E200FFF4E700FFFAF400FEF2E200FEF2
+              E300FFFAF300FFFCF700FFFEFC00008100000202020202020202020202020202
+              020202021010101010101010101010100202021030242E20091B181615140711
+              100202100C26242F1F2D1B081715141210020210283D3D3D3D3D3D3D3D3D3D13
+              10020210392A3430242E200A1A181715100202100E3D3D3D3D3D3D201C2C1817
+              100202102B0E38290C3124211F1D191810020210373D3D3D3D3D3D3D3D3D3D1A
+              10020210053A0F360D280C332522201D10020210043D3D3D3D3D3D270B25211E
+              10020210013C3B3A2B0E35290633252310020210013D3D3D3D3D3D3D3D3D3D24
+              10020210010101033B3A2B0E3529273210020202101010101010101010101010
+              020202020202020202020202020202020202}
+          end
+          object SpBuExato: TSpeedButton
+            Left = 15
+            Top = 16
+            Width = 23
+            Height = 22
+            Hint = 'Conte'#250'do exato|Procura exatamente o conte'#250'do informado'
+            AllowAllUp = True
+            GroupIndex = 1
+            Down = True
+            Flat = True
+            Glyph.Data = {
+              36030000424D3603000000000000360200002800000010000000100000000100
+              08000000000000010000120B0000120B0000800000008000000000000000FFFF
+              FF00FF00FF00A4676900FFFEFE00A0675B00A7756B00BC826800D1926D00E7AB
+              7900FEFCFA00EAB87A00EBBC8200EBBD8400EDC28E00EDC28F00EDC49100FFFA
+              F400E9B77400E9B77600EAB87800EABA7B00EABA7D00EABB7D00EABB7E00EABC
+              7F00EBBC8100EABC8000EBBD8200EABD8200EBBF8400EBBF8600EBBF8700EBC0
+              8800EBC08900EBC18900EBC18A00EDC28C00EBC18B00EDC49000EDC59300FEF6
+              EB00FEF7ED00FEF8EF00F3CA8900F3CC8C00F3CC8E00F6D9AB00F7DEB500F8E2
+              C000FAE6C600FBEACF00FBEFDC00FCF4E700F3D09300F7DDB000F8E0B600F8E0
+              B700F7E0B800F7E1BA00F8E2BB00F8E2BC00FAE5C100F8E3C000FAE7C700F8E6
+              C500FAE9CA00FAE9CB00FAEACE00FAEBD000FAEBD100FBEED700FBEED800FAED
+              D700FBEFDA00FBF0DD00FCF2E000FCF2E100FCF4E600FEFBF600F7E3BC00FBED
+              D300FCF3E200FCF4E500FEFAF200E9DDB70041582900405D2B004D7E2B006697
+              4C005E9247003775240023691600245B1A000A520800004B0000005101000154
+              0300025903000258040003580400074E080006650A00097B13000A6F12000E87
+              1C000F8B1C00108F1F00119222001AAB310019A12E0021B53D002AC24C0035D3
+              5F005BCCFF0056C7FF0053C2FF0046B4FF004AB8FF0041ADFF0039A4FF003DA9
+              FF00369FFF003AA4FF002E96FF003098FF00339CFF000C489700020202020202
+              0202616102020202020202030303030357616E69610303030202020350393761
+              68706F6D612D2C030202020332313A617161646C6B5C2E0302020205441D1916
+              615812616A61360302020205474542553D38372F61675B03020202064B23200D
+              1A18151413636656020202064E4D4A5144403E3C3059625E020202072A270E26
+              211F1C1B170B5A60610202077F7F7F7F7F484643413F3B5D6502027F787E7C7C
+              7F2524211E0C3E03615F02087F797A7D7F355234493342030202027F7476777B
+              7F28100F2522460302027F7272737F757F112B29534C4A030202027F727F017F
+              040A4F542A354D03020202097F08080808080808080808080202}
+          end
+        end
+        object RzBitBtn2: TRzBitBtn
+          Left = 800
+          Top = 29
+          Width = 137
+          Caption = 'Todos Registros'
+          Color = 15791348
+          HighlightColor = 16026986
+          HotTrack = True
+          HotTrackColor = 3983359
+          TabOrder = 6
+          OnClick = RzBitBtn2Click
+          Glyph.Data = {
+            36060000424D3606000000000000360400002800000020000000100000000100
+            08000000000000020000430B0000430B00000001000000000000000000003300
+            00006600000099000000CC000000FF0000000033000033330000663300009933
+            0000CC330000FF33000000660000336600006666000099660000CC660000FF66
+            000000990000339900006699000099990000CC990000FF99000000CC000033CC
+            000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF
+            0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00
+            330000333300333333006633330099333300CC333300FF333300006633003366
+            33006666330099663300CC663300FF6633000099330033993300669933009999
+            3300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC
+            330000FF330033FF330066FF330099FF3300CCFF3300FFFF3300000066003300
+            66006600660099006600CC006600FF0066000033660033336600663366009933
+            6600CC336600FF33660000666600336666006666660099666600CC666600FF66
+            660000996600339966006699660099996600CC996600FF99660000CC660033CC
+            660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF
+            6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00
+            990000339900333399006633990099339900CC339900FF339900006699003366
+            99006666990099669900CC669900FF6699000099990033999900669999009999
+            9900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC
+            990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300
+            CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933
+            CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66
+            CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CC
+            CC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FF
+            CC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00
+            FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366
+            FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999
+            FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCC
+            FF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF00FFFFFF00000080000080
+            000000808000800000008000800080800000C0C0C00080808000191919004C4C
+            4C00B2B2B200E5E5E500C8AC2800E0CC6600F2EABF00B59B2400D8E9EC009933
+            6600D075A300ECC6D900646F710099A8AC00E2EFF10000000000000000000000
+            0000000000000000000000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E85E095EE8E8
+            E8E8E8E8E8E8E8E8E8E8E8AC81ACE8E8E8E8E8E8E8E8E8E8E8E8E8090909E8E8
+            0000000000000000E8E8E8818181E8E88181818181818181E8E8E85E095EE8E8
+            E8E8E8E8E8E8E8E8E8E8E8AC81ACE8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E85E095EE8E8
+            E8E8E8E8E8E8E8E8E8E8E8AC81ACE8E8E8E8E8E8E8E8E8E8E8E8E8090909E8E8
+            0000000000000000E8E8E8818181E8E88181818181818181E8E8E85E095EE8E8
+            E8E8E8E8E8E8E8E8E8E8E8AC81ACE8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E85E095EE8E8
+            E8E8E8E8E8E8E8E8E8E8E8AC81ACE8E8E8E8E8E8E8E8E8E8E8E8E8090909E8E8
+            0000000000000000E8E8E8818181E8E88181818181818181E8E8E85E095EE8E8
+            E8E8E8E8E8E8E8E8E8E8E8AC81ACE8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+            E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8}
+          NumGlyphs = 2
+        end
+      end
+      object DBGrConsulta: TcxGrid
+        Left = 0
+        Top = 61
+        Width = 1028
+        Height = 618
+        Align = alClient
+        TabOrder = 1
+        LookAndFeel.Kind = lfOffice11
+        LookAndFeel.NativeStyle = True
+        object DBGrConsultaDBTaVi: TcxGridDBTableView
+          OnDblClick = DBGrConsultaDBTaViDblClick
+          DataController.DataSource = DaSoConsulta
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          NavigatorButtons.ConfirmDelete = False
+          NavigatorButtons.PriorPage.Visible = False
+          NavigatorButtons.NextPage.Visible = False
+          NavigatorButtons.Insert.Visible = False
+          NavigatorButtons.Delete.Visible = False
+          NavigatorButtons.Edit.Visible = False
+          NavigatorButtons.Post.Visible = False
+          NavigatorButtons.Cancel.Visible = False
+          NavigatorButtons.Refresh.Visible = False
+          NavigatorButtons.SaveBookmark.Visible = False
+          NavigatorButtons.GotoBookmark.Visible = False
+          NavigatorButtons.Filter.Visible = False
+          OptionsBehavior.FocusCellOnTab = True
+          OptionsBehavior.IncSearch = True
+          OptionsCustomize.ColumnFiltering = False
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.Navigator = True
+          OptionsView.GroupByBox = False
+          OptionsView.GroupRowStyle = grsOffice11
+        end
+        object DBGrConsultaLe: TcxGridLevel
+          GridView = DBGrConsultaDBTaVi
+        end
+      end
+    end
+    object TaShCadastro: TcxTabSheet
+      Caption = 'Cadastro'
+      OnEnter = TaShCadastroEnter
+    end
+    object TaShRelatorio: TcxTabSheet
+      Caption = 'Relat'#243'rio'
+    end
+  end
+  object RzToolbar1: TRzToolbar
+    Left = 0
+    Top = 0
+    Width = 1028
+    Height = 44
+    AutoStyle = False
+    Images = DaMoBio.Imagens
+    RowHeight = 40
+    ButtonLayout = blGlyphTop
+    ButtonWidth = 60
+    ButtonHeight = 40
+    ShowButtonCaptions = True
+    TextOptions = ttoCustom
+    BorderInner = fsNone
+    BorderOuter = fsGroove
+    BorderSides = [sdLeft, sdTop, sdRight, sdBottom]
+    BorderWidth = 0
+    ShowDockClientCaptions = True
+    TabOrder = 1
+    ToolbarControls = (
+      BuLocalizar
+      BuPrimeiro
+      BuVoltar
+      BuProximo
+      BuUltimo
+      BuNovo
+      BuSalvar
+      BuCancelar
+      BuAlterar
+      BuExcluir
+      BuImprimir)
+    object BuLocalizar: TRzToolButton
+      Left = 4
+      Top = 2
+      Hint = 'Localizar Registro'
+      DisabledIndex = 51
+      ImageIndex = 50
+      Layout = blGlyphTop
+      Caption = 'Localizar'
+      OnClick = BuLocalizarClick
+    end
+    object BuPrimeiro: TRzToolButton
+      Left = 64
+      Top = 2
+      Hint = 'Primeiro Registro'
+      DisabledIndex = 53
+      ImageIndex = 52
+      Layout = blGlyphTop
+      Caption = 'Primeiro'
+      OnClick = BuPrimeiroClick
+    end
+    object BuVoltar: TRzToolButton
+      Left = 124
+      Top = 2
+      Hint = 'Voltar Registro'
+      DisabledIndex = 55
+      ImageIndex = 54
+      Layout = blGlyphTop
+      Caption = 'Voltar'
+      OnClick = BuVoltarClick
+    end
+    object BuUltimo: TRzToolButton
+      Left = 244
+      Top = 2
+      Hint = #218'ltimo Registro'
+      DisabledIndex = 57
+      ImageIndex = 56
+      Layout = blGlyphTop
+      Caption = #218'ltimo'
+      OnClick = BuUltimoClick
+    end
+    object BuProximo: TRzToolButton
+      Left = 184
+      Top = 2
+      Hint = 'Pr'#243'ximo Registro'
+      DisabledIndex = 59
+      ImageIndex = 58
+      Layout = blGlyphTop
+      Caption = 'Pr'#243'ximo'
+      OnClick = BuProximoClick
+    end
+    object BuNovo: TRzToolButton
+      Left = 304
+      Top = 2
+      Hint = 'Novo Registro'
+      DisabledIndex = 61
+      ImageIndex = 60
+      Layout = blGlyphTop
+      Caption = 'Novo'
+      OnClick = BuNovoClick
+    end
+    object BuSalvar: TRzToolButton
+      Left = 364
+      Top = 2
+      Hint = 'Salvar Registro'
+      DisabledIndex = 63
+      ImageIndex = 62
+      Layout = blGlyphTop
+      Caption = 'Salvar'
+      OnClick = BuSalvarClick
+    end
+    object BuCancelar: TRzToolButton
+      Left = 424
+      Top = 2
+      Hint = 'Cancelar Registro'
+      DisabledIndex = 65
+      ImageIndex = 64
+      Layout = blGlyphTop
+      Caption = 'Cancelar'
+      OnClick = BuCancelarClick
+    end
+    object BuExcluir: TRzToolButton
+      Left = 544
+      Top = 2
+      Hint = 'Excluir Registro'
+      DisabledIndex = 67
+      ImageIndex = 66
+      Layout = blGlyphTop
+      Caption = 'Excluir'
+      OnClick = BuExcluirClick
+    end
+    object BuImprimir: TRzToolButton
+      Left = 604
+      Top = 2
+      Hint = 'Imprimir'
+      ImageIndex = 68
+      Layout = blGlyphTop
+      Caption = 'Imprimir'
+    end
+    object BuAlterar: TRzToolButton
+      Left = 484
+      Top = 2
+      Hint = 'Alterar Registro'
+      DisabledIndex = 70
+      ImageIndex = 69
+      Layout = blGlyphTop
+      Caption = 'Alterar'
+      OnClick = BuAlterarClick
+    end
+  end
+  object ClDaConsulta: TClientDataSet
+    Aggregates = <>
+    FetchOnDemand = False
+    PacketRecords = 100
+    Params = <>
+    ProviderName = 'DaSePrGeral'
+    RemoteServer = DaMoBio.DCOMConnection
+    Left = 386
+    Top = 378
+  end
+  object DaSoConsulta: TDataSource
+    DataSet = ClDaConsulta
+    Left = 387
+    Top = 434
+  end
+  object CiDaCadastro: TClientDataSet
+    Aggregates = <>
+    PacketRecords = 100
+    Params = <>
+    ProviderName = 'DataSetProvider'
+    RemoteServer = DaMoBio.DCOMConnection
+    BeforePost = CiDaCadastroBeforePost
+    AfterPost = CiDaCadastroAfterPost
+    Left = 296
+    Top = 379
+  end
+  object DaSoCadastro: TDataSource
+    DataSet = CiDaCadastro
+    OnDataChange = DaSoCadastroDataChange
+    Left = 296
+    Top = 435
+  end
+end

@@ -1,0 +1,53 @@
+**Desenvolvimento
+
+- Formulário – Menu Principal 
+
+- Cadastro de Tipos de Serviço
+
+- Cadastro de Usuários
+
+- Cadastro de Clientes
+
+- Cadastro de Status de Leitura
+  Este cadastro bloquear a deleção
+  Atualizar pois consertei a estrutura de tabela/campos E O Generator
+
+- Cadastro tabela GUIAS_CABECALHO (*Alvaro Ja fez*)
+
+- Cadastro tabela GUIAS_GRUPO_LOTE (*Alvaro Ja fez*)
+  
+- Consertar campos do cadastro de usuário
+
+- Formulário – Análise de Leitura de Guias (*Alvaro Ja fez*)
+
+
+- Login
+  Analisar rotina para criptografia
+
+- Manutenção de BD
+
+- Instalador
+
+- Instalação no Cliente
+
+- Projeto - Escopo (*Alvaro Ja fez*)
+
+- Envio de Email - Devolucao
+
+-Criar tabelas no BD (*Alvaro Ja fez*)
+ exemplo
+	Usuarios
+	Campos: ID, Nome, Senha..etc
+	
+- Criar indices nas tabelas (*Alvaro Ja fez*)
+	Campos: Lote, Carteirinhas, Datas
+
+- Arquivo Ini ou XML para mapeamento entre BD e App
+
+
+
+
+
+	
+
+	

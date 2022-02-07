@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{71E978C3-1590-4CE1-8C82-00EDBD2F9456}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Leitura.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Componentes\Sum182\D14\Sum182D14.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Leitura">
+        <MSBuild Projects="Leitura.dproj"/>
+    </Target>
+    <Target Name="Leitura:Clean">
+        <MSBuild Projects="Leitura.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Leitura:Make">
+        <MSBuild Projects="Leitura.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Sum182D14">
+        <MSBuild Projects="C:\Componentes\Sum182\D14\Sum182D14.dproj"/>
+    </Target>
+    <Target Name="Sum182D14:Clean">
+        <MSBuild Projects="C:\Componentes\Sum182\D14\Sum182D14.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Sum182D14:Make">
+        <MSBuild Projects="C:\Componentes\Sum182\D14\Sum182D14.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Leitura;Sum182D14"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Leitura:Clean;Sum182D14:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Leitura:Make;Sum182D14:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

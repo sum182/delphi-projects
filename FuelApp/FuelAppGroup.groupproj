@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F60FC0C4-A240-49EC-AC03-F3C6EE8FE0A5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FuelApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\XMLEdit\XMLEdit.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FuelApp">
+        <MSBuild Projects="FuelApp.dproj"/>
+    </Target>
+    <Target Name="FuelApp:Clean">
+        <MSBuild Projects="FuelApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FuelApp:Make">
+        <MSBuild Projects="FuelApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="XMLEdit">
+        <MSBuild Projects="..\XMLEdit\XMLEdit.dproj"/>
+    </Target>
+    <Target Name="XMLEdit:Clean">
+        <MSBuild Projects="..\XMLEdit\XMLEdit.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="XMLEdit:Make">
+        <MSBuild Projects="..\XMLEdit\XMLEdit.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FuelApp;XMLEdit"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FuelApp:Clean;XMLEdit:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FuelApp:Make;XMLEdit:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

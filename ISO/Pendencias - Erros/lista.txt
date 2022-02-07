@@ -1,0 +1,15 @@
+          Segue lista de pendencias:
+          splash
+          login
+          em todos os cadastros é muito importante gravarmos ao menos 3 registros com dados coerentes
+          unit departamentos
+          cadastros de usuarios - senha - smCript/Decrpit
+          o login deve codificar/decodificar a senha --- veja na pasta projetos/outros tem alguns exemplos
+          no show das grids somente os campos realmente necessarios devem aparecer
+          antes de fazer cadastros da uma olhadas no que eu fiz de registros e dos testes
+          todos os erros/pendencias cadastre na pasta que eu adicionei ao SVN Pendencias - Erros
+
+
+
+
+1 -  criar Módulo IDF
