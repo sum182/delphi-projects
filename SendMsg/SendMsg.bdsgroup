@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <PersonalityInfo>
+    <Option>
+      <Option Name="Personality">Default.Personality</Option>
+      <Option Name="ProjectType"></Option>
+      <Option Name="Version">1.0</Option>
+      <Option Name="GUID">{D81AE9F8-5349-4798-8DB3-DCFE5A38BD70}</Option>
+    </Option>
+  </PersonalityInfo>
+  <Default.Personality>
+    
+    
+    
+    
+    
+    <Projects>
+      <Projects Name="GetMsg.exe">GetMsg.bdsproj</Projects>
+      <Projects Name="SendMsg.exe">SendMsg.bdsproj</Projects>
+      <Projects Name="Targets">GetMsg.exe SendMsg.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+  <StarTeamAssociation></StarTeamAssociation>
+  <StarTeamNonRelativeFiles></StarTeamNonRelativeFiles>
+</BorlandProject>

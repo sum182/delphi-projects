@@ -1,0 +1,172 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Width = 353
+  Height = 399
+  AutoScroll = True
+  BorderIcons = [biSystemMenu, biHelp]
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  OnMouseDown = FormMouseDown
+  OnMouseEnter = FormMouseEnter
+  OnMouseLeave = FormMouseLeave
+  OnMouseUp = FormMouseUp
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton1: TSpeedButton
+    Left = 256
+    Top = 182
+    Width = 23
+    Height = 22
+    AllowAllUp = True
+    GroupIndex = 1
+    Glyph.Data = {
+      0A040000424D0A040000000000000A0300002800000010000000100000000100
+      08000000000000010000120B0000120B0000B5000000B500000000000000FFFF
+      FF00CDCCCF00FF00FF00C7C4C700C2C0C200D1CCCD00D9D4D400D5D1D100FDFB
+      FB00FEFDFD00FDFCFC00C7C0BF00FBF6F500C4B7B400C8BCB900FAF6F500F8F4
+      F300D8C5BE00C8B7B100FAF2EF00F9F1EE00CEB0A400E8D2C900EFD9D000EED8
+      CF00F2E0D900ECE0DB00E8CCBF00E8CDC100EACFC300E6CDC200E4CBC000DCC4
+      B900EBD3C800E9D1C600E6CEC300ECD4C900E3CDC300EED7CD00EED8CE00D6C2
+      B900DFCBC200DBC7BE00F2E0D800EFDED600F7EEEA00F6EDE900C95B2200C95C
+      2300CD602700CC602800CC653000CD673200CD693500D08F6E00D7967400CF96
+      7900D29B7F00D7A08500E6B39900F2D4C500E5C9BB00F0D5C700DCC3B700E9CF
+      C200E5D0C600F7E7DF00F5E7E000F4E8E200FAF0EB00F6ECE700F6F4F300C755
+      1900CC612800CB612800CA612900CB622A00CD642C00CB642D00CD652E00CC65
+      2E00CC662F00CE683000CC673000CD673100CC673100CD693300CD6A3300CD6A
+      3400CD6A3500CF6F3900D0703B00CF6F3C00D0724000D2754100D0744300D175
+      4400D3784800D48B6400D58C6500D68E6800D8916B00E0A28100DDA28300E4AF
+      9200E0AB8F00E3AF9300E6B49700E6B39800E9BBA100E9BCA400ECC6B000EDC7
+      B300F6E1D500F2E2D900F4E7E000D1723900D2753D00D3774100D4794300D57D
+      4700D7814A00D6804A00E5AE8B00E9BA9E00ECC5AE00F7E6DC00FDF8F500D479
+      3C00D6804600D7834C00DB8B5500DA8B5500DD946500E19E6F00E4AC8700EFCA
+      B000FEFBF900D9854900DB8D5300E09B6700E8B28B00E8B69000EABD9C00EEC9
+      AD00F7E2D200F8E7DA00FEFAF700FDF9F600DF965C00E8B68E00EFC8A800F5DC
+      C700E4A46A00EFCAA900F0CEB000EEC39A00F1D0AE00F2D2B300FAEEE200FDF8
+      F300FDF9F500F4F1EE00FFFEFD00FEFDFC00F0CEA800F1D0AD00F3D4B400F9EA
+      DA00FBF2E700FFFFFE00FBFFFF00F4FAFD00F6FBFF00F1F6FA00EAEBEC00E8EC
+      F100E4E7EC00DFE1E500CBCBCE00030303030324262A2B213E03030303030303
+      031D1BB0B20706B40C133E03030303031EA3AD1F3864633716050E400303031C
+      11AC684B50723D4A4E39040F3E030345016B3052366F3C5654323A0212031E0A
+      7F5C35345E6D675157555929083E18017D755F586294465D4C5A333BB3201A01
+      88827B785B71013F604F4D65B1422C01978C84837977700143613166AF172801
+      9C968D87857A767E0169496AAE232809AA9A99AB8F8B817C016E537348230374
+      019F9D01958991808A866C012D0303251401A7A6A0A2A1938E90012F2D030303
+      251501A9A89E9B9892012E410303030303254710A5A4A50B0D44440303030303
+      0303032222192725250303030303}
+    OnClick = SpeedButton1Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 345
+    Height = 81
+    Caption = 'Clientes'
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 72
+      Top = 40
+      Width = 75
+      Height = 25
+      HelpContext = 20
+      Caption = 'Novo'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+      OnMouseUp = BitBtn1MouseUp
+    end
+    object BitBtn2: TBitBtn
+      Left = 160
+      Top = 40
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 1
+      OnClick = BitBtn2Click
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 0
+    Top = 87
+    Width = 345
+    Height = 66
+    Caption = 'Fornecedores'
+    TabOrder = 1
+    object BitBtn3: TBitBtn
+      Left = 72
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = 'Alterar'
+      TabOrder = 0
+      OnClick = BitBtn3Click
+    end
+    object BitBtn4: TBitBtn
+      Left = 160
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = 'Salvar'
+      TabOrder = 1
+      OnClick = BitBtn4Click
+    end
+  end
+  object BitBtn5: TBitBtn
+    Left = 72
+    Top = 182
+    Width = 75
+    Height = 25
+    Caption = 'Ajuda '
+    TabOrder = 2
+    OnClick = BitBtn5Click
+  end
+  object BitBtn6: TBitBtn
+    Left = 160
+    Top = 182
+    Width = 75
+    Height = 25
+    Caption = 'Poup UP'
+    TabOrder = 3
+    OnClick = BitBtn6Click
+  end
+  object BitBtn7: TBitBtn
+    Left = 72
+    Top = 240
+    Width = 75
+    Height = 25
+    HelpContext = 20
+    Caption = 'BitBtn7'
+    TabOrder = 4
+    OnClick = BitBtn7Click
+  end
+  object BitBtn8: TBitBtn
+    Left = 160
+    Top = 240
+    Width = 75
+    Height = 25
+    Caption = 'BitBtn8'
+    TabOrder = 5
+    OnClick = BitBtn8Click
+    OnMouseUp = BitBtn8MouseUp
+  end
+  object BitBtn9: TBitBtn
+    Left = 72
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'BitBtn9'
+    TabOrder = 6
+  end
+  object ApplicationEvents1: TApplicationEvents
+    OnHelp = ApplicationEvents1Help
+    Left = 160
+    Top = 184
+  end
+end

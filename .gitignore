@@ -48,9 +48,10 @@ __history
 __recovery
 *.identcache
 *.~dsk
+*.rar
 
-
-# Dependency directories
+# SVN
 .svn/
 .svn-base
+
 

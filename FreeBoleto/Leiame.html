@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>FreeBoleto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</style></head>
+
+<body>
+<h1 align="center">FreeBoleto</h1>
+<p align="center">Autor original: <a href="http://www.warmboot.com.br" target="_blank">Carlos H. Cantu</a><br>
+  (&uacute;ltima vers&atilde;o: <strong>0.43</strong> - <a href="#changelog"><em>ver &uacute;ltimas altera&ccedil;&otilde;es</em></a>)</p>
+<h3>Descri&ccedil;&atilde;o</h3>
+<p align="justify">O FreeBoleto &eacute; um componente VCL compat&iacute;vel com o Delphi 7, 2005/Win32 (e talvez com outras vers&otilde;es tamb&eacute;m), destinado &agrave; gera&ccedil;&atilde;o das informa&ccedil;&otilde;es necess&aacute;rias para emitir boletos banc&aacute;rios em projetos feitos com o Delphi.</p>
+<p align="justify" class="style1">Antes de optar pela utiliza&ccedil;&atilde;o do FreeBoleto, voc&ecirc; deve concordar com os termos da <a href="#licenca">licen&ccedil;a</a> presentes nesse arquivo. </p>
+<p align="justify"><strong>Bancos suportados atualmente: </strong></p>
+<ul>
+  <li><strong align="justify">Ita&uacute;</strong></li>
+  <li><strong align="justify">NossaCaixa</strong></li>
+  <li><strong align="justify">Banespa</strong></li>
+  <li><strong align="justify">Unibanco</strong></li>
+  <li><strong align="justify">Real</strong></li>
+  <li><strong align="justify">Bradesco </strong></li>
+  <li><strong align="justify">Caixa Federal</strong></li>
+</ul>
+<h3>Instala&ccedil;&atilde;o</h3>
+<p align="justify">Para instalar, abra o pacote (DPK) correspondente no Delphi, compile e instale. Uma nova aba com o nome de &quot;FreeBoleto&quot; ser&aacute; criada na sua palheta de componentes. Para saber como utilizar os componentes, verifique o projeto <strong>DEMO.DPR</strong> que acompanha o pacote.</p>
+<h3>Criando novos bancos</h3>
+<p align="justify">Se voc&ecirc; precisa gerar boletos para um banco que ainda n&atilde;o &eacute; suportado pelo FreeBoleto, ent&atilde;o voc&ecirc; mesmo pode criar a unit de suporte para esse banco. Para isso, pe&ccedil;a ao banco em quest&atilde;o o manual para gera&ccedil;&atilde;o de c&oacute;digo de barras. Nesse manual voc&ecirc; encontrar&aacute; as informa&ccedil;&otilde;es necess&aacute;rias para gerar os dados do boleto de acordo com o padr&atilde;o do banco em quest&atilde;o.</p>
+<p align="justify">Junto com o pacote do FreeBoleto existe um arquivo chamado uBancoBASE.pas. Esse arquivo serve de base para a cria&ccedil;&atilde;o de novos bancos para o FreeBoleto. Ele est&aacute; todo comentado com as instru&ccedil;&otilde;es de como voc&ecirc; dever&aacute; proceder para incorporar um novo banco ao pacote do FreeBoleto. N&atilde;o esque&ccedil;a que voc&ecirc; pode consultar as outras units j&aacute; existentes (para outros bancos) para ter uma id&eacute;ia de como implementar o c&oacute;digo necess&aacute;rio.</p>
+<h3 align="justify">Vers&otilde;es Oficiais</h3>
+<p align="justify">O download das vers&otilde;es oficiais do componente podem ser encontradas no site oficial do projeto: <a href="http://sourceforge.net/projects/freeboleto/" target="_blank">sourceforge.net/projects/freeboleto/</a></p>
+<h3 align="justify">Suporte </h3>
+<p align="justify">Voc&ecirc; pode obter suporte volunt&aacute;rio ao FreeBoleto atrav&eacute;s da lista de discuss&atilde;o localizada em <a href="http://br.groups.yahoo.com/group/freeboleto" target="_blank">br.groups.yahoo.com/group/freeboleto</a>. O suporte &eacute; volunt&aacute;rio, por isso <strong>n&atilde;o reclame</strong> se sua d&uacute;vida n&atilde;o foi respondida rapidamente, pois isso vai depender da <strong>disponibilidade</strong> de cada um.</p>
+<p align="justify"><em><strong><u>N&atilde;o responderei</u> d&uacute;vidas postadas diretamente para mim. Utilizem a lista de discuss&atilde;o para tirar suas d&uacute;vidas! </strong></em></p>
+<h3>Atuais contribuidores</h3>
+<ul>
+  <li>Carlos Henrique Cantu (autor original)</li>
+  <li><a href="http://www.ericksasse.com.br">Erick Sasse</a></li>
+</ul>
+<h3><a name="licenca"></a>Licen&ccedil;a</h3>
+<ol>
+  <li>O FreeBoleto pode ser distribu&iacute;do e utilizado livremente com qualquer tipo de projeto, comercial ou n&atilde;o. </li>
+  <li>Componentes derivados do c&oacute;digo do FreeBoleto n&atilde;o podem ser vendidos e devem manter os cr&eacute;ditos originais, e devem estar compat&iacute;veis com essa licen&ccedil;a. </li>
+  <li>Qualquer altera&ccedil;&atilde;o ou melhoria no c&oacute;digo do FreeBoleto deve ser enviada ao autor para ser avaliada e, se poss&iacute;vel, incorporada ao c&oacute;digo oficial do componente. </li>
+  <li>A inclus&atilde;o do suporte de novos bancos ao FreeBoleto deve ser notificada ao autor, enviando juntamente o c&oacute;digo da unit do banco em quest&atilde;o. A cria&ccedil;&atilde;o de uma nova unit de suporte a um novo banco dever&aacute; ser feita em conjunto com a cria&ccedil;&atilde;o dos testes unit&aacute;rios (<a href="http://sourceforge.net/projects/dunit/" target="_blank">DUNITs</a>) necess&aacute;rios para garantir o correto funcionamento das rotinas. </li>
+  <li>O autor n&atilde;o se responsabiliza por qualquer dano ou qualquer outro tipo de problema originado pela utiliza&ccedil;&atilde;o desse componente, se isentando de qualquer responsabilidade sobre a utiliza&ccedil;&atilde;o do mesmo.</li>
+</ol>
+<h3><a name="changelog"></a>ChangeLog</h3>
+<p><strong>Vers&atilde;o 0.50: </strong><em>(29-Agosto-2006)</em> </p>
+<ul>
+  <li>Adicionado Banco do Brasil. (Cantu) </li>
+  <li> Altera&ccedil;&atilde;o da rotina de impress&atilde;o, a fim de sanar o problema que as vezes fazia com que p&aacute;gina sa&iacute;sse inteiramente preta. (rotina testada por Erick Sasse) </li>
+</ul>
+<p><strong>Vers&atilde;o 0.43: </strong><em>(19-Setembro-2005)</em> </p>
+<ul>
+  <li>Adicionado propriedade LocalPagamento no TFreeBoleto (Daycon)</li>
+  <li> Modificado o constructor do componente TFreeBoletoImagem adicionado o par&acirc;metro para indicar se a &quot;lista de boletos&quot; deve se tornar &quot;dona&quot; dos boletos adicionados, e portanto destru&iacute;-los automaticamente quando a mesma for limpa. O padr&atilde;o &eacute; TRUE, ou seja, os boletos ser&atilde;o destru&iacute;dos. (Cantu)</li>
+  <li>Corre&ccedil;&atilde;o de bug na sincroniza&ccedil;&atilde;o do TrackBar de navega&ccedil;&atilde;o no preview de boletos. (Cantu)</li>
+  <li> Adicionado as propriedades DestruirBoletos e TrackBarDelay no componente TFreeBoletoImagem. (Cantu)</li>
+  <li> Padroniza&ccedil;&atilde;o: Altera&ccedil;&atilde;o do nome do m&eacute;todo Limpa para Limpar e LimpaTudo para LimparTudo.</li>
+</ul>
+<p><strong>Vers&atilde;o 0.3: </strong><em>(13-Setembro-2005)</em> </p>
+<ul>
+  <li>Cria&ccedil;&atilde;o da classe TFreeBoletoList, utilizada para gerenciar uma lista de boletos. (Erick Sasse)</li>
+  <li>Melhoria geral no preview e impress&atilde;o de boletos. Agora &eacute; poss&iacute;vel inserir v&aacute;rios boletos para serem vistos na tela, atrav&eacute;s da propriedade ListaBoletos, que substituiu a antiga propriedade Boleto do componente TFreeBoletoImagem. (Cantu)</li>
+  <li>Troca do BitMap utilizado para o boleto por um mais &quot;light&quot; modificado por Daycon Rodrigues. (Cantu)</li>
+  <li>Adapta&ccedil;&atilde;o da aplica&ccedil;&atilde;o de demonstra&ccedil;&atilde;o do FreeBoleto para suportar os novos recursos. (Cantu)</li>
+  <li>Melhoria da barra de a&ccedil;&otilde;es na tela de preview, com op&ccedil;&atilde;o de navega&ccedil;&atilde;o, impress&atilde;o e track para se movimentar pelos boletos mais facilmente. (Cantu) </li>
+  <li>Criado &iacute;cones para os componentes na palheta do Delphi. (Cantu) </li>
+</ul>
+<p><strong>Vers&atilde;o 0.2: </strong><em>(10-Setembro-2005)</em> </p>
+<ul>
+  <li>Inclus&atilde;o da propriedade <em>Instrucoes</em> no TFreeBoleto, permitindo imprimir instru&ccedil;&otilde;es no boleto. (Erick Sasse)</li>
+  <li>Inclus&atilde;o de novos bancos. (Cantu) </li>
+  <li>Inclus&atilde;o de uma barra de a&ccedil;&otilde;es na tela de preview do boleto. (Erick Sasse)</li>
+  <li>Corre&ccedil;&atilde;o de alguns bugs. (Cantu)</li>
+  <li>Cria&ccedil;&atilde;o do projeto para Delphi 2005 (Win32). (Erick Sasse) </li>
+</ul>
+<p><strong>Vers&atilde;o 0.1: Vers&atilde;o inicial (Cantu) </strong></p>
+</body>
+</html>

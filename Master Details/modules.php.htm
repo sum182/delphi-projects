@@ -1,0 +1,127 @@
+<html><head><title>www.activedelphi.com.br</title><link rel="stylesheet" type="text/css" href="modules.php_arquivos/style.css"></head><body bgcolor="#ffffff" text="#000000"><center><table border="0"><tbody><tr><td><table bgcolor="" border="0" cellpadding="0" cellspacing="1" width="640"><tbody><tr><td><table bgcolor="#ffffff" border="0" cellpadding="20" cellspacing="1" width="640"><tbody><tr><td align="left"><img src="modules.php_arquivos/logo_active.gif" alt="" border="0"><br><br><br><font size="2"><b>Assunto: </b></font> Relacionamento Mestre-detalhe</td></tr><tr><td>
+<hr>
+<font size="2"><b>jfrancop</b></font> - <font size="1">27/7/2005 �s 15:49</font>
+<p>Boa tarde, pessoal<br>
+<br>
+Fiz um relacionamento mestre-detalhe baseado num artigo que encontrei no
+site FireBase e cujo endere�o segue abaixo:<br>
+<br>
+<a href="http://www.firebase.com.br/cgi-bin/firebase.cgi/artigo?ID=299" target="_blank">http://www.firebase.com.br/cgi-bin/firebase.cgi/artigo?ID=2
+99</a><br>
+<br>
+Para quem n�o tiver saco de ir ao link, o artigo segue abaixo:<br>
+<br>
+1) Possuindo as tabelas TABELA_MESTRE e TABELA_DETALHE em seu banco de
+dados e um componente SQLConnection devidamente configurado, adicione ao
+seu DataModule os componentes seguintes e d� nome a eles (os nomes deste
+exemplo seguem entre par�nteses � frente do nome do componente):<br>
+<br>
+- Dois SQLDataSet (dst_Mestre e dst_Detalhe)<br>
+- Um DataSetProvider (dsp_Mestre)<br>
+- Dois ClientDataSet (cds_Mestre e cds_Detalhe)<br>
+- Tr�s DataSource (dts_LinkMestre, dts_Mestre e dts_Detalhe)<br>
+<br>
+2) Escreva a SQL de dst_Mestre na sua propriedade CommandText:<br>
+<br>
+SELECT &lt;colunas_da_tabela_mestre&gt;<br>
+FROM TABELA_MESTRE<br>
+WHERE &lt;coluna_chave_do_relacionamento_na_tabela_mestre&gt; =
+:parametro<br>
+<br>
+3) Configure na propriedade Params "parametro" conforme seu tipo, neste<br>
+caso, DataType = ftInteger.<br>
+<br>
+4) Mude a propriedade DataSet de dts_LinkMestre para dst_Mestre<br>
+<br>
+5) Escreva a SQL de dst_Detalhe na sua propriedade CommandText:<br>
+<br>
+SELECT &lt;colunas_da_tabela_detalhe)<br>
+FROM TABELA_DETALHE<br>
+WHERE &lt;coluna_chave_do_relacionamento_na_tabela_detalhe&gt; =<br>
+:&lt;coluna_chave_do_relacionamento_na_tabela_mestre&gt;<br>
+<br>
+NOTA IMPORTANTE: <br>
+O nome do par�metro na tabela detalhe tem que obrigatoriamente ser igual ao
+nome da coluna a que corresponde na tabela mestre.<br>
+<br>
+6) Mude a propriedade DataSource de dst_Detalhe para dts_LinkMestre<br>
+7) Mude a propriedade DataSet de dsp_Mestre dst_Mestre<br>
+8) Mude a propriedade ProviderName de cds_Mestre para dsp_Mestre<br>
+9) Adicione os TFields do cds_Mestre e note a presen�a de um campo novo
+(campo anhinhado) que � quem ser� o respons�vel pelo relacionamento com a
+tabela detalhe.<br>
+10) Mude a propriedade DataSetField do cds_Detalhe, colocando nela o nome
+do campo aninhado mencionado no item anterior.<br>
+11) Mude a propriedade DataSet de dts_Mestre para cds_Mestre<br>
+12) Mude a propriedade DataSet de dts_Detalhe para cds_Detalhe<br>
+13) Adicione os TFields do cds_Detalhe<br>
+<br>
+Agora � s� fornecer o valor de "parametro" (item 2) e abrir o cds_Mestre
+que o resto ser� feito automaticamente!<br>
+<br>
+OBSERVA��ES<br>
+<br>
+a) Ocorrer� o erro "dbExpress Error: Operation not supported" na abertura
+(Open) do ClientDataSet mestre, caso na SQL da propriedade CommandText do
+SQLDataSet mestre n�o contiver uma cl�sula WHERE com o campo chave do
+relacionamento. Portanto, SQL do tipo "SELECT * FROM TABELA_MESTRE" n�o �
+aceito. Necessariamente tem-se que colocar a cl�usula "'WHERE CAMPO_CHAVE =
+'+(VALOR DO CAMPO_CHAVE)"<br>
+b) Em decorr�ncia da falta da cl�usula WHERE na tabela mestre tamb�m ocorre
+o erro "SQL Error: Error mapping failed" na abertura (Open) do
+ClientDataSet detalhe.<br>
+<br>
+c) N�o � preciso abrir o ClientDataSet detalhe, isto � feito
+automaticamente pelo Delphi no momento que se abre o ClientDataSet
+mestre.<br>
+<br>
+d) N�o � necess�rio abrir e fechar o SQLDataSet. A partir do momento que
+sua SQL na propriedade CommandText esteja definida, a abertura do
+ClientDataSet ligada a ele abre-o e fecha-o automaticamente. Alias, na
+revista ClubeDelphi h� uma recomenda��o de se trabalhar diretamente com o
+ClientDataSet. Por isso, testei alterar a SQL da propriedade CommandText do
+ClientDataSet em vez de fazer na CommandText do SQLDataSet e ele funcionou
+perfeitamente. N�o sei se h� alguma contra-indica��o para isto, mas estaria
+de acordo com a orienta��o do Guinther da Revista Clube Delphi.<br>
+<br>
+ATEN��O: para que seja poss�vel utilizar a propriedade CommandText do
+ClientDataSet (e n�o do SQLDataSet) � preciso colocar TRUE na propriedade
+poAllowCommandText do DataSetProvider ligado ao ClientDataSet.<br>
+<br>
+Fim do artigo -----------------------------<br>
+<br>
+Funcionou sem problemas, mas preciso fazer outro relacionamento seguindo a
+mesma l�gica mas n�o estou conseguindo. Eis o que acontece:<br>
+<br>
+No primeiro relacionamento, liguei as tabelas CD_DISCO e TB_DISCOMUS que
+est�o ligadas pelo campo DSC_CODIGO que � o c�digo de um disco de
+m�sica.<br>
+<br>
+Agora quero relacionar as tabelas TB_DISCOMUS e TB_MUSINTER que est�o
+ligadas pelos campos DSC_CODIGO e MUS_CODIGO.<br>
+<br>
+Os componentes que usei nos relacionamentos s�o:<br>
+<br>
+- Dois SQLDataSet (dst_Mestre - p/ CD_DISCO e dst_Detalhe - p/
+TB_DISCOMUS)<br>
+- Um DataSetProvider (dsp_Mestre)<br>
+- Dois ClientDataSet (cds_Mestre e cds_Detalhe)<br>
+- Tr�s DataSource (dts_LinkMestre, dts_Mestre e dts_Detalhe)<br>
+<br>
+Quando chego na etapa de adicionar os TFields na tabela mestre (item 9 do
+artigo acima), n�o aparece automaticamente o campo que deve ser colocado na
+propriedade DataSetField da tabela detalhe (item 10 do artigo acima).<br>
+<br>
+Algu�m j� tentou fazer esse tipo de relacionamento "em cascata"?
+Funcionou?<br>
+<br>
+O que pode estar dando errado?<br>
+<br>
+Obrigado<br>
+<br>
+PS: Pe�o desculpas antecipadas pelo texto longo, mas achei melhor pecar
+pelo excesso...<br>
+</p>
+
+<hr>
+</td></tr><tr><td align="center"><font class="pn-normal">Este assunto � origin�rio de:  www.activedelphi.com.br<br><a class="pn-normal" href="http://www.activedelphi.com.br/">http://www.activedelphi.com.br/</a><br><br>URL deste site web: <br><a class="pn-normal" href="http://www.activedelphi.com.br//modules.php?op=modload&amp;name=XForum&amp;file=viewthread&amp;fid=4&amp;tid=13258">http://www.activedelphi.com.br//modules.php?op=modload&amp;name=XForum&amp;file=viewthread&amp;fid=4&amp;tid=13258</a></font></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></center></body></html>

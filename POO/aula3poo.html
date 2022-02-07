@@ -1,0 +1,1709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ 
+  <meta name="Generator" content="Microsoft Word 10 (filtered)"><title>Orientação a Objetos - Delphi</title>
+  
+   
+  <style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	text-decoration:underline;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-variant:small-caps;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.Corponico, li.Corponico, div.Corponico
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+p.Programa, li.Programa, div.Programa
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Courier New";}
+p.Corpo, li.Corpo, div.Corpo
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:42.55pt 1.0cm 35.7pt 42.55pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+  </style></head><body lang="PT-BR">
+  
+<div class="Section1">  
+<h1 style="text-indent: 1cm;"><a name="_Toc356053885">Componentes Básicos</a>
+da Orientação a Objetos</h1>
+  
+<h1 style="text-indent: 1cm;">&nbsp;</h1>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Classe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</span></b><span style="font-size: 12pt;"> São moldes através dos quais criamos objetos</span></p>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Objeto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</span></b><span style="font-size: 12pt;"> Abstração que agrupa características e comportamentos.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Instância &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - </span></b><span style="font-size: 12pt;">É o objeto propriamente dito. Possui características 
+próprias.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Propriedade &nbsp;&nbsp;&nbsp;&nbsp; -</span></b><span style="font-size: 12pt;"> Define as características dos objetos de uma classe.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Método &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</span></b><span style="font-size: 12pt;"> Define o comportamento dos objetos de uma classe.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Mensagem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</span></b><span style="font-size: 12pt;"> Representa uma ação do objeto ou uma mudança de 
+estado. Define a comunicação entre objetos.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 99.25pt; text-align: justify; text-indent: -92.15pt;"><b><span style="font-size: 12pt;">Interface &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</span></b><span style="font-size: 12pt;"> Conjunto de mensagens que define o comportamento
+de um objeto (Protocolo).</span></p>
+  
+<h1 style="text-indent: 1cm;">&nbsp;</h1>
+  
+<h1 style="text-indent: 1cm;">Encapsulamento</h1>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-align: justify; text-indent: -3.8pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span><span style="font-size: 12pt;">É a capacidade de "esconder"
+detalhes de implementação (abstração).</span></p>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-align: justify; text-indent: -3.8pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span><span style="font-size: 12pt;">O principal objetivo é tornar
+o objeto independente de sua implementação interna, para isso a implementação
+das suas propriedades e métodos são "escondidas" de forma que o usuário precise
+apenas conhecer a interface do objeto para poder utilizá-lo. Desta forma
+o desenvolvedor poderá alterar tranqüilamente a implementação de um objeto
+(Classe) sem causar transtornos ao usuários.</span></p>
+  
+<h1 style="text-indent: 1cm;">&nbsp;</h1>
+  
+<h1 style="text-indent: 1cm;">Herança</h1>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Permite que uma nova classe
+seja descrita a partir de outra classe já existente (Reutilização).</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">A <i>subclasse</i> herda as
+características e o comportamento da <i>superclasse</i>.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">A <i>subclasse</i> pode adicionar
+novas características e comportamentos aos herdados da <i>superclasse</i>.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">A <i>subclasse</i> pode ter
+um comportamento diferente da <i>superclasse</i>, redefinindo o método herdado.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">A <i>subclasse</i> é uma especialização
+da <i>superclasse</i>.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Toda instância da <i>subclasse</i>
+é também uma instância da <i>superclasse</i>.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">O resultado de uma seqüência
+de heranças é uma <i>hierarquia de classes</i>.</span></p>
+  
+<h2 style="text-indent: 1cm;"><a name="_Toc360092056"></a><a name="_Toc356273548"></a><a name="_Toc356272505"></a><a name="_Toc356054290"></a><a name="_Toc356053888">Classes Abstratas</a></h2>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Definida para ser a base de
+uma hierarquia.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Possui métodos que não estão
+implementados.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Não pode ser instanciada.</span></p>
+  <b><span style="font-size: 14pt; font-family: Arial;"><br style="page-break-before: always;" clear="all">
+ </span></b>  
+<h1 style="text-indent: 1cm;">Polimorfismo</h1>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">É a capacidade de tratarmos
+objetos de diferentes tipos de uma mesma maneira desde que eles tenham um
+ancestral em comum</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Objetos de classes diferentes
+podem ter métodos com mesmo nome e cada objeto responderá adequadamente de
+acordo com seu método.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Métodos da mesma classe podem
+ter o mesmo nome, desde que possuam quantidade ou tipo de parâmetros diferentes.</span></p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-align: justify; text-indent: 0.05pt;"><span style="font-size: 12pt; font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size: 12pt;">Métodos da classe derivada podem
+ter nomes iguais aos da classe base, inclusive com parâmetros iguais</span></p>
+  <b><span style="font-size: 14pt; font-family: Arial;"><br style="page-break-before: always;" clear="all">
+ </span></b>  
+<h1><a name="_Toc356053889">Object Pascal</a></h1>
+  
+<h2><a name="_Toc356273556"></a><a name="_Toc356054298"></a><a name="_Toc356053896">Estrutura de uma Unit</a></h2>
+  
+<p class="Programa"><b>&nbsp;</b></p>
+  
+<p class="Programa"><b>Unit</b> &lt;identificador&gt;;</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa"><b>Interface</b></p>
+  
+<p class="Programa"><span style="font-size: 10pt;">{Especifica o que será 
+exportado pela UNIT afim de ser utilizados por outros módulos }</span></p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">[uses &lt;lista de units&gt;;]</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">&lt;seções de declaração&gt;</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa"><b>Implementation</b></p>
+  
+<p class="Programa"><span style="font-size: 10pt;">{Declaração de Variáveis, 
+Constante e tipos locais a UNIT e Implementação dos métodos.</span></p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">[uses &lt;lista de units&gt;;]</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">&lt;definições&gt;</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">[<b>Initialization</b> </p>
+  
+<p class="Programa"><span style="font-size: 10pt;">{Código executado automaticamente
+quando um aplicativo que utiliza a UNIT é <i>executado</i>}</span></p>
+  
+<p class="Programa">&lt;instruções&gt;]</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">[<b>Finalization</b></p>
+  
+<p class="Programa"><span style="font-size: 10pt;">{Código executado automaticamente
+quando um aplicativo que utiliza a UNIT é <i>finalizado</i>}</span></p>
+  
+<p class="Programa">&lt;instruções&gt;]</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa"><b>end.</b></p>
+  <b><span style="font-size: 14pt; font-family: Arial;"><br style="page-break-before: always;" clear="all">
+ </span></b>  
+<h1><a name="_Toc360092074"></a><a name="_Toc356273632"></a><a name="_Toc356272522"></a><a name="_Toc356054316"></a><a name="_Toc356053914">Classes</a></h1>
+  
+<h3>Definição de uma Classe</h3>
+  
+<p class="Programa">&lt;identificador&gt; =  <b>class</b>[(Descendência)]</p>
+  
+<p class="Programa" style="margin-left: 144pt; text-indent: 36pt;">&lt;atributos 
+e métodos&gt;</p>
+  
+<p class="Programa" style="margin-left: 108pt; text-indent: 36pt;"><b>end</b>;</p>
+  
+<p class="MsoNormal">&nbsp;</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Deve ser feita na seção de declaração de tipos principal de
+um programa ou de uma unit.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>No caso do Delphi, todas as classes são descendentes de <b>TObject</b>.<b> 
+</b></p>
+  
+<h3>Atributos e Métodos</h3>
+  
+<p class="Programa">&lt;visibilidade 1&gt;</p>
+  
+<p class="Programa">&nbsp; &lt;lista de variáveis&gt;</p>
+  
+<p class="Programa">&nbsp; &lt;lista de procedimentos ou funções&gt;</p>
+  
+<p class="Programa">&lt;visibilidade 2&gt;</p>
+  
+<p class="Programa">&nbsp; &lt;lista de variáveis&gt;</p>
+  
+<p class="Programa">&nbsp; &lt;lista de procedimentos ou funções&gt;</p>
+  
+<p class="Programa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .</p>
+  
+<p class="Programa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .</p>
+  
+<p class="Programa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .</p>
+  
+<p class="Programa">&lt;visibilidade n&gt;</p>
+  
+<p class="Programa">&nbsp; &lt;lista de variáveis&gt;</p>
+  
+<p class="Programa">&nbsp; &lt;lista de procedimentos ou funções&gt;</p>
+  
+<h3>Visibilidade</h3>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Define quem tem permissão de acessar e alterar os atributos
+e métodos da classe.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Em uma mesma classe podem existir atributos e métodos com visibilidades
+diferentes.</p>
+  
+<p class="MsoNormal">&nbsp;</p>
+  
+<table class="MsoNormalTable" style="margin-left: 2.15pt; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+   <td style="border-top: medium none; border-left: medium none; border-right: medium none; padding: 0cm 2.15pt; width: 70.85pt;" valign="top" width="94"> 
+  
+      <p class="MsoNormal"><b>Visibilidade</b></p>
+   </td>
+   <td style="border-top: medium none; border-left: medium none; border-right: medium none; padding: 0cm 2.15pt; width: 369.1pt;" valign="top" width="492"> 
+  
+      <p class="MsoNormal"><b>Descrição</b></p>
+   </td>
+  </tr>
+  <tr>
+   <td style="padding: 0cm 2.15pt; width: 70.85pt;" valign="top" width="94">   
+      <p class="MsoNormal">Public</p>
+   </td>
+   <td style="padding: 0cm 2.15pt; width: 369.1pt;" valign="top" width="492">   
+      <p class="MsoNormal">Os atributos e métodos podem ser manipulados por
+qualquer   classe.</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="padding: 0cm 2.15pt; width: 70.85pt;" valign="top" width="94">   
+      <p class="MsoNormal">Private</p>
+   </td>
+   <td style="padding: 0cm 2.15pt; width: 369.1pt;" valign="top" width="492">   
+      <p class="MsoNormal">Os atributos e métodos só podem ser manipulados
+pela   própria classe.</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="padding: 0cm 2.15pt; width: 70.85pt;" valign="top" width="94">   
+      <p class="MsoNormal">Protected</p>
+   </td>
+   <td style="padding: 0cm 2.15pt; width: 369.1pt;" valign="top" width="492">   
+      <p class="MsoNormal">Os atributos e métodos podem ser manipulados pela
+própria   classe ou por qualquer subclasse desta e por demais classes declaradas
+na   mesma UNIT.</p>
+   </td>
+  </tr>
+  <tr>
+   <td style="padding: 0cm 2.15pt; width: 70.85pt;" valign="top" width="94">   
+      <p class="MsoNormal">Published</p>
+   </td>
+   <td style="padding: 0cm 2.15pt; width: 369.1pt;" valign="top" width="492">   
+      <p class="MsoNormal">Semelhante a visibilidade <b>public</b> sendo
+que permite   o acesso em tempo de projeto.</p>
+   </td>
+  </tr>
+ 
+  </tbody>
+</table>
+  
+<h3>Declarando, Instanciando, Destruindo e Referenciando Objetos</h3>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-indent: -14.15pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>É declarado da mesma maneira que uma variável.</p>
+  
+<p class="MsoNormal" style="margin-left: 14.15pt; text-indent: -14.15pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Para que um objeto possa ser utilizado, este deve ser instanciado 
+e após o seu uso o mesmo deve ser liberado</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Se comporta como um ponteiro, mas é manipulado como uma variável 
+normal.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Pode ser atribuído o valor <b>nil</b>.</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">&lt;Objeto&gt; : Classe;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {Declarando}</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">&lt;Objeto&gt; := Classe.Create;&nbsp;&nbsp; {Instanciando}</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">&lt;Objeto&gt;.Free;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {Destruindo}</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">&lt;Objeto&gt;.Identificador&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {Referenciando}</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<ul>
+  <li>onde Identificador representa uma propriedade ou um método. A referência
+a Dados é idêntica a referência a código.</li>
+</ul>
+  <u><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;;"><br style="page-break-before: always;" clear="all">
+ </span></u>  
+<h3>Método Construtor</h3>
+  
+<p class="Programa">constructor &lt;identificador&gt; ( &lt;parâmetros formais&gt;
+);</p>
+  
+<p class="Corpo">&nbsp;</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Aloca memória e inicializa o objeto, baseado nos parâmetros 
+passados.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Normalmente a primeira ação é invocar o construtor da classe 
+base, através da instrução:</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">inherited &lt;construtor&gt; ( &lt;parâmetros reais &gt;
+);</p>
+  
+<h3>Método Destrutor</h3>
+  
+<p class="Programa">destructor &lt;identificador&gt; ( &lt;parâmetros formais&gt; 
+);</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Destroi o objeto, baseado nos parâmetros passados, e libera
+a memória alocada para ele.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Normalmente a última ação é invocar o destrutor da classe base, 
+através da instrução:</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa">inherited &lt;destrutor&gt; ( &lt;parâmetros reais &gt;
+);</p>
+  
+<h3>O Parâmetro Self</h3>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Representa um parâmetro invisível passado a todos os métodos
+de uma classe e representa a instância da classe que esta chamando o método.</p>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>É utilizado para evitar conflitos de nomes de objetos</p>
+  
+<h3>Métodos Estáticos</h3>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Os métodos declarados numa classe são por default estáticos</p>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Tem suas referências determinadas em tempo de compilação</p>
+  
+<h3>Métodos Virtuais</h3>
+  
+<p class="MsoNormal" style="margin-left: 14.2pt; text-indent: -14.2pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>O objetivo&nbsp; dos métodos virtuais é a possibilidade de substituí-los
+por novos métodos, contendo os mesmo parâmetros, das classes descendentes.</p>
+  
+<p class="MsoNormal" style="margin-left: 14.2pt; text-indent: -14.2pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Para tornar um método virtual, basta acrescentar no final de
+sua declaração na classe, a palavra <i>virtual</i>;</p>
+  
+<p class="MsoNormal" style="margin-left: 14.2pt; text-indent: -14.2pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Um método virtual pode ser substituído em uma classe descendente 
+através de sua redeclaração seguida da diretiva <i>override;</i></p>
+  
+<h3 style="margin-left: 14.2pt; text-indent: -14.2pt;">Métodos Dinâmicos</h3>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Métodos dinâmicos são basicamente idênticos a métodos virtuais 
+sendo declarados com o uso da diretiva <i>dynamic</i></p>
+  
+<p class="MsoNormal">&nbsp;</p>
+  
+<p class="MsoNormal">OBS :Os métodos dinâmicos favorecem o tamanho do código 
+enquanto os métodos virtuais favorecem a velocidade.</p>
+  
+<h3>Métodos Abstratos</h3>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>São métodos que não fazem nada, servem apenas para definir
+a estrutura de uma hierarquia.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Para tornar um método abstrato, basta acrescentar no final
+de sua declaração na classe, a palavra <i>abstract;</i></p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>&nbsp;Para um método ser abstrato, é necessário que ele seja também 
+virtual.</p>
+  <u><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;;"><br style="page-break-before: always;" clear="all">
+ </span></u>  
+<h3><a name="_Toc360092075"></a><a name="_Toc356273633"></a><a name="_Toc356272523"></a><a name="_Toc356054317"></a><a name="_Toc356053915">Propriedades</a></h3>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-align: justify; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Representa um mecanismo para encapsular os campos de uma Classe
+sobrecarrgando as operações de leitura e escrita</p>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-align: justify; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>São uma extensão natural às variáveis de instância de uma classe, 
+pois permitem que o desenvolvedor pareça esta trabalhando com estas, enquanto 
+na realidade está executando chamadas a métodos.</p>
+  
+<p class="MsoNormal" style="margin-left: 18pt; text-align: justify; text-indent: -18pt;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Para utilizar as propriedades os <i>campos </i>(atributos)
+devem ser declarados como <b>private</b>, os <i>métodos</i> como <b>protected</b>,
+e as <i>propriedades</i> como <b>public</b>.</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="Programa"><b>property</b> Identificador : TIPO</p>
+  
+<p class="Programa" style="margin-left: 78pt;">[<b>read</b>&nbsp; MétodoDeLeitura]</p>
+  
+<p class="Programa" style="margin-left: 78pt;">[<b>write</b> MétodoDeEscrita];</p>
+  
+<p class="MsoNormal" style="margin-left: 78pt;">&nbsp;</p>
+  
+<p class="MsoNormal">,onde, Identificador representa a propriedade, TIPO
+o tipo da propriedade, MétodoDeLeitura o método associado a leitura da propriedade,
+MédodoDeEscrita o método associado a escrita da propriedade.</p>
+  
+<h3>Verificação de Tipo</h3>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Verifica, em tempo de execução, se o objeto é uma instância
+da classe ou de alguma subclasse desta.</p>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Retorna <i>true</i> ou <i>false</i>.</p>
+  
+<p class="MsoNormal">&nbsp;</p>
+  
+<p class="Programa">&lt;objeto&gt; is &lt;classe&gt;</p>
+  
+<p class="MsoNormal">&nbsp;</p>
+  
+<h3>Conversão de Tipo</h3>
+  
+<p class="MsoNormal" style="margin-left: 0cm; text-indent: 0cm;"><span style="font-family: Symbol;">·<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-stretch: normal; font-size-adjust: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span></span>Converte, se possível, uma referência para o objeto de uma
+classe base em uma referência para objeto da subclasse.</p>
+  
+<p class="MsoNormal">&nbsp;</p>
+  
+<p class="Programa">&nbsp;</p>
+  
+<p class="MsoNormal"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">(&lt;objeto&gt; as
+&lt;classe&gt;).&lt;Métodos ou Propriedade&gt;</span></p>
+  <span style="font-size: 12pt; font-family: &quot;Courier New&quot;;"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoNormal"><b><span style="font-size: 14pt; font-family: Arial;">Exemplos de Orientação a Objetos</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-size: 12pt; font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">unit</span></b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US"> Datas;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">interface</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">type</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp; TData = <b>Class</b>(TObject)</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b><span style="font-family: &quot;Courier New&quot;;">private</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dia, Mes, Ano : Integer;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">public</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor Init (d,m,a
+: integer);</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure DefVal (d,m,a
+: integer);</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; AnoBis : boolean;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;">procedure Incrementa;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure Decrementa;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure Adiciona (NumDeDias
+: integer);</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">procedure Subtrai (NumDeDias
+: integer);</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetText : string;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function DiasNoMes : Integer;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp; end;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">implementation</span></b></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">constructor</span></b><span style="font-family: &quot;Courier New&quot;;" lang="EN-US"> TData.Init (d,m,a : integer);</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">begin</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">&nbsp; dia := d; Mes := m; ano := a;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">procedure TData.DefVal (d,m,a : integer);</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">begin</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;">&nbsp; dia := d; Mes := m; ano := a;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">function TData.AnoBis : boolean;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp; if (ano mod 4 &lt;&gt; 0)</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp; then AnoBis := false</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (ano mod 100 &lt;&gt; 0)</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then AnoBis := true</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; else</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (ano mod 400 &lt;&gt;
+0)</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then AnoBis := False</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else AnoBis := True;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">function TData.DiasNoMes : integer;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp; case Mes of</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp; 1,3,5,7,8,10,12 : DiasNoMes := 31;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp; 4,6,9,11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : DiasNoMes := 30;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp; 2 : if (AnoBis)</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then DiasNoMes := 29</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; else DiasNoMes := 28;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">procedure TData.Incrementa;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; if (dia
+&lt; DiasNoMes) {se não for o último dia do Mes}</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; then inc(dia)</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; else</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Mes
+&lt; 12) {se não for dezembro}</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">then</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; inc(Mes);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; dia := 1;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;">end</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else
+{se for o dia de ano novo}</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;inc(ano);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Mes
+:= 1;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; dia
+:= 1;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">procedure TData.Decrementa;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; if (dia
+&gt; 1)</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; then Dec(dia) 
+{se não for o primeiro dia do mês}</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; else</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (Mes
+&gt; 1) {se não for o primeiro dia do ano}</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">then</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Dec(Mes);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; dia := DiasNoMes;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Dec(ano);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Mes := 12;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; dia := DiasNoMes;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">function TData.GetText : string;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">var d, m, a : string;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp; d := IntToStr(dia);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp; case Mes of</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;">1 : m := 'Janeiro';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 2 : m
+:= 'Fevereiro';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 3 : m
+:= 'Março';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 4 : m
+:= 'Abril';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 5 : m
+:= 'Maio';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 6 : m
+:= 'Junho';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 7 : m
+:= 'Julho';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 8 : m
+:= 'Agosto';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 9 : m
+:= 'Setembro';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 10: m
+:= 'Outubro';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 11: m
+:= 'Novembro';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; 12: m
+:= 'Dezembro';</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; a := IntToStr(ano);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; GetText
+:= d + ', ' + m + ' de ' + a;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">end;</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">procedure
+TData.Adiciona (NumDeDias : integer);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">var n : integer;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; for n :=
+1 to NumDeDias do</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; Incrementa;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">procedure
+TData.Subtrai (NumDeDias : integer);</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">var n : integer;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">begin</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp; for n :=
+1 to NumDeDias do</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">&nbsp;&nbsp;&nbsp; </span><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">Decrementa;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">end;</span></p>
+  
+<p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;" lang="EN-US">&nbsp;</span></p>
+  
+<p class="Programa" style="margin-bottom: 6pt; page-break-after: avoid;"><b><span style="font-size: 10pt;" lang="EN-US">end.</span></b></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">unit Universidade;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">interface</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">type</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TEndereco = Class</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FRua, FBairro, FNumero&nbsp;
+: String;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetRua&nbsp;&nbsp;&nbsp; : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetBairro : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetNumero : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetRua&nbsp;&nbsp;&nbsp; (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetBairro (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetNumero (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property&nbsp; Rua&nbsp;&nbsp;&nbsp; : string
+read GetRua&nbsp;&nbsp;&nbsp; write SetRua;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;property&nbsp; Bairro : string
+read GetBairro write SetBairro;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property&nbsp; Numero : string
+read GetNumero write SetNumero;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TPessoa&nbsp; = Class</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FMatricula : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FNome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp;&nbsp;&nbsp; GetMatricula
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp;&nbsp;&nbsp; GetNome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure&nbsp;&nbsp; SetMatricula
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure&nbsp;&nbsp; SetNome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Endereco&nbsp; : TEndereco;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor Create;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destructor&nbsp; Destroy; override;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Matricula : string
+read GetMatricula write SetMatricula;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property </span><span lang="EN-US">Nome</span><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : string read GetNome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+write SetNome;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TProfessor = Class(TPessoa)</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDepartamento : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FAulasMes&nbsp;&nbsp;&nbsp;&nbsp; : byte;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetDepartamento
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetAulasMes&nbsp;&nbsp;&nbsp;&nbsp;
+: byte;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetDepartamento
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetAulasMes&nbsp;&nbsp;&nbsp;&nbsp;
+(Value : byte);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Departamento :
+String read GetDepartamento write SetDepartamento;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property AulasMes&nbsp;&nbsp;&nbsp;&nbsp; :
+byte&nbsp;&nbsp; read GetAulasMes&nbsp;&nbsp;&nbsp;&nbsp; write SetAulasMes;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TAluno = Class(TPessoa)</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FCurso : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FMGP&nbsp;&nbsp; : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetCurso : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetMGP&nbsp;&nbsp; : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetCurso (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetMGP&nbsp;&nbsp; (Value
+: byte);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Curso : string
+read&nbsp; GetCurso write SetCurso;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property MGP&nbsp;&nbsp; : string
+read&nbsp; GetMGP&nbsp;&nbsp; write SetMGP;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TFuncionario = Class(TPessoa)</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FSetor&nbsp;&nbsp;&nbsp;&nbsp; : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FSalario&nbsp;&nbsp; : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetSetor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetSalario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+: real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetSetor&nbsp;&nbsp; (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetSalario (Value
+: byte);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Setor&nbsp;&nbsp; : string
+read&nbsp; GetSetor&nbsp;&nbsp; write SetSetor;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Salario : real&nbsp;&nbsp;
+read&nbsp; GetSalario write SetSalario;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">implementation</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">{********************** TEndereco******************}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp;&nbsp;&nbsp; TEndereco.GetRua&nbsp;&nbsp;&nbsp;
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FRua;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp;&nbsp;&nbsp; TEndereco.GetBairro
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FBairro;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp;&nbsp;&nbsp; TEndereco.GetNumero
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FNumero;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure&nbsp;&nbsp; TEndereco.SetRua&nbsp;&nbsp;&nbsp;
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FRua := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure&nbsp;&nbsp; TEndereco.SetBairro
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FBairro := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure&nbsp;&nbsp; TEndereco.SetNumero
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FNumero := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">{********************** TPessoa******************}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">constructor TPessoa.Create;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; inherited Create;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.Endereco := TEndereco.Create;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">destructor TPessoa.Destroy;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.Endereco.Free;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; inherited Destroy;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp;&nbsp;&nbsp; TPessoa.GetMatricula
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FMatricula;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp;&nbsp;&nbsp; TPessoa.GetNome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FNome;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure&nbsp;&nbsp; TPessoa.SetMatricula
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FMatricula := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure&nbsp;&nbsp; TPessoa.SetNome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FNome := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">{********************** TProfessor******************}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function TProfessor.GetDepartamento
+: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FDepartamento;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function TProfessor.GetAulasMes
+: byte;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FAulasMes;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure Tprofessor.SetDepartamento 
+(Value : string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FDepartamento := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure Tprofessor.SetAulasMes
+(Value : byte);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FAulasMes := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">end.</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">unit Figura;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">interface</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">type</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TFigura = Class</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FCor&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;: string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetCor&nbsp;&nbsp; : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetCor (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure Desenhe; virtual; 
+abstract;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property&nbsp; Cor : string read
+GetCor write SetCor;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TQuadrado = Class (TFigura)</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FX : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetX : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetX (Value :
+real);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure Desenhe ; override;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property X : real read&nbsp;
+GetX write SetX;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TRetangulo = Class (TQuadrado)</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;FY : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetY : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetY (Value :
+real);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure Desenhe; override;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Y : real read GetY
+write&nbsp; SetY;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; TCirculo = Class (TFigura)</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; private</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FRaio : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; &nbsp;&nbsp;protected</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetRaio : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetRaio (Value
+: Real);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; public</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure Desenhe ;override;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Raio : real read
+GetRaio write SetRaio;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">implementation</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">uses dialogs, SysUtils;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">{************TFigura************}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp; TFigura.GetCor&nbsp;&nbsp; : string;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FCor;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TFigura.SetCor (Value
+: string);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FCor := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">{************TQuadrado************}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TQuadrado.Desenhe;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; showMessage('Quadrado' + FloatToStr(Self.X));</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp; TQuadrado.GetX : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FX;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TQuadrado.SetX (Value
+: real);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FX := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">{************TRetangulo************}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TRetangulo.Desenhe;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; showMessage('Retangulo' + FloatToStr(Self.X) 
++ FloatToStr(Self.X));</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp; TRetangulo.GetY : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FY;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TRetangulo.SetY (Value
+: real);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FY := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">{**********TCirculo*********}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TCirculo.Desenhe;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; showMessage('Circulo' + FloatToStr(Self.Raio));</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function&nbsp; TCirculo.GetRaio : real;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FRaio;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TCirculo.SetRaio (Value
+: Real);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FRaio := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">end.</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">unit Vetor;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">interface</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">const</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;Tam = 100;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">type</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Vetor_T = array[1..Tam] of integer;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; </span>TVetorInteiro = class</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp; private</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDados&nbsp;&nbsp; : Vetor_T;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTamanho : integer;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp; protected</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetDados (Posicao : integer) : integer;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetDados (Posicao ,Value : integer);</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function&nbsp; GetTamanho : integer;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; procedure SetTamanho (Value : integer);</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp; public</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Tamanho : integer read GetTamanho
+write SetTamanho ;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property Dados[Posicao : integer]&nbsp; : integer</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read GetDados write SetDados; default;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Procedure Insere( Value : integer);</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span lang="EN-US">procedure Inverte;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">implementation</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">{ TVetorInteiro}</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function TVetorInteiro.GetTamanho
+: integer;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FTamanho;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TVetorInteiro.SetTamanho
+(Value : integer);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FTamanho := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">function TVetorInteiro.GetDados
+( Posicao : integer) : integer;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Result := Self.FDados[Posicao];</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TVetorInteiro.SetDados
+(Posicao , Value : integer);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Self.FDados[Posicao] := Value;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  <span style="font-size: 10pt; font-family: &quot;Courier New&quot;;" lang="EN-US"><br style="page-break-before: always;" clear="all">
+ </span>  
+<p class="MsoPlainText"><span lang="EN-US">procedure TVetorInteiro.Insere(
+Value : integer);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; </span>with Self do</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp; Tamanho := Tamanho + 1;</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp; try</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dados[Tamanho] := Value</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp; except</p>
+  
+<p class="MsoPlainText">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tamanho := Tamanho - 1;</p>
+  
+<p class="MsoPlainText">&nbsp; <span lang="EN-US">end;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">procedure TVetorInteiro.Inverte;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Var</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; i, f : byte;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; aux : integer;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; i := 1;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; f := Self.Tamanho;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; while i &lt; f do</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; Begin</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; aux&nbsp;&nbsp;&nbsp;&nbsp; := Self[i];</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; Self[i] := Self[f];</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; Self[f] := aux;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; inc(i);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp;&nbsp;&nbsp; inc(f,-1);</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">&nbsp; End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">End;</span></p>
+  
+<p class="MsoPlainText"><span lang="EN-US">end.</span></p>
+  
+<h1><span lang="EN-US">&nbsp;</span></h1>
+  <span style="font-size: 12pt; font-family: &quot;Courier New&quot;;"><br style="page-break-before: always;" clear="all">
+ </span>  
+<hr size="2" width="100%">  
+<p class="MsoNormal">Baseado em <br>
+CANTÙ, Marco. &nbsp;Dominando o Delphi 5 - A Bíblia. Makron Books. 2000,<br>
+<br>
+</p>
+  </div>
+<p class="MsoNormal">Adaptado de: </p>
+  DELPHI - Orientação a Objetos e Object Pascal.&nbsp;Prof. José Maria Rodrigues
+Santos Júnior. Universidade Tiradentes.<br>
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body></html>

@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Pacotes(bpl) e conexões com Banco de Dados :: :: Active Delphi :: O Site do Programador Delphi</title>
+
+<meta name="KEYWORDS" content="Delphi, ActiveDelphi, Interbase, Programação , Firebird, Revista, Newsletter, dicas, news, downloads, produtos, SQLServer, ECO, Borland, ALM, programas, fontes, forum, suporte, componentes, exemplos, desenvolvimento, softwares, software, programas fontes, fontes delphi.">
+<meta name="DESCRIPTION" content="O Site do Programador Delphi">
+<meta name="ROBOTS" content="INDEX,FOLLOW">
+<meta name="resource-type" content="document">
+<meta http-equiv="expires" content="0">
+<meta name="author" content=":: Active Delphi">
+<meta name="copyright" content="Copyright (c) 2001 by :: Active Delphi">
+<meta name="revisit-after" content="1 days">
+<meta name="distribution" content="Global">
+<meta name="generator" content="PostNuke 0.7.2.6-Phoenix - http://postnuke.com">
+<meta name="rating" content="General">
+<link rel="StyleSheet" href="modules.php_arquivos/styleNN.css" type="text/css">
+<style type="text/css">@import url("themes/Inspire/style/style.css"); </style>
+<script type="text/javascript" src="modules.php_arquivos/showimages.htm"></script>
+
+<script type="text/javascript" src="modules.php_arquivos/openwindow.htm"></script></head><body topmargin="0" leftmargin="0"><table style="border: 1px solid rgb(128, 128, 128);" align="center" bgcolor="#f4f4f4" cellpadding="10" width="970"><tbody><tr>
+	<td valign="middle"><a href="http://www.activedelphi.com.br/index.php"> <img src="modules.php_arquivos/logo_active.gif" border="0"></a></td>
+	<td align="right"><a href="http://www.activedelphi.com.br/banners.php?op=click&amp;bid=9" target="_blank"><img src="modules.php_arquivos/banner_video_aula_cds.gif" alt="Clique para saber mais..." style="border: 0px solid rgb(0, 0, 0);" border="0"></a></td>
+	</tr>
+	</tbody></table>
+	<table style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 2px solid rgb(128, 128, 128);" align="center" bgcolor="#004f76" cellpadding="2" width="970">
+	<tbody><tr>
+	<td style="padding-left: 10px;">
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/" class="superlink">Home</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Downloads&amp;file=index" class="superlink">Download</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/produtos.php" class="superlink">Produtos / Cursos</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/revista.php" class="superlink">Revista</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/suport.php" class="superlink">Suporte</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a target="_blank" href="http://www.activedelphi.com.br/forumbb_gateway.php" class="superlink">Fórum</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=FAQ&amp;file=index" class="superlink">FAQ</a>&nbsp;&nbsp;
+	<img src="modules.php_arquivos/seta.gif">&nbsp;&nbsp;<a href="http://www.activedelphi.com.br/sobre.php" class="superlink">Contato</a>&nbsp;&nbsp;
+	</td>
+	<td style="color: rgb(204, 204, 204);" align="right">
+	<a href="http://www.activedelphi.com.br/user.php" class="superlink">Clique aqui para logar</a> | Ribeirão Preto, 06 de Junho de 2007	</td>
+	</tr>
+	</tbody></table>
+	<table align="center" border="0" cellpadding="0" cellspacing="0" width="970">
+	<tbody><tr>
+	<td style="border-left: 1px solid rgb(128, 128, 128); border-right: 1px solid rgb(128, 128, 128); padding-top: 10px;" valign="top" width="0%">
+		<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Usuários	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/user.php?op=register&amp;module=NS-NewUser" title="Registrar-se">Registrar-se*</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/user.php" title="Alterar Cadastro.">Meu Cadastro</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/admin.php" title="Administrar Site.">Administração</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/user.php?op=loginscreen&amp;module=NS-User" title="Fazer Login">Login</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/user.php?module=NS-User&amp;op=logout" title="Fazer logout.">Logout</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/user.php?op=lostpassscreen&amp;module=NS-LostPassword" title="Recuperar Senha">Recuperar Senha</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Submit_News&amp;file=index" title="Enviar Artigos">Enviar Artigos</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Downloads&amp;file=index&amp;req=AddDownload" title="Inserir Download">Enviar Download</a><br> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Revista ActiveDelphi	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/assinatura.php" title="Assinatura da Revista ActiveDelphi">Assine Já!</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/revista.php" title="Confira as Edições Anteriores da Revista ActiveDelphi">Edições Anteriores</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/sobre.php" title="Fale com a Redação da Revista ActiveDelphi">Fale com a Redação</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/boleto_renovacao.php" title="Renove sua Assinatura da Revista ActiveDelphi">Renovação Online</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/parceiro_revista.php?parceiro=7" title="Confira o Resumo dos Artigos da Última Edição">Resumo da Última Edição</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/saibamais.php" title="Características da Revista ActiveDelphi">Sobre a Revista</a><br> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Serviços	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/cadastro.php" title="Cadastre-se para receber gratuitamente, toda semana por e-mail, o ActiveNews, um Newsletter contendo várias dicas de programação Delphi.">Active News</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=index&amp;catid=&amp;topic=5&amp;allstories=1" title="Artigos relacionado a programação Delphi">Artigos</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=index&amp;catid=&amp;topic=19&amp;allstories=1" title="Dicas relacionadas a programação Delphi">Dicas</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/forumbb_gateway.php" target="_blank" title="Fórum Active Delphi">Fórum</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=index&amp;catid=&amp;topic=3&amp;allstories=1" title="Últimas notícias do mundo Delphi">News</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/lista_vagas.php?todas=1" title="Lista ofertas de emprego">Ofertas de Emprego</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/produtos.php" title="Produtos e programas fontes em Delphi">Produtos / Cursos</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/suport.php" title="Suporte em programação Delphi">Suporte</a><br> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Downloads	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Downloads&amp;file=index&amp;req=viewdownload&amp;cid=1" title="Apostilas relacionadas ao Delphi pra download">Apostilas</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Downloads&amp;file=index&amp;req=viewdownload&amp;cid=4" title="Atualizações para Delphi">Atualizações</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Downloads&amp;file=index&amp;req=viewdownload&amp;cid=2" title="Componentes Delphi download">Componentes</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Downloads&amp;file=index&amp;req=viewdownload&amp;cid=3" title="Exemplos Delphi com fontes pra download">Programas / Exemplos</a><br> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Outros	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/sobre.php" title="Fale Conosco">Contato</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=FAQ&amp;file=index" title="Dúvidas Frequentes">FAQ</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/parceiros.php" title="Parceiros ">Parceiros</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Search&amp;file=index" title="Busca em Todas as Categorias">Pesquisar</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Recommend_Us&amp;file=index" title="Recomende-nos">Recomende-nos</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Top_List&amp;file=index" title="">Top 10</a><br><img src="modules.php_arquivos/seta_menu.gif">&nbsp;<a class="menu" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Web_Links&amp;file=index&amp;req=viewlink&amp;cid=1" title="">Web Links</a><br> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Estatística	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <span class="pn-normal"><br><b>231 Usuários Online </b><br><br>Você ainda não é um Membro deste <i>site</i>. Para se tornar um, <a href="http://www.activedelphi.com.br/user.php">clique aqui</a></span><br> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Login	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  </font><form action="user.php" method="post"><table border="0" cellpadding="1" cellspacing="0" width="100%"><tbody><tr><td><span class="pn-normal">&nbsp;Codinome</span></td></tr><tr><td><input name="uname" size="14" maxlength="25" type="text"></td></tr><tr><td><span class="pn-normal">&nbsp;Senha</span></td></tr><tr><td><input name="pass" size="14" maxlength="20" type="password"></td></tr><tr><td><input value="1" name="rememberme" type="checkbox"><span class="pn-normal">&nbsp;Lembrar senha</span></td></tr><tr><td><br><input name="module" value="NS-User" type="hidden"><input name="op" value="login" type="hidden"><input name="url" value="" type="hidden"><input value="Entrar" type="submit"></td></tr><tr><td><br><span class="pn-normal"><a href="http://www.activedelphi.com.br/user.php?op=lostpassscreen&amp;module=NS-LostPassword">Esqueci minha senha.</a></span></td></tr><tr><td><br><span class="pn-normal">Ainda não possui uma conta? Para criar uma, <a href="http://www.activedelphi.com.br/user.php">clique aqui</a>. Como usuário registrado do <i>site</i>, você vai poder acessar todo conteúdo do site gratuitamente.</span></td></tr><tr><td></td></tr></tbody></table></form><font color="#333333"> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Active News	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <br>
+</font><center>
+<font color="#333333"><a href="http://www.activedelphi.com.br/cadastro.php"><img src="modules.php_arquivos/free.gif" alt="Active News" border="0">
+</a>  </font>
+	</center></td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Produtos	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  <br>
+</font><center>
+<font color="#333333"><a href="http://www.activedelphi.com.br/produtos.php"><img src="modules.php_arquivos/banner_produtos.gif" alt="Conheça Nossos Produtos" border="0">
+</a>  </font>
+	</center></td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Parceiros	</td>
+	</tr>
+	<tr>
+	<td style="padding-left: 10px; color: rgb(0, 0, 0);">
+  <font color="#333333">
+  
+<br>
+</font><center>
+<font color="#333333">  <a href="http://info.borland.com.br/delphi/" target="_blank"><img src="modules.php_arquivos/delphi2006.gif" alt="Delphi 2006" border="0"></a><br><br>
+  <a href="http://www.porta80.com.br/" target="_blank"><img src="modules.php_arquivos/porta80.gif" alt="Porta80 Web Hosting" border="0"></a><br><br>
+  <a href="http://www.tdscursos.com.br/" target="_blank"><img src="modules.php_arquivos/tds.gif" alt="TDS Cursos" border="0"></a> <br><br>
+  <a href="http://www.tool.com.br/" target="_blank"><img src="modules.php_arquivos/tool.gif" alt="Tool Engenharia" border="0"></a> 
+</font></center><font color="#333333"> </font>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+
+	</td>
+	<td style="padding: 10px;" align="center" valign="top" width="970">
+	<table border="0" width="100%"><tbody><tr><td valign="top" width="85%">
+		<table style="border: 1px solid rgb(128, 128, 128);" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+		<td style="padding: 5px; background-color: rgb(0, 79, 118); color: rgb(255, 255, 255);">
+		<img src="modules.php_arquivos/seta.gif">&nbsp;
+		<b><a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=499&amp;mode=thread&amp;order=0&amp;thold=0" class="superlink">Pacotes(bpl) e conexões com Banco de Dados</a></b>		</td>
+		</tr>
+		<tr>
+		<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 3px;">
+<font color="#000000" size="2">Publicado por ActiveDelphi : Sexta, Março 23, 2007 - 08:51 AM GMT-3 (2124 leituras internas)</font>
+<font color="#000000"><a class="pn-normal" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=499&amp;mode=thread&amp;order=0&amp;thold=0">Continuação...</a> (9101 bytes) 5 Comentários <a class="pn-normal" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Recommend_Us&amp;file=index&amp;req=FriendSend&amp;sid=499"><img src="modules.php_arquivos/friend.gif" alt="Enviar esta notícia a um amigo" border="0"></a> <a class="pn-normal" href="http://www.activedelphi.com.br/print.php?sid=499"><img src="modules.php_arquivos/print.gif" alt="Versão para impressão" border="0"></a></font>
+		</td>
+		</tr>
+		<tr>
+		<td style="padding: 10px; color: rgb(0, 0, 0);">
+<font color="#999999"><b><a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=index&amp;catid=&amp;topic=5"><img src="modules.php_arquivos/artigos.gif" alt="Artigos" align="right" border="0" hspace="10" vspace="10"></a></b></font>
+&#8220;Ah! Mais um texto sobre pacotes do Delphi ou modularização de
+aplicações.&#8221;. Espero que não seja só isso que as pessoas pensem ao
+lerem este artigo. Todo mundo sabe criar aplicações exe, você vai ao
+Delphi, cria uma nova aplicação, compila e pronto. Mas... e pacotes?<br><br><p>Quando
+  comecei a ler sobre eles e tentar construir algo não achava grandes
+documentos que oferecesse uma abordagem simples, mas explicativa do assunto.</p>
+<p>  Vamos começar pelo princípio, para podermos chegar ao que importa:
+  a conexão
+com o banco de dados usando pacotes.</p>
+<p>Para criar uma aplicação modularizada se faz necessário, é claro,
+  de um exe para poder carregar os pacotes. Então, crie uma nova aplicação
+igualmente as normais que você já é acostumado: File/New/Application.</p>
+<p align="center">
+<img src="modules.php_arquivos/figura1.jpg" height="443" width="578"><br>
+  Figura 1 - Criando uma nova aplicação
+</p>
+<p>Salve a sua aplicação normalmente e  nas opções do projeto
+  (Menu Project, Options), você deve marcar o item "Build with runtime
+packages" e limpar o campo logo abaixo, deixando igual à imagem que segue:</p>
+<p align="center">
+<img src="modules.php_arquivos/figura2.jpg" height="403" width="424"><br>
+Figura 2 - Opções do Projeto</p>
+<p>Compile sua aplicação e verá que o tamanho do executável
+  ficou bem pequeno. Lembre-se dessa tela, pois você terá que voltar
+nela mais adiante.</p>
+<p>Agora feche o projeto do executável,
+vá ao menu File/New/Other e procure por Package.</p>
+<p align="center">
+<img src="modules.php_arquivos/figura3.jpg" height="369" width="441"><br>
+  Figura 3 - Criando um pacote
+</p>
+<p>Irá aparecer uma tela igual a essa:</p>
+<p align="center">
+<img src="modules.php_arquivos/figura4.jpg" height="242" width="368"><br>
+Figura 4 - Janela do pacote criado</p>
+<p>Os pacotes possuem os <em>Contains</em>, que são as units, forms,
+  dm e etc que ele possui e os <em>Requires</em>, que são outros pacotes
+que ele utiliza.</p>
+<p>  Vamos adicionar uma unit ao pacote e nela criar uma classe para conectar
+  ao banco de dados. Eu uso e recomendo a library do Zeos para trabalhar com
+  banco de dados, mas existem  outras formas. Implemente da forma
+que precisar ou necessitar.</p>
+<p>  Veja abaixo o fonte que fiz para criar uma classe que irá se conectar ao
+  banco de dados. Você poderá fazer à sua maneira:</p>
+<p><font face="Courier New, Courier, mono">unit uConnection;<br>
+<br>
+interface<br>
+uses ZConnection,SysUtils;<br>
+<br>
+type<br>
+&nbsp; TConnection = class<br>
+&nbsp; private<br>
+&nbsp;&nbsp;&nbsp; FConnection: TZConnection;<br>
+&nbsp; public<br>
+&nbsp;&nbsp;&nbsp; constructor Create;<br>
+&nbsp;&nbsp;&nbsp; destructor Destroy;override;<br>
+&nbsp;&nbsp;&nbsp; property Connection: TZConnection read FConnection;<br>
+&nbsp; end;<br>
+var<br>
+&nbsp; Connection : TConnection;<br>
+implementation<br>
+{ TConnection }<br>
+constructor TConnection.Create;<br>
+begin<br>
+&nbsp; FConnection := TZConnection.Create(nil);<br>
+&nbsp; with FConnection do<br>
+&nbsp;&nbsp;&nbsp; begin<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HostName := 'localhost';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Port := 3306;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User := 'artigo';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password := 'artigo';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Protocol := 'mysql-5';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Database := 'ARTIGO';<br>
+&nbsp;&nbsp;&nbsp; end;<br>
+&nbsp; FConnection.Connected := TRUE;<br>
+end;<br>
+<br>
+destructor TConnection.Destroy;<br>
+begin<br>
+&nbsp; FConnection.Disconnect;<br>
+&nbsp; FConnection.Free;<br>
+end;<br>
+<br>
+initialization<br>
+&nbsp; Connection := TConnection.Create;<br>
+&nbsp; <br>
+finalization<br>
+&nbsp; Connection.Free;<br>
+end.</font></p>
+<p>Essa classe fará a conexão com a base e a manterá ativa
+  até que o
+aplicativo seja finalizado.</p>
+<p>  Salve e compile o mesmo.  No local em que
+  o arquivo foi compilado, você encontrará um arquivo com a extensão
+bpl. Este é o pacote de conexão, e também terá um
+dcp, que é para  usar agora no projeto1, que tem o exe.</p>
+<p>Feche todas os projetos abertos e abra o primeiro projeto, que possui o executável,
+para podermos modificar algumas coisas nele.</p>
+<p>Vá novamente às opções do projeto e modifique-as
+como abaixo:</p>
+<p align="center">
+<img src="modules.php_arquivos/figura5.jpg" height="403" width="424"><br>
+Figura 5 - Alterando as opções do primeiro projeto</p>
+<p>Feche a tela acima e na tela principal do sistema ou até mesmo no projeto
+  dpr, adicione ao uses o <em>dbconnection</em>, para que ele seja inicializado
+junto com a aplicação.</p>
+<p>Salve e compile-o novamente.</p>
+<p>Agora vamos criar um form para conectar a base e seu respectivo pacote.</p>
+<p> Feche os projetos, vá ao menu File/New/Other e Packages.
+  Criado o pacote, crie dentro dele um novo form, também no menu File/New/Form.
+  No pacote do formulário, você deve adicionar o pacote de conexão,
+pois você depende dele.</p>
+<p align="center">
+<img src="modules.php_arquivos/figura6.jpg" height="243" width="366"><br>
+Figura 6 - Pacote de Formulário</p>
+<p>No formulário coloquei o seguinte:</p>
+<p align="center">
+<img src="modules.php_arquivos/figura7.jpg" height="295" width="483"><br>
+Figura 7 - Interface do Formulário</p>
+<p>Vou mostrar somente fazendo a conexão com a base e executando uma consulta.
+O botão abrir ficou:</p>
+<p><font face="Courier New, Courier, mono">ZQuery1.Close;<br>
+ZQuery1.SQL.Text := 'SELECT * FROM CLIENTES';<br>
+ZQuery1.Connection := Connection.Connection;<br>
+ZQuery1.Open;</font></p>
+<p>Nas uses, adicione a unit de conexão para poder usar o Connection.
+  Ao final da unit, registrei a classe do formulário para poder usar ele
+no exe:</p>
+<p><font face="Courier New, Courier, mono">initialization<br>
+&nbsp; RegisterClass(TForm1);<br>
+<br>
+finalization<br>
+&nbsp; UnRegisterClass(TForm1);</font></p>
+<p>Usei no exemplo o banco de dados Mysql, mas como disse, isso serve para qualquer
+  banco.
+Abaixo esta o script de criação da tabela que uso nessa aplicação.</p>
+<p><font face="Courier New, Courier, mono">CREATE TABLE `clientes` (<br>
+&nbsp; `CODIGO` int(11) NOT NULL auto_increment,<br>
+&nbsp; `NOME` varchar(40) default NULL,<br>
+&nbsp; `DATA_NASCIMENTO` date default NULL,<br>
+&nbsp; PRIMARY KEY&nbsp; (`CODIGO`),<br>
+&nbsp; UNIQUE KEY `CODIGO` (`CODIGO`)<br>
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;</font></p>
+<p>Fecho todos os projetos abertos no delphi e abro o projeto do executável,
+  para
+inserir o código que chamará o pacote, que é feito da seguinte
+forma:</p>
+<p><font face="Courier New, Courier, mono">procedure TForm1.Button1Click(Sender: TObject);<br>
+var<br>
+&nbsp; PackageModule: HModule;<br>
+&nbsp; AClass: TPersistentClass;<br>
+begin<br>
+&nbsp; PackageModule := LoadPackage('formulario.bpl');<br>
+&nbsp; if PackageModule &lt;&gt; 0 then<br>
+&nbsp; begin<br>
+&nbsp;&nbsp;&nbsp; AClass := GetClass('TForm1');<br>
+&nbsp;&nbsp;&nbsp; if AClass &lt;&gt; nil then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with TComponentClass(AClass).Create(Application)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; as TCustomForm do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; begin<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ShowModal;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end;<br>
+&nbsp;&nbsp;&nbsp; UnloadPackage(PackageModule);<br>
+&nbsp; end;<br>
+end;</font></p>
+<p>Salve e compile a aplicação para efetuar o teste:</p>
+<p align="center">
+<img src="modules.php_arquivos/figura8.jpg" height="303" width="576"><br>
+Figura 8 - Testando a aplicação</p>
+<p>Espero com este artigo ter ajudado bastantes pessoas que tem dúvida
+  neste assunto. Hoje na internet são poucos os artigos que falam sobre
+  delphi com pacotes. Demorei um bom tempo até fazer com que minha a aplicação
+  e os bpls fizessem o uso da mesma conexão sem usar um datamodulo, e agora,
+estou compartilhando com os companheiros delphianos.</p>
+<p>
+<a target="_blank" href="http://www.activedelphi.com.br/imagens/artigos/conexao_packages/conexao_bpl.zip">Clique aqui para fazer o download do exemplo</a></p>
+<p>Até a próxima.</p>
+<p>Juliomar<br>Contato: <a href="mailto:juliomar_m@yahoo.com.br">juliomar_m@yahoo.com.br</a> </p>
+		</td>
+		</tr>
+		</tbody></table>
+		<br><br>
+
+</td><td>&nbsp;</td><td valign="top">
+	<table border="0" cellpadding="0" cellspacing="0" width="150">
+	<tbody><tr>
+	<td style="border-top: 1px solid rgb(128, 128, 128); border-bottom: 1px solid rgb(128, 128, 128); padding: 4px; font-weight: bold; color: rgb(0, 79, 118);" background="modules.php_arquivos/fundo_tit_coluna.gif" height="24">
+	&nbsp;
+	Links relacionados	</td>
+	</tr>
+	<tr>
+	<td style="padding: 5px; color: rgb(0, 0, 0);">
+	<font class="pn-normal"><strong><big>·</big></strong>&nbsp;<a class="pn-normal" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Search&amp;file=index&amp;action=search&amp;overview=1&amp;active_stories=1&amp;stories_topics%5B0%5D=5">Mais sobre Artigos</a><br>
+<strong><big>·</big></strong>&nbsp;<a class="pn-normal" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Search&amp;file=index&amp;action=search&amp;overview=1&amp;active_stories=1&amp;stories_author=ActiveDelphi">Notícias por ActiveDelphi</a><br>
+</font><br><hr noshade="noshade" size="1" width="95%"><div align="center"><font class="pn-normal">A notícia mais lida sobre Artigos:<br>
+<a class="pn-title" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=66&amp;mode=thread&amp;order=0&amp;thold=0">TECNOLOGIAS APLICÁVEIS AO DELPHI 7</a></font></div><br><table border="0" width="100%"><tbody><tr><td align="left">
+</td><td align="right">
+</td></tr></tbody></table>
+	</td>
+	</tr>
+	</tbody></table>	
+	<br>		
+</td></tr></tbody></table>
+
+
+<!-- COMMENTS NAVIGATION BAR START -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="99%">
+<tbody><tr><td align="center" bgcolor="#bcbccb"><font class="pn-title">Pacotes(bpl) e conexões com Banco de Dados</font><font class="pn-normal"> | </font><a class="pn-normal" href="http://www.activedelphi.com.br/user.php">Entrar no <i>site</i> / Criar um novo cadastro</a><font class="pn-normal"> | 5 Comentários</font></td></tr>
+<tr><td align="center" bgcolor="#dedee6" width="100%">
+<table border="0"><tbody><tr><td>
+<form method="post" action="modules.php">
+<font class="pn-normal">Votos</font> <select name="thold">
+<option value="-1">-1</option>
+<option value="0" selected="selected">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select><select name="mode"><option value="nocomments">Sem comentários</option>
+<option value="nested">Necessário</option>
+<option value="flat">Simples</option>
+<option value="thread" selected="selected">Discussão</option>
+</select> <select name="order"><option value="0" selected="selected">Os mais antigos primeiro</option>
+<option value="1">Os mais recentes primeiro</option>
+<option value="2">Melhores primeiro</option>
+</select>
+<input name="op" value="modload" type="hidden">
+<input name="name" value="News" type="hidden">
+<input name="file" value="article" type="hidden">
+<input name="sid" value="499" type="hidden">
+<input value="Atualizar" type="submit"></form>
+</td></tr></tbody></table>
+</td></tr><tr><td align="center" bgcolor="#bcbccb"><font class="pn-sub">Comentários pertencem aos seus respectivos autores. Não somos responsáveis pelo seus conteúdos.</font></td></tr>
+</tbody></table>
+
+<!-- COMMENTS NAVIGATION BAR END -->
+
+<div align="left"><a name="2798"></a>
+<table border="0" width="99%">
+<tbody><tr bgcolor="#dedee6">
+<td width="500">
+<font class="pn-title">Re: Pacotes(bpl) e conexões com Banco de Dados</font><font class="pn-normal">
+(Pontuação: 1)
+<br>
+por BEJATTO : Mar 28, 2007 - 02:02 PM<br>
+<font class="pn-normal">(<a class="pn-normal" href="http://www.activedelphi.com.br/user.php?op=userinfo&amp;uname=BEJATTO&amp;module=NS-User">Informações sobre o membro</a> | <a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Messages&amp;file=replypmsg&amp;send=1&amp;uname=BEJATTO">Enviar uma mensagem</a>)</font>
+ <a class="pn-normal" href="http://http//" target="window">http://http://</a>
+ </font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="pn-normal">Bom Artigo, eu nao conhecia isso ainda, assim que der irei testar....</font>
+</td>
+</tr>
+</tbody></table><br><br>
+</div><ul><li><font class="pn-normal"><a class="pn-normal" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=NS-Comments&amp;file=index&amp;req=showreply&amp;tid=4325&amp;sid=499&amp;pid=2798&amp;mode=thread&amp;order=0&amp;thold=0#4325">Re: Pacotes(bpl) e conexões com Banco de Dados</a></font><font class="pn-sub"> por juliomar_m : Abr 20, 2007 - 04:28 PM</font><br></li></ul><a name="2801"></a>
+<table border="0" width="99%">
+<tbody><tr bgcolor="#dedee6">
+<td width="500">
+<font class="pn-title">Re: Pacotes(bpl) e conexões com Banco de Dados</font><font class="pn-normal">
+(Pontuação: 1)
+<br>
+por lindolfo_2007 : Abr 02, 2007 - 12:38 PM<br>
+<font class="pn-normal">(<a class="pn-normal" href="http://www.activedelphi.com.br/user.php?op=userinfo&amp;uname=lindolfo_2007&amp;module=NS-User">Informações sobre o membro</a> | <a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Messages&amp;file=replypmsg&amp;send=1&amp;uname=lindolfo_2007">Enviar uma mensagem</a>)</font>
+ </font>
+</td>
+</tr>
+<tr>
+<td>
+<font class="pn-normal">a cara.... desculpa falar mas isso ai está fraco d+, vc fez isso para iniciantes aprenderem?<br>
+se sim me desculpa cara... se não acho melhor rever seus conceitos e
+dar uma melhoradinha... criticas tbm serverm para um bom
+desenvolvimento de um programador.. até mais<br>
+consigo fala isso pois ja trabalha a +/- 11 anos com delphi.<br>
+Jair Alberto - Supervisor BD oracle<br>
+</font>
+</td>
+</tr>
+</tbody></table><br><br>
+<ul><li><font class="pn-normal"><a class="pn-normal" href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=NS-Comments&amp;file=index&amp;req=showreply&amp;tid=4323&amp;sid=499&amp;pid=2801&amp;mode=thread&amp;order=0&amp;thold=0#4323">Re: Pacotes(bpl) e conexões com Banco de Dados</a></font><font class="pn-sub"> por juliomar_m : Abr 20, 2007 - 04:12 PM</font><br></li></ul><a name="4324"></a>
+<table border="0" width="99%">
+<tbody><tr bgcolor="#dedee6">
+<td width="500">
+<font class="pn-title">Re: Pacotes(bpl) e conexões com Banco de Dados <font class="pn-normal">
+(Pontuação: 1)
+<br>por <a class="pn-normal" href="mailto:JULIOMAR@MARCHETTI.COM.BR">juliomar_m</a> <b>(JULIOMAR@MARCHETTI.COM.BR)</b></font>
+<font class="pn-sub"> : Abr 20, 2007 - 04:26 PM<br>
+<font class="pn-normal">(<a class="pn-normal" href="http://www.activedelphi.com.br/user.php?op=userinfo&amp;uname=juliomar_m&amp;module=NS-User">Informações sobre o membro</a> | <a href="http://www.activedelphi.com.br/modules.php?op=modload&amp;name=Messages&amp;file=replypmsg&amp;send=1&amp;uname=juliomar_m">Enviar uma mensagem</a>)</font>
+ <a class="pn-normal" href="http:///" target="window">http://</a>
+ </font>
+</font></td>
+</tr>
+<tr>
+<td>
+<font class="pn-normal">Boa Tarde Pessoal dessa comunidade<br>
+1º Coloquei o artigo para ajudar a quem precisa-se e não para que
+alguma pessoa que se sente muito superior viesse fazer comentarios, se
+não queria ler não precisava ler era só passar adiante.<br>
+2º Pesso desculpas ao sr. Lindolfo, mas para que ele saiba muita gente
+mandou me e-mails perguntado mais algumas coisas sobre o artigo ou que
+não conseguiram ou não entendem ainda de pacotes. Então o dia que não
+gostar de algum artigo simplismente feche o navegador e não fique fazer
+comentarios desnecessários.. pq pelo jeito o sr. deve de ser o todo
+poderoso mas tem gente que ainda necessita deste auxilio que essa
+comunidade disponibiliza. Outra tentei procurar algo escrito pela mesma
+pessoa e não achei nda só comentarios.<br>
+3º Peço desculpas a comunidade novamente.</font>
+</td>
+</tr>
+</tbody></table><br><br>
+		</td>
+		</tr>
+		</tbody></table>
+		<table style="border-style: solid; border-color: rgb(128, 128, 128); border-width: 2px 1px 1px;" align="center" bgcolor="#f4f4f4" cellpadding="2" width="970">
+		<tbody><tr>
+		<td align="center">
+		<font class="pn-sub">
+
+	</font><p style="margin-top: 0pt; margin-bottom: 0pt;"><font class="pn-sub">Copyright© 2001-2007 &#8211; Active Delphi &#8211; Todos os direitos reservados<br>
+</font></p><p style="margin-top: 0pt; margin-bottom: 0pt;"><font class="pn-sub">Rua: Oswaldo Cruz, 384 - Ribeirão Preto - SP - CEP: 14030-150 - Tel: 
+  (16) 3024-8713</font></p>
+<p style="margin-top: 0pt; margin-bottom: 0pt;"><font class="pn-sub"><a target="_blank" href="http://www.porta80.com.br/"><font color="#333333">Hospedagem de sites na Porta 80 Web Hosting</font></a></font></p><font class="pn-sub"><br>
+<a href="http://www.activedelphi.com.br/backend.php"><img src="modules.php_arquivos/rss.gif" border="0" height="15" width="80"></a><br>
+
+	</font>
+		</td>
+		</tr>
+		</tbody></table>
+
+
+
+</body></html>

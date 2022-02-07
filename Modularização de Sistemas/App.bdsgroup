@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{003AB6AA-CE55-4BB7-93D9-A7E608958A96}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  <Projects>
+      <Projects Name="App.exe">App.bdsproj</Projects>
+      <Projects Name="Connection.bpl">Connection\Connection.bdsproj</Projects>
+      <Projects Name="Customer.bpl">Customer\Customer.bdsproj</Projects>
+      <Projects Name="Vendas.bpl">Vendas\Vendas.bdsproj</Projects>
+      <Projects Name="Targets">App.exe Connection.bpl Customer.bpl Vendas.bpl</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>
